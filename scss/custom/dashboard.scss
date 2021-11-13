@@ -1,0 +1,10 @@
+.pagelayout-mydashboard {
+    #block-region-content {
+        section.card {
+            margin-bottom: 70px;
+            &:first-of-type {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

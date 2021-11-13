@@ -1,0 +1,105 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page navbar.
+}}
+<nav class="notfixed-top navbar navbar-light navbar-expand moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+
+        {{!
+        Toggle menu below md only
+        }}
+        {{#mobilenavbar}}
+        <div data-region="drawer-toggle" class="row align-items-center d-sm h-md">
+            <div class="container logo-toggle">
+                <a class="homelink" href="{{{sitehome}}}" title="Intuitable homepage">
+                    <img class="img-responsive" src="{{{sitelogo}}}" alt="Intuitable bricks ident" width="38" height="47">
+                </a>
+            </div>
+            <div class="container ctl">
+            <button
+                aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}"aria-controls="nav-drawer" 
+                type="button" 
+                class="btn nav-link" 
+                data-action="toggle-drawer" 
+                data-side="top" 
+                data-preference="drawer-open-nav">
+                <span class="toggle-text open">
+                    {{#str}}closemenu, theme_intuitable{{/str}}
+                </span>
+                <span class="toggle-icon open">
+                    <i class="icon fa fa-fw fa-times"></i>
+                </span>
+                <span class="toggle-text closed">
+                    {{#str}}openmenu, theme_intuitable{{/str}}
+                </span>
+                <span class="toggle-icon closed">
+                    <i class="icon fa fa-fw fa-bars"></i>
+                </span>
+                <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
+            </button>
+            </div>
+        </div>
+        {{/mobilenavbar}}
+
+        <div class="row align-items-center {{#mobilenavbar}}h-sm d-md-fl{{/mobilenavbar}}">
+            {{#headerlinkscontent}}
+            <div class="nav-group {{#mobilenavbar}}h-sm d-md{{/mobilenavbar}}">
+                <ul class="headerlinks">
+                    {{! navbar_plugin_output not rendered for intuitable }}
+                    {{{ headerlinkscontent }}}
+                </ul>
+            </div>
+            {{/headerlinkscontent}}
+            <!-- user_menu -->
+            <div class="nav-group">
+                {{{ output.user_menu }}}
+            </div>
+            {{#cohortfilter}}{{{cohortfilter}}}{{/cohortfilter}}
+            {{#isadmin}}
+            <!-- admin search page button -->
+            <div class="nav-group">
+                <a href="{{{adminsearchurl}}}" title="{{{adminsearch}}}" class="btn btn-primary">{{{adminsearch}}}</a>
+            </div>
+            {{/isadmin }}
+        </div>
+        <div class="row block-cohort h-sm d-md-fl {{#showpageheaderlogo}}has-logo{{/showpageheaderlogo}}">
+            <div class="col-sm-12 col-md-7 px-0 py-0">
+                {{#showpageheaderlogo}}
+                <!-- Intuitable logo  -->
+                <div class = "container logo">
+                    {{! logo uploaded via theme settings logoheader is used as background for this div }}
+                </div>
+                {{/showpageheaderlogo}}
+                {{^editing}}
+                {{#hasintuitableheaderblocks}}
+                <section data-region="blocks-header" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
+                    {{{ intuitableheaderblocks }}}
+                </section>
+                {{/hasintuitableheaderblocks}}
+                {{/editing}}
+            </div>
+            <div class="h-sm d-md-fl col-sm-12 col-md-5 px-0 py-0 ">
+            {{{ output.search_box }}}
+            </div>
+            {{#welcomemessagename}}
+            <div class="col-sm-12 px-0 py-0">
+                <h2 class='userwelcome'>{{#str}}welcomeuser, theme_intuitable, {{welcomemessagename}}{{/str}}</H2>
+            </div>
+            {{/welcomemessagename}}
+        </div>
+</nav>
+

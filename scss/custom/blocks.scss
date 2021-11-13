@@ -1,0 +1,605 @@
+/* blocks.scss */
+
+.card {
+    color: $bodytext;
+    border: 0;
+    padding: 0;
+    .block-controls + .card-text {
+        clear: both;
+    }
+    &.tabs {
+        .tabs {
+            .tab {
+                margin: $gutterwide 0 0;
+                p {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+            position: relative;
+            ul.tabs-list {
+                list-style: none;
+                margin: 0 0 $gutterwide;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: flex-end;
+                border-bottom: 1px solid $grey7;
+                li {
+                    color: #fff;
+                    padding: 0;
+                    background: $bluegradient;
+                    box-sizing: border-box;
+                    border: 1px solid $grey7;
+                    border-bottom: 0;
+                    border-radius: 3px 3px 0 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 17px;
+                    padding: 13px 24px 11px;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        background: transparent;
+                        box-shadow: none;
+                        outline: none;
+                    }
+                    &:hover {
+                        background: $bluegradientinverse;
+                    }
+                    &.active, 
+                    &:active {
+                        background: $white;
+                        color: $grey1;
+                        padding-top: 19px;
+                        margin: 0 0 -1px;
+                        a {
+                            color: $grey1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.block_courseduedatestatus {
+        position: relative;
+        .card-body {
+            h5.card-title {
+                margin: 14px 0 0 100px;
+                font-size: $blockthumbtitlefontsize;
+                line-height: $blockthumbtitlefontsize;
+                color: $bodytext;
+                border-bottom: $blockthumbtitleborder;
+            }
+        }
+        .card-text {
+            h5 {
+                display: block;
+                font-size: $blockthumbsubtitlefontsize;
+                font-weight: $blockthumbsubtitlefontweight;
+                line-height: $blockthumbsubtitlelineheight;
+                color: $blockthumbsubtitlecolour;
+                margin: 7px 0 0 100px;
+                min-height: 50px;
+            }
+        }
+        .details {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+        }
+        .status-info {
+            .icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 85px;
+                line-height: 85px;
+                font-weight: 300;
+                padding: 0;
+                margin: 0;
+                height: auto;
+                width: auto;
+                display: block;
+            }
+            .icon-inner {
+                position: absolute;
+                top: 15px;
+                left: 0;
+                font-size: 30px;
+                line-height: 45px;
+                font-weight: 900;
+                width: 75px;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                height: auto;
+                display: block;
+                padding: 12px 0 0;
+                text-align: center;
+            }
+            .text-inner {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-weight: 300;
+                width: 70px;
+                height: 60px;
+                padding: 28px 0 0;
+                margin: 0;
+                text-align: center;
+                color: $intuitabledarkblue;
+                .day {
+                    display: block;
+                    font-size: 25px;
+                    line-height: 25px;
+                }
+                .month {
+                    display: block;
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+            }
+            &.notstarted {
+                .icon,
+                .statussubtitle {
+                    color: $statusnotstarted;
+                }
+            }
+            &.inprogress {
+                .icon,
+                .statussubtitle {
+                    color: $statusinprogress;
+                }
+            }
+            &.complete {
+                .icon,
+                .icon-inner,
+                .text-inner,
+                .statussubtitle {
+                    color: $statuscomplete;
+                }
+            }
+            &.pending {
+                .icon,
+                .icon-inner,
+                .statussubtitle {
+                    color: $statuspending;
+                }
+            }
+            &.untracked {
+                .icon,
+                .icon-inner,
+                .text-inner,
+                .statussubtitle {
+                    color: $statusuntracked;
+                }
+            }
+        }
+    }
+    &.titlethumb,
+    &.block_cohortcourselink {
+        position: relative;
+        .card-body {
+            h5.card-title {
+                margin: 14px 0 0 90px;
+                font-size: $blockthumbtitlefontsize;
+                line-height: $blockthumbtitlefontsize;
+                color: $bodytext;
+                border-bottom: $blockthumbtitleborder;
+                padding: 0 0 1px;
+            }
+        }
+        .card-text {
+            .meta {
+                position: absolute;
+                top: 0;
+                width: 100px;
+                background: $whitetransparent;
+                z-index: 100;
+                ul {
+                    margin: 0;
+                }
+            }
+            h5 {
+                display: block;
+                font-size: $blockthumbsubtitlefontsize;
+                font-weight: $blockthumbsubtitlefontweight;
+                line-height: $blockthumbsubtitlelineheight;
+                color: $blockthumbsubtitlecolour;
+                margin: 7px 0 0 90px;
+                min-height: 50px;
+            }
+            img.title-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            a.thumblink {
+                display: block;
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-width: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                padding: 0;
+                margin: 0 0 20px;
+            }
+        }
+    }
+    &.titlethumb.hidecontent {
+        #block-region-side-pre & {
+            .card-body {
+                padding: 0;
+            }
+        }
+        + span + a.sr-only + .block {
+            h5.card-title {
+                display: none;
+                body.editing & {
+                    display: block;
+                }
+            }
+        }
+
+    }
+    &.block_cohortcourselink {
+        .bcl-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin: 0 0 $guttermedium;
+            &.bcl-cat-name-assessing-services {
+                .icon {
+                    background: $categoryassessingservices;
+                }
+            }
+            &.bcl-cat-name-building-pathology {
+                .icon {
+                    background: $categorybuildingpathology;
+                }
+            }
+            &.bcl-cat-name-condition-master-class {
+                .icon {
+                    background: $categoryconditionmasterclass;
+                }
+            }
+            &.bcl-cat-name-construction {
+                .icon {
+                    background: $categoryconstruction;
+                }
+            }
+            &.bcl-cat-name-energy {
+                .icon {
+                    background: $categoryenergy;
+                }
+            }
+            &.bcl-cat-name-inspecting-property {
+                .icon {
+                    background: $categoryinspectingproperty;
+                }
+            }
+            &.bcl-cat-name-introduction-to-assessment {
+                .icon {
+                    background: $categoryintroductiontoassessment;
+                }
+            }
+            &.bcl-cat-name-law {
+                .icon {
+                    background: $categorylaw;
+                }
+            }
+            &.bcl-cat-name-practical-day {
+                .icon {
+                    background: $categorypracticalday;
+                }
+            }
+            &.bcl-cat-name-professional-issues {
+                .icon {
+                    background: $categoryprofessionalissues;
+                }
+            }
+            &.bcl-cat-name-rdsap-masterclass {
+                .icon {
+                    background: $categoryrdsapmasterclass;
+                }
+            }
+            &.bcl-cat-name-valuation {
+                .icon {
+                    background: $categoryvaluation;
+                }
+            }
+            &.bcl-cat-name-report-writing {
+                .icon {
+                    background: $categoryreportwriting;
+                }
+            }
+            .icon {
+                flex: 0 0 auto;
+                color: #fff;
+                text-align: center;
+                padding: 8px 11px 20px;
+                font-size: 16px;
+                line-height: 16px;
+            }
+            h3 {
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 300;
+                margin: 0 0 5px;
+            }
+            .cl-duedate,
+            .cl-progress {
+                font-size: 12px;
+                line-height: 14px;
+                display: block;
+            }
+        }
+    }
+    &.subtitle {
+        .card-title {
+            font-size: 27px;
+            line-height: 27px;
+            margin: 0;
+            color: $intuitablemidblue;
+        }
+        .card-text {
+            font-size: 18px;
+            line-height: 28px;
+            color: $intuitabledarkblue;
+            h5 {
+                font-size: 54px;
+                font-weight: 600;
+                line-height: 54px;
+                color: $intuitablered;
+                margin: 0 0 33px;
+                padding: 0 0 18px;
+                border-bottom: 1px dashed $grey6;
+            }
+        }
+    }
+    &.block_news_items {
+        .unlist {
+            .date {
+                font-size:10px;
+                color:$intuitablemidblue;
+                text-transform: uppercase;
+            }
+            .name {
+                color: $intuitabledarkblue;
+                font-weight: 500;
+            }
+            .info {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &.block_recentlyaccessedcourses {
+        position: relative;
+        /* reuired to override important rule */
+        .dashboard-card-deck {
+            &.one-row {
+                justify-content: flex-start!important;
+            }
+            &.fixed-width-cards {
+                .dashboard-card {
+                    flex: 0 0 300px;
+                }
+            }
+        }
+    }
+}
+section.pagebackground {
+    :not(body.editing) & {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;;
+        height: 100vh;
+        #block-region-intuitable-background {
+            .background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                .card-title {
+                    display: none;
+                }
+                .card-body {
+                    padding: 0;
+                    margin: 0;
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    img {
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    body.editing & {
+        position: relative;
+        width: auto;
+        height: auto;
+        #block-region-intuitable-background {
+            .background {
+                position: relative;
+                .card-title {
+                    display: block;
+                    float: left;
+                }
+                .card-text {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+#block-region-intuitable-header {
+    .card {
+        .card-title {
+            color: $red;
+            font-size: 30px;
+            font-weight: 300;
+            letter-spacing: 0;
+            line-height: 31px;  
+        }
+        .card-body {
+            padding: 0;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+#block-region-intuitable-banner {
+    .card {
+        margin: 0 0 $gutterwide;
+        &.banner {
+            border: 0;
+            padding: 0;
+            .card-body {
+                padding: 0;
+                p {
+                    margin: 0;
+                }
+                .img-responsive {
+                    display: block;
+                    max-width: 100%;
+                    margin: 0;
+                    padding:0;
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+#block-region-side-pre {
+    padding-top: 5px;
+    .intuitable-course & {
+        padding-top: 14px;
+    }
+}
+#block-region-side-pre,
+#block-region-intuitable-intro,
+#block-region-intuitable-main {
+    .card-body {
+        padding: 0 0 $gutterpage 0;
+    }
+}
+
+#block-region-intuitable-intro {
+    .card {
+        &:not(.subtitle) {
+            .card-title {
+                font-size: 20px;
+                line-height: 19px;
+                padding: 0 0 $gutternarrow;
+                margin: 0 0 27px;
+                border-bottom: 1px dashed $grey6;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+#block-region-intuitable-main {
+    .block_html {
+        &.thumblinks {
+            .card-title {
+                @include card-title;
+            }
+        }
+    }
+}
+
+#block-region-content {
+    .block {
+        .card-title {
+            @include card-title;
+        }
+        &.block_recentlyaccessedcourses {
+            .card-title {
+                color: $grey1;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 19px;
+                border-bottom: 0;
+            }
+        }
+    }
+    .block_cohortspecifichtml {
+        .card-text {
+            @include card-hero;
+        }
+    }
+    .card-body {
+        padding: 0;
+    }
+}
+
+.block_recentlyaccessedcourses {
+    .page-link {
+        background: transparent;
+        border: 0;
+    }
+}
+.card {
+    &.titlelink {
+        .card-text {
+            .titlelink {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+            }
+        }
+    }
+}
+.thumbsholder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    .thumb {
+        flex: 0 0 24%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        .img-responsive, img {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+        h3 {
+            font-size: 19px;
+            line-height: 19px;
+            color: $red;
+            font-weight: 500;
+            margin: 20px 0 9px;
+        }
+        .thumb_text {
+            flex: 1 0 auto;
+        }
+    }
+}
+

@@ -1,0 +1,66 @@
+#page-header {
+    margin: 0;
+    .col-12 {
+        padding: 0;
+    }
+    .logo {
+        max-width: none;
+        max-height: none;
+        margin: 0 0 0 $gutterpage;
+        padding: 0;
+        .img-responsive {
+            max-height: none;
+            margin: 0;
+        }
+    }
+    .card {
+        background: transparent;
+        margin: 0;
+    }
+    .card-body {
+        padding: 0;
+    }
+
+    #page-my-index.pagelayout-mydashboard &,
+    body.hasblockbackground & {
+        margin: 0 -15px -20px;
+        background: transparent;
+        padding: $gutterpage;
+        padding: 0 15px 20px;
+        .card-body {
+            padding: 0;
+            min-height: 0;
+        }
+        .card {
+            color: $white;
+            margin: 0;
+        }
+    }
+}
+
+#mini-header {
+    .container-logo {
+        .img-responsive {
+            max-width: 105px;
+            height: auto;
+        }
+    }
+    .exit-activity {
+        display: flex;
+        color: $intuitablered;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 27px;
+        .exit-icon {
+            margin-left: 7px;
+            .icon {
+                font-size: 27px;
+                line-height: 27px;
+                height: 27px;
+                width: 27px;
+            }
+        }
+    }
+    margin-top: 80px;
+    margin-bottom: 32px;
+}

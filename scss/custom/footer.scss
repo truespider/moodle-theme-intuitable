@@ -1,0 +1,86 @@
+
+$footerpaddingleft: 80px;
+
+#page-footer {
+    background: transparent;
+    margin: $gutterpage 0 0 -$gutterpage;
+    padding: 0;
+    z-index: 100;
+    .container {
+        max-width: 100%;
+        padding: $guttermedium 0 0;
+        background: $white;
+    }
+    .footer-info,
+    .footer-links,
+    .footer-standard {
+        margin: 0;
+    }
+    .footer-info {
+        padding: $guttermedium 0 $gutternarrow $footerpaddingleft;
+    }
+    .footer-items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 17px;
+        color: #333333;
+        a {
+            color: #333333;
+            text-decoration: underline;
+        }
+        .footercontentitem  {
+            margin: 0 0 14px;
+            &:first-child {
+                margin-bottom: 35px;
+            }
+        }
+        .strong {
+            font-weight: 600;
+        }
+    }
+    .footer-links {
+        list-style: none;
+        margin: 0;
+        padding: $guttermedium $gutterpage $guttermedium $footerpaddingleft;
+        font-size: 16px;
+        line-height: 17px;
+        background-color: #333333;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .footersociallink {
+
+        }
+        .icon {
+            font-size: 16px;
+            color: #fff;
+            padding: 0 $guttermedium 0 0;
+        }
+    }
+    .footer-standard {
+        background-color: #333333;
+        margin: 0;
+        padding: 0 $gutterpage $gutternarrow $footerpaddingleft;
+    }
+    @include media-breakpoint-up(md) {
+        .footer-links, 
+        .footer-standard {
+            margin-left: -40px;
+            padding-left: 120px;
+        }
+        .quiz-nav-only & {
+            .footer-info {
+                margin-left: -125px;
+                padding-left: 205px;
+            }
+            .footer-links {
+                margin-left: -125px;
+                padding-left: 205px;
+            }
+        }
+    }
+}

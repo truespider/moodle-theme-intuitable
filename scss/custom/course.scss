@@ -1,0 +1,509 @@
+$sectiontoggleindent:   180px;
+$sectionthumbindent: 60px;
+.course-content {
+    .collapsible-actions {
+        display: block;
+        margin: 10px 0 72px;
+        padding: 0;
+        text-align: left;
+        a {
+            color: $white;
+            padding: 11px 18px 8px 37px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 14px;
+            text-align: center;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.34);
+            position: relative;
+            &:before {
+                content: "\f0fe";
+                display: block;
+                position: absolute;
+                left: 10px;
+                font-size: 16px;
+                line-height: 16px;
+                text-align: center;
+                color: #fff;
+                font-family: 'FontAwesome';
+                height: 16px;
+                width: 16px;
+            }
+            &.expandall {
+                content: "\f0fe";
+                background: $redgradient;
+            }
+            &.collapseall {
+                background: $redgradient;
+                content: "\f146";
+            }
+        }
+    }
+    ul.collapsibletopics {
+        li.section {
+            &#section-0 {
+                .sectionname, 
+                .summarytext {
+                    display: none;
+                    .editing & {
+                        display: block;
+                    }
+                }
+            }
+             a.sectiontoggle {
+                display: block;
+                position: relative;
+                margin: 0 0 0 $sectiontoggleindent;
+                padding: 0;
+                .sectionname {
+                    color: $red;
+                    font-size: 30px;
+                    font-weight: 500;
+                    letter-spacing: 0;
+                    line-height: 31px;
+                    padding: 12px 0 16px 0px;
+                    margin: 0;
+                }
+                &:before {
+                    display: block;
+                    position: absolute;
+                    left: -$sectiontoggleindent;
+                    top: 35px;
+                    font-size: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    color: $blue;
+                    font-family: 'FontAwesome';
+                    height: 32px;
+                    width: 32px;
+                }
+                &[aria-expanded="false"] {
+                    background-image: none;
+                    background-position: 0 0;
+                    &:before {
+                        content: "\f196";
+                    }
+                }
+                &[aria-expanded="true"] {
+                    background-image: none;
+                    background-position: 0 0;
+                    &:before {
+                        content: "\f147";
+                    }
+                }
+            }
+            .content {
+                padding: 0;
+                margin: 0 0 $gutterpage;
+                position: relative;
+                .editing & {
+                    margin: 0 $gutterpage;
+                }
+            }
+            &.main {
+                border: 0;
+            }
+            ul.section {
+                margin: 0 0 0 $sectionthumbindent;
+            }
+            .section_availability {
+                margin-left: $sectiontoggleindent;
+            }
+        }
+        .content {
+            .summarytext {
+                margin: 0 0 0 $sectiontoggleindent;
+                border-top: 1px dashed $grey6;
+                .img-responsive {
+                    position: absolute;
+                    top: 0;
+                    left: $sectionthumbindent;
+                    margin: 0;
+                    width: 103px;
+                    height: auto;
+                    background: transparent;
+                }
+                ul.meta {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: start;
+                }
+                .meta-item {
+                    flex: 0 0 50%;
+                    min-width: 200px;
+                    margin: $gutternarrow 0;
+                    color: $grey1;
+                    font-size: 18px;
+                    font-weight: 300;
+                    letter-spacing: 0;
+                    line-height: 18px;
+                    .icon.fa {
+                        color: $red;
+                        font-size: 18;
+                        line-height: 18px   ;
+                    }
+                }
+                .intro {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 18px;
+                    line-height: 26px;
+                    font-weight: 300;
+                    color: $grey1;
+                }
+            }
+        }
+    }
+    ul.topics {
+        li.section {
+            .summary {
+                .intuitable-news & 
+                .intuitable-learningskills & {
+                    margin: 0;
+                    padding: 0;
+                }
+                margin: 0;
+            }
+            .left,
+            .right {
+                body:not(.editing) & {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            &.main {
+                border-bottom: 0;
+            }
+        }
+        .sectionname {
+            color: $intuitablered;
+            font-size: 30px;
+            line-height: 31px;
+            font-weight: 500;
+            a {
+                color: $intuitablered;
+            }
+        }
+    }
+    .intuitable-course &,
+    .intuitable-news & {
+        h3.sectionname {
+            color: $intuitablered;
+            font-size: 30px;
+            line-height: 31px;
+            font-weight: 500;
+            a {
+                color: $intuitablered;
+            }
+        }
+        .summary {
+            .datestamp {
+                font-size: 14px;
+                line-height: 14px;
+                color: $intuitablemidblue;
+            }
+            font-size: 14px;
+            line-height: 22px;
+            color: $intuitabledarkblue;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .intuitable-course & {
+        #section-0 {
+            margin-top: 53px;
+            h3.sectionname {
+                font-size: 41px;
+                line-height: 41px;
+                border-bottom: 1px dashed $grey6;
+                padding-bottom: 14px;
+                margin-bottom: 23px;
+                display: none;
+            }
+            .summary {
+                font-size: 18px;
+                line-height: 26px;
+                color: $intuitabledarkblue;
+            }
+        }
+        .section {
+            li.activity {
+                font-size: 18px;
+                line-height: 18px;
+                padding: 14px 0 0;
+                .activityinstance {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .intuitable-learningskills & {
+        h3.sectionname {
+            color: $intuitablered;
+            font-size: 30px;
+            line-height: 31px;
+            font-weight: 500;
+            border-bottom: 1px dashed $grey6;
+            padding: 0 0 16px;
+            margin: 0 0 23px;
+            a {
+                color: $intuitablered;
+            }
+        }
+    }
+    .intuitable-bookings & {
+        h3.sectionname {
+            color: $intuitablered;
+            font-size: 30px;
+            line-height: 31px;
+            font-weight: 500;
+            border-bottom: 1px dashed $grey6;
+            padding: 0 0 16px;
+            margin: 0 0 16px;
+            a {
+                color: $intuitablered;
+            }
+        }
+        .summary {
+            font-size: 14px;
+            line-height: 22px;
+            color: $intuitabledarkblue;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            .activity {
+                .activityinstance {
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: $intuitableblue;
+                    > a {
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: $intuitableblue;
+                    }
+                }
+                img.iconlarge.activityicon {
+                    width:  36px;
+                    height: auto;
+                    margin: 0 18px 0 0;
+                    padding: 0;
+                    position: relative;
+                    top: 8px;
+                }
+                .availabilityinfo,
+                .contentafterlink {
+                    margin: 10px 0 0 54px;
+                }
+            }
+        }
+    }
+    li.section {
+        ul {
+            list-style-position: outside;
+            padding: 0;
+            margin: 0 0 0 $guttermedium;
+        }
+    }
+    .summary {
+        .columns {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            margin: $guttermedium 0;
+            .column {
+                flex: 0 0 100%;
+                @include media-breakpoint-up(smd) {
+                    flex: 0 0 47.5%;
+                }
+                @include media-breakpoint-up(xxl) {
+                    flex: 0 0 31%;
+                }
+                img.img-responsive {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    max-width: none;
+                    margin: 0 0 $guttermedium;
+                    padding: 0;
+                }
+            }
+            .double-column {
+                flex: 0 0 100%;
+                @include media-breakpoint-up(smd) {
+                    flex: 0 0 47.5%;
+                }
+                @include media-breakpoint-up(xxl) {
+                    flex: 0 0 65.5%;
+                }
+                img.img-responsive {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    max-width: none;
+                    margin: 0 0 $guttermedium;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.section {
+    .activity {
+        &.courselink {
+            display: block;
+            margin: 0;
+            padding: 0;
+
+        }
+    }
+    .courselink .contentwithoutlink {
+        display: block;
+        padding: 0;
+        .cl-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin: 0 0 $guttermedium;
+            &.cl-cat-name-assessing-services {
+                .cl-id {
+                    background: $categoryassessingservices;
+                }
+            }
+            &.cl-cat-name-building-pathology {
+                .cl-id {
+                    background: $categorybuildingpathology;
+                }
+            }
+            &.cl-cat-name-condition-master-class {
+                .cl-id {
+                    background: $categoryconditionmasterclass;
+                }
+            }
+            &.cl-cat-name-construction {
+                .cl-id {
+                    background: $categoryconstruction;
+                }
+            }
+            &.cl-cat-name-energy {
+                .cl-id {
+                    background: $categoryenergy;
+                }
+            }
+            &.cl-cat-name-inspecting-property {
+                .cl-id {
+                    background: $categoryinspectingproperty;
+                }
+            }
+            &.cl-cat-name-introduction-to-assessment {
+                .cl-id {
+                    background: $categoryintroductiontoassessment;
+                }
+            }
+            &.cl-cat-name-law {
+                .cl-id {
+                    background: $categorylaw;
+                }
+            }
+            &.cl-cat-name-practical-day {
+                .cl-id {
+                    background: $categorypracticalday;
+                }
+            }
+            &.cl-cat-name-professional-issues {
+                .cl-id {
+                    background: $categoryprofessionalissues;
+                }
+            }
+            &.cl-cat-name-rdsap-masterclass {
+                .cl-id {
+                    background: $categoryrdsapmasterclass;
+                }
+            }
+            &.cl-cat-name-valuation {
+                .cl-id {
+                    background: $categoryvaluation;
+                }
+            }
+            &.cl-cat-name-report-writing {
+                .cl-id {
+                    background: $categoryreportwriting;
+                }
+            }
+           &.untracked {
+                .cl-date {
+                    color: $statusuntracked;
+                }
+            }
+           &.notstarted {
+                .cl-date {
+                    color: $statusnotstarted;
+                }
+            }
+           &.inprogress {
+                .cl-date {
+                    color: $statusinprogress;
+                }
+            }
+           &.pending {
+                .cl-date {
+                    color: $statuspending;
+                }
+            }
+           &.complete {
+                .cl-date {
+                    color: $statuscomplete;
+                }
+            }
+        }
+        .cl-id {
+            flex: 0 0 64px;
+            text-align: center;
+            align-self: stretch;
+            background: $categoryunknown;
+            .icon {
+                display: block;
+                width: 100%;
+                height: 100%;
+                display: block;
+                font-size: 27px;
+                top: 14px;
+                position: relative;
+                color: $white;
+            }
+        }
+        .cl-details {
+            padding: 0 0 0 10px;
+            h3 {
+                font-size: 22px;
+                line-height: 22px;
+                margin: 10px 0;
+            }
+            .cl-desc {
+                font-size: 14px;
+                line-height: 22px;
+                margin: 0;
+            }
+            .cl-date {
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 300;
+                margin: 0;
+            }
+            .completiondate {
+                display: inline-block;
+                margin: 0 0 0 1em;
+            }
+        }
+    }
+}

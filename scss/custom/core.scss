@@ -1,0 +1,230 @@
+#page-wrapper {
+    #page {
+        padding: 70px 55px 0;
+        .pagelayout-mydashboard {
+            padding-top: 0;
+        }
+        @include media-breakpoint-up(md) {
+            padding-top: 0;
+        }
+    }
+}
+#region-main {
+    overflow-x: hidden;
+}
+
+#region-main-settings-menu.has-blocks, 
+#region-main.has-blocks {
+    width: 100%;
+    @include media-breakpoint-up(xl) {
+        width: calc(100% - (#{$blocks-column-width} + #{$gutterpage}));
+    }
+}
+
+[data-region="blocks-column"] {
+    width: 100%;
+    @include media-breakpoint-up(xl) {
+        width: $blocks-column-width;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    #region-main {
+        border: 0;
+        padding: 0;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .col-md-justify-left {
+        text-align: left;
+    }
+    .col-md-justify-right {
+        text-align: right;
+    }
+}
+
+#page {
+    padding: 0 $gutterpage;
+    margin-top: 0;
+    @include media-breakpoint-up(xs) {
+        position: relative;
+        top: 60px;
+    }
+    @include media-breakpoint-up(md) {
+        top: 0;
+    }
+}
+
+#page-content {
+    .row {
+        margin: 0;
+    }
+}
+
+.editing.has-region-intuitable-background {
+    background: $greygradient;
+}
+body.hasblockbackground, 
+.pagelayout-mydashboard {
+    #region-main {
+        margin: 0;
+        background: transparent;
+    }
+    #region-main-box {
+        background: $containertransparentgradient;
+        border-radius: $cardborderradius;
+        padding-left: $gutterpage;
+        padding-right: $gutterpage;
+        padding-top: 55px;
+        padding-top: 15px;
+        .block-region {
+            .card {
+                background-color: transparent;
+                border: 0;
+            }
+        }
+    }
+}
+#page-my-index {
+    #page {
+        top: 160px;
+    }
+    @include media-breakpoint-up(md) {
+        #page {
+            top: 0;
+        }
+    }
+} 
+@include media-breakpoint-up(md)
+#region-main {
+    background-color: transparent;
+    border: 0;
+}
+
+.search-input-wrapper {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    width: auto;
+    &.expanded {
+        width: 100%;
+    }
+    .icon {
+        position: absolute;
+        top: 14px;
+        left: 18px;
+        color: #7a7a7a;
+        font-size: 18px;
+        line-height: 18px;
+        pointer-events: none;
+    }
+    .search-input-form {
+        opacity: 1;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin: 0;
+        > input {
+            width: auto;
+            flex: 1 0 auto;
+            height: 46px;
+            border: 1px solid $grey7;
+            &:focus + i {
+                display: none;
+            }
+        }
+    }
+    .btn {
+        width: auto;
+        padding: 0 34px;
+        color: $white;
+        border-radius: 0 8px 8px 0;
+        border: 1px solid $intuitablered;
+        background: $redgradient;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17px;
+        &:hover,
+        &:active {
+            background: $whitegradient;
+            color: $intuitablered;
+            border-color: $intuitablered;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+    }
+}
+
+body {
+    @include media-breakpoint-down(md) {
+        &.drawer-open-left,
+        &.drawer-open-top {
+            overflow-y: auto;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        padding-left: $menutabwidth;
+        &.drawer-open-left {
+            margin-left: 0;
+        }
+    }
+}
+
+.page-context-header {
+    padding: 0;
+    .page-header-headings {
+        float: none;
+    }
+    h1 {
+        color: $intuitablered;
+        font-size: 41px;
+        line-height: 41px;
+        font-weight: 500;
+        padding: 0 0 14px;
+        margin: 0 0 13px;
+        border-bottom: $maincontentsectiontitleborder; 
+    }
+    .breadcrumb {
+        padding: 0;
+        font-size: 14px;
+    }
+}
+
+
+.generaltable {
+    font-size: 14px;
+    line-height: 24px;
+    th,
+    td {
+        border-top: 1px solid #ffffff;
+        border-left: 1px solid #ffffff;
+        font-size: 14px;
+    }
+
+}
+
+.moodle-dialogue-base {
+    .moodle-dialogue-wrap {
+        .moodle-dialogue-bd {
+            padding: 0 20px 20px;
+        }
+        .moodle-dialogue-hd {
+            border-bottom: 0;
+        }
+        .mform {
+            fieldset {
+                margin: 0 0 20px;
+                border-bottom: 0;
+            }
+        }
+    }
+}

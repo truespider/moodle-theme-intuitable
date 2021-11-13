@@ -1,0 +1,40 @@
+{{!
+    @template theme_intuitable/nav-drawer
+    Example context (json): {}
+}}
+<div id="nav-drawer" data-region="drawer" class="{{^navdraweropen}}closed{{/navdraweropen}} d-print-none moodle-has-zindex" aria-hidden="{{#navdraweropen}}false{{/navdraweropen}}{{^navdraweropen}}true{{/navdraweropen}}" tabindex="-1">
+    <div class="container logo h-sm d-md-fl">
+        <a class="homelink" href="{{{sitehome}}}" title="Intuitable homepage">
+            <img class="img-responsive" src="{{{sitelogo}}}" alt="Intuitable bricks ident" width="38" height="47">
+        </a>
+    </div>
+    <div class="container d-sm h-md">
+        <!-- user_menu -->
+        <div class="nav-group">
+            {{{ output.user_menu }}}
+        </div>
+        {{#isadmin}}
+        <!-- admin search page button -->
+        <div class="nav-group">
+            <a href="{{{adminsearchurl}}}" title="{{{adminsearch}}}" class="btn btn-primary">{{{adminsearch}}}</a>
+        </div>
+        {{/isadmin }}
+    </div>
+    <div class="container search d-sm h-md">
+        {{{ output.search_box }}}
+    </div>
+    <div class="container main">
+        <ul class="mainnavigation">
+        {{{ mainnavigationcontent }}}
+        </ul>
+    </div>
+    {{! mobile only display }}
+    {{#headerlinkscontent}}
+    <div class="container d-sm h-md">
+        <ul class="headerlinks">
+            {{{ headerlinkscontent }}}
+        </ul>
+    </div>
+    {{/headerlinkscontent}}
+  
+</div>

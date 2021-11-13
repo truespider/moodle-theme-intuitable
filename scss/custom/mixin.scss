@@ -1,0 +1,17 @@
+
+
+@mixin card-title {
+    font-size: $maincontentsectiontitlefontsize;
+    font-weight: $maincontentsectiontitlefontweight;
+    line-height: $maincontentsectiontitlelineheight;
+    color: $maincontentsectiontitlecolour;
+    border-bottom: $maincontentsectiontitleborder;
+    padding: $maincontenttitlepadding;
+}
+
+@mixin card-hero {
+    font-size: $blocklargefontsize;
+    font-weight: $blocklargefontweight;
+    line-height: $blocklargelineheight;
+    color: $blocklargecolour;
+}
