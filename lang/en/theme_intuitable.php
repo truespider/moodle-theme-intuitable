@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();                                                                                                
  
 // A description shown in the admin theme selector.                                                                                 
-$string['choosereadme'] = 'Theme intuitable is a child theme of Boost. It implements custom Intuitable layout and style.';                
+$string['choosereadme'] = 'Theme Intuitable is a child theme of Boost. It implements custom Intuitable layout and style.';                
 // The name of our plugin.                                                                                                          
 $string['pluginname'] = 'Intuitable';                                                                                                    
 // Intuitable block regions 
@@ -76,32 +76,26 @@ $string['headerlinksettings'] = 'Header links settings';
 $string['headerlinksheading'] = 'Header links';
 $string['headerlinksheading_desc'] = 'The following settings define the links which are rendered at the top of each page sitewide.';
 
+$string['headerlinktext1'] = 'Header link 1 text';
+$string['headerlinktext1_desc'] = 'The text displayed for the first link in the page header.';
 $string['headerlink1'] = 'Header link 1';
-$string['headerlink1_desc'] = 'Name of the first link in the page header.';
-$string['headerlinkurl1'] = 'Header link 1 url';
-$string['headerlinkurl1_desc'] = 'The url for the first link in the header.';
-$string['headerlinktel1'] = 'Telephone link?';
-$string['headerlinktel1_desc'] = 'Check this to display a phone number link';
-$string['headerlinkmailto1'] = 'Email?';
-$string['headerlinkmailto1_desc'] = 'Check this to display an email link';
+$string['headerlink1_desc'] = 'The first link in the header: email address, phone number or url';
+$string['headerlinkselect1'] = 'Header link 1 type';
+$string['headerlinkselect1_desc'] = 'Select email, tel or url';
 
+$string['headerlinktext2'] = 'Header link 2 text';
+$string['headerlinktext2_desc'] = 'The text displayed for the http_send_content_disposition(filename) link in the page header.';
 $string['headerlink2'] = 'Header link 2';
-$string['headerlink2_desc'] = 'Name of the second link in the page header.';
-$string['headerlinkurl2'] = 'Header link 2 url';
-$string['headerlinkurl2_desc'] = 'The url for the second link in the header.';
-$string['headerlinktel2'] = 'Telephone link?';
-$string['headerlinktel2_desc'] = 'Check this to display a phone number link';
-$string['headerlinkmailto2'] = 'Email?';
-$string['headerlinkmailto2_desc'] = 'Check this to display an email link';
+$string['headerlink2_desc'] = 'The second link in the header: email address, phone number or url';
+$string['headerlinkselect2'] = 'Header link 2 type';
+$string['headerlinkselect2_desc'] = 'Select email, tel or url';
 
+$string['headerlinktext3'] = 'Header link 3 text';
+$string['headerlinktext3_desc'] = 'The text displayed for the third link in the page header.';
 $string['headerlink3'] = 'Header link 3';
-$string['headerlink3_desc'] = 'Name of the third link in the page header.';
-$string['headerlinkurl3'] = 'Header link 3 url';
-$string['headerlinkurl3_desc'] = 'The url for the third link in the header.';
-$string['headerlinktel3'] = 'Telephone link?';
-$string['headerlinktel3_desc'] = 'Check this to display a phone number link';
-$string['headerlinkmailto3'] = 'Email?';
-$string['headerlinkmailto3_desc'] = 'Check this to display an email link';
+$string['headerlink3_desc'] = 'The third link in the header: email address, phone number or url';
+$string['headerlinkselect3'] = 'Header link 3 type';
+$string['headerlinkselect3_desc'] = 'Select email, tel or url';
 
 /* custom navigation */
 $string['navigationsettings'] = 'Main navigation settings';
@@ -229,3 +223,9 @@ $string['prefixtel'] = 'Call:';
 /* activity , quiz */
 $string['endtest'] = 'Finish attempt';
 $string['exitactivity'] = 'Exit {$a}';
+
+// type of link
+$string['mailto'] = 'Link with email address';
+$string['tel'] = 'Link with telephone number';
+$string['url'] = 'Link with url';
+

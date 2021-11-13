@@ -82,6 +82,11 @@ if ($ADMIN->fulltree) {
     // Add tab to settings page.
     $settings->add($page);
 
+    $headerlinkselectoptions = array(
+        0 => get_string('mailto', 'theme_intuitable'), 
+        1 => get_string('tel', 'theme_intuitable'), 
+        2 => get_string('url', 'theme_intuitable'));
+
     // Create header links tab.
     $page = new admin_settingpage('theme_intuitable_headerlinks', get_string('headerlinksettings', 'theme_intuitable', null, true));
 
@@ -93,87 +98,66 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Settings for the three header links
-    $name = 'theme_intuitable/headerlink1';
-    $title = get_string('headerlink1', 'theme_intuitable', null, true);
-    $description = get_string('headerlink1_desc', 'theme_intuitable', null, true);
+    $name = 'theme_intuitable/headerlinktext1';
+    $title = get_string('headerlinktext1', 'theme_intuitable', null, true);
+    $description = get_string('headerlinktext1_desc', 'theme_intuitable', null, true);
     $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 40, 40);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_intuitable/headerlinkurl1';
-    $title = get_string('headerlinkurl1', 'theme_intuitable', null, true);
-    $description = get_string('headerlinkurl1_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_URL, 60, 200);
+    $name = 'theme_intuitable/headerlinkselect1';
+    $title = get_string('headerlinkselect1', 'theme_intuitable', null, true);
+    $description = get_string('headerlinkselect1_desc', 'theme_intuitable', null, true);
+    $setting = new admin_setting_configselect($name, $title, $description,  1, $headerlinkselectoptions);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_intuitable/headerlinktel1';
-    $title = get_string('headerlinktel1', 'theme_intuitable', null, true);
-    $description = get_string('headerlinktel1_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description,  'yes', 'yes', 'no');
+    $name = 'theme_intuitable/headerlink1';
+    $title = get_string('headerlink1', 'theme_intuitable', null, true);
+    $description = get_string('headerlink1_desc', 'theme_intuitable', null, true);
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 60, 200);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_intuitable/headerlinkmailto1';
-    $title = get_string('headerlinkmailto1', 'theme_intuitable', null, true);
-    $description = get_string('headerlinkmailto1_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description,  'yes', 'yes', 'no');
+    $name = 'theme_intuitable/headerlinktext2';
+    $title = get_string('headerlinktext2', 'theme_intuitable', null, true);
+    $description = get_string('headerlinktext2_desc', 'theme_intuitable', null, true);
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 40, 40);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_intuitable/headerlinkselect2';
+    $title = get_string('headerlinkselect2', 'theme_intuitable', null, true);
+    $description = get_string('headerlinkselect2_desc', 'theme_intuitable', null, true);
+    $setting = new admin_setting_configselect($name, $title, $description,  0, $headerlinkselectoptions);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     $name = 'theme_intuitable/headerlink2';
     $title = get_string('headerlink2', 'theme_intuitable', null, true);
     $description = get_string('headerlink2_desc', 'theme_intuitable', null, true);
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 60, 200);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_intuitable/headerlinktext3';
+    $title = get_string('headerlinktext3', 'theme_intuitable', null, true);
+    $description = get_string('headerlinktext2_desc', 'theme_intuitable', null, true);
     $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 40, 40);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    $name = 'theme_intuitable/headerlinkurl2';
-    $title = get_string('headerlinkurl2', 'theme_intuitable', null, true);
-    $description = get_string('headerlinkurl2_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_URL, 60, 200);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    $name = 'theme_intuitable/headerlinktel2';
-    $title = get_string('headerlinktel2', 'theme_intuitable', null, true);
-    $description = get_string('headerlinktel2_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description,  'yes', 'yes', 'no');
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    $name = 'theme_intuitable/headerlinkmailto2';
-    $title = get_string('headerlinkmailto2', 'theme_intuitable', null, true);
-    $description = get_string('headerlinkmailto2_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description,  'yes', 'yes', 'no');
+    $name = 'theme_intuitable/headerlinkselect3';
+    $title = get_string('headerlinkselect3', 'theme_intuitable', null, true);
+    $description = get_string('headerlinkselect3_desc', 'theme_intuitable', null, true);
+    $setting = new admin_setting_configselect($name, $title, $description,  2, $headerlinkselectoptions);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     $name = 'theme_intuitable/headerlink3';
     $title = get_string('headerlink3', 'theme_intuitable', null, true);
     $description = get_string('headerlink3_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 40, 40);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    $name = 'theme_intuitable/headerlinkurl3';
-    $title = get_string('headerlinkurl3', 'theme_intuitable', null, true);
-    $description = get_string('headerlinkurl3_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_URL, 60, 200);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    $name = 'theme_intuitable/headerlinktel3';
-    $title = get_string('headerlinktel3', 'theme_intuitable', null, true);
-    $description = get_string('headerlinktel3_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description,  'yes', 'yes', 'no');
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    $name = 'theme_intuitable/headerlinkmailto3';
-    $title = get_string('headerlinkmailto3', 'theme_intuitable', null, true);
-    $description = get_string('headerlinkmailto3_desc', 'theme_intuitable', null, true);
-    $setting = new admin_setting_configcheckbox($name, $title, $description,  'yes', 'yes', 'no');
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 60, 200);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

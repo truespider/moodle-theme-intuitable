@@ -68,30 +68,29 @@ if ($showpageheaderlogo) {
 $minilogo = $this->page->theme->setting_file_url('logomini', 'logomini');
 // header links
 for ( $headerlinks_i = 1 ; $headerlinks_i < 4 ; $headerlinks_i++) {
+    $settingcontenttype = 0;
     $settingcontenturl = '';
-    $settingcontenttel = '';
-    $settingcontentmailto = '';
     $settingoutput = '';
-    $settingcontent = get_config('theme_intuitable', 'headerlink'.$headerlinks_i);
-    $settingcontenttel = get_config('theme_intuitable', 'headerlinktel'.$headerlinks_i);
-    $settingcontentmailto = get_config('theme_intuitable', 'headerlinkmailto'.$headerlinks_i);
+    $linkoutput = '';
+    $settingcontenttext = get_config('theme_intuitable', 'headerlinktext'.$headerlinks_i);
     $contentclass = 'headerlink';
-    if (! is_null($settingcontent)) {
-        $settingcontenturl = get_config('theme_intuitable', 'headerlinkurl'.$headerlinks_i);
+    if (! is_null($settingcontenttext)) {
+        $settingcontenttype = get_config('theme_intuitable', 'headerlinkselect'.$headerlinks_i);
+        $settingcontenturl = get_config('theme_intuitable', 'headerlink'.$headerlinks_i);
         if (strlen($settingcontenturl) !== 0) {
-            $linkoutput = html_writer::tag('a', $settingcontent,['href' => $CFG->wwwroot.$settingcontenturl]);
-            $settingoutput = html_writer::tag('li'
-                                            , $linkoutput
-                                            , ['class' => $contentclass]);
-        }
-        else if ($settingcontenttel === 'yes') {
-            $linkoutput = html_writer::tag('a', $prefixtel.' '.$settingcontent,['href' => 'tel:'.$settingcontent]);
-            $settingoutput = html_writer::tag('li'
-                                            , $linkoutput
-                                            , ['class' => $contentclass]);
-        }
-        else if ($settingcontentmailto === 'yes') {
-            $linkoutput = html_writer::tag('a', $prefixmailto.' '.$settingcontent,['href' => 'mailto:'.$settingcontent]);
+            switch ($settingcontenttype)  {
+                // email
+                case 0 :    $linkoutput = html_writer::tag('a', $settingcontenttext,['href' => 'mailto:'.$settingcontenturl]);
+                            break;
+                // tel
+                case 1 :    $linkoutput = html_writer::tag('a', $settingcontenttext,['href' => 'tel:'.$settingcontenturl]);
+                            break;
+                // url
+                case 2 :    $linkoutput = html_writer::tag('a', $settingcontenttext,['href' => $CFG->wwwroot.$settingcontenturl]);
+                            break;
+                default : 
+                            break;
+            }
             $settingoutput = html_writer::tag('li'
                                             , $linkoutput
                                             , ['class' => $contentclass]);
