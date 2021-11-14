@@ -55,6 +55,12 @@ $string['logoheader_desc'] = 'The logo displayed in the header on home page, das
 $string['logosite'] = 'Sitewide logo';
 $string['logosite_desc'] = 'The logo displayed in the main navigation sitewide after login.';
 
+$string['logoalt'] = 'Logo alt text';
+$string['logoalt_desc'] = 'The text usde for the logo image alt text';
+
+$string['logositehomelinktext'] = 'Site home link text';
+$string['logositehomelinktext_desc'] = 'The tooltip / title for the main navigation site home link.';  
+
 $string['logomini'] = 'Mini header logo';
 $string['logomini_desc'] = 'The logo displayed on pages with minimal navigation, such as quiz pages.';
 

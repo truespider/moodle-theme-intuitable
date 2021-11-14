@@ -38,6 +38,8 @@ $cohortfilter = '';
 $showpageheaderlogo = false;
 $sitelogo = '';
 $headerlogo = '';
+$logoalt = get_config('theme_intuitable', 'logoalt');
+$sitehomelinktext = get_config('theme_intuitable', 'logositehomelinktext');
 $minilogo = '';
 $welcomemessagename = false;
 if (isloggedin() && $PAGE->pagelayout === 'mydashboard') {
@@ -66,6 +68,7 @@ if ($showpageheaderlogo) {
 }
 
 $minilogo = $this->page->theme->setting_file_url('logomini', 'logomini');
+$sitelogo = $this->page->theme->setting_file_url('logosite', 'logosite');
 // header links
 for ( $headerlinks_i = 1 ; $headerlinks_i < 4 ; $headerlinks_i++) {
     $settingcontenttype = 0;
@@ -99,8 +102,6 @@ for ( $headerlinks_i = 1 ; $headerlinks_i < 4 ; $headerlinks_i++) {
     }
 }
 
-// main navigation logo from theme setting
-$sitelogo = $this->image_url('logo-intuitable', 'theme');
 // all main nav items
 // use course category to determine if active link
 $linkactiveclass = '';

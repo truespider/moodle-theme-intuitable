@@ -27,14 +27,11 @@ defined('MOODLE_INTERNAL') || die();
 
 $bodyattributes = $OUTPUT->body_attributes();
 
-// pix:theme_intuitable|backgroundimagelogin
-
 // get Intuitable theme settings and set template context
 require("{$CFG->dirroot}/theme/intuitable/layout/partials/themesettings.php"); 
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'loginlogo' => $OUTPUT->image_url('logo-login', 'theme'), 
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
     'headerlinkscontent' => $headerlinkscontent,
@@ -43,5 +40,4 @@ $templatecontext = [
     'mobilenavbar' => $mobilenavbar
 ];
 
-// $imageurl = moodle_url::make_pluginfile_url($context->id, 'theme', 'logologin', $badge->id, '/', 'logologin', false);
 echo $OUTPUT->render_from_template('theme_intuitable/login', $templatecontext);

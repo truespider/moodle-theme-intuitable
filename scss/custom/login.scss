@@ -11,12 +11,15 @@ body.pagelayout-login {
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
+        background-image: none;
         text-align: center;
         min-height: 13vh;
         max-height: 16vh;
         padding: 0;
         .img-responsive {
-            display: none;
+            min-height: 13vh;
+            max-height: 16vh;
+            padding: 0;
         }
     }
     #page {

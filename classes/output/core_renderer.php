@@ -70,7 +70,7 @@ class core_renderer extends \core_renderer {
      * @return string
      */
     public function render_login(\core_auth\output\login $form) {
-        global $CFG, $SITE;
+        global $CFG, $SITE, $PAGE;
 
         $context = $form->export_for_template($this);
 
@@ -81,24 +81,12 @@ class core_renderer extends \core_renderer {
             $context->cookieshelpiconformatted = $this->help_icon('cookiesenabled');
         }
         $context->errorformatted = $this->error_text($context->error);
-        // 
-        // $url = $this->image_url('logologin', 'theme_intuitable');
-        // if ($url) {
-        //     $url = $url->out(false);
-        // }
-        // $context->logourl = $url;
-        // for now, Intuitable login logo in theme pix folder used
-
-        // $context->loginlogo = $this->image_url('logo-login', 'theme');    
-        // 202107 redundant as login logo provided via background style    
-        $context->loginlogo = $this->image_url('logologin', 'theme');        
-
-        // ideally, would user the uploaded logo
-        // check usage of file server pluginfile 
-        // $context->loginlogo2 = $this->image_url('logologin', 'theme');        
         $context->sitename = format_string($SITE->fullname, true,
                 ['context' => context_course::instance(SITEID), "escape" => false]);
         // MODIFICATION START.
+        // add loginlogo, logoalt 
+        $context->logoalt = get_config('theme_intuitable', 'logoalt');   
+        $context->loginlogo = $PAGE->theme->setting_file_url('logologin', 'logologin');
         return $this->render_from_template('theme_intuitable/core/loginform', $context);
         // MODIFICATION END.
     }
@@ -170,17 +158,13 @@ class core_renderer extends \core_renderer {
         $header->showpagetitle = $showpagetitle;
         $header->showpageheaderlogo = $showpageheaderlogo;
         $header->showbreadcrumb = $showbreadcrumb;
-        if ($showpageheaderlogo) {
-            // $header->headerlogo = $this->image_url('logoheader', 'theme');
-            if (!empty($this->page->theme->settings->logoheader)) {
-                // $url = $this->page->theme->setting_file_url('logoheader', 'logoheader');
-                $header->headerlogo = $this->page->theme->setting_file_url('logoheader', 'logoheader');
-                // Get a URL suitable for moodle_url.
-                // $relativebaseurl = preg_replace('|^https?://|i', '//', $CFG->wwwroot);
-                // $url = str_replace($relativebaseurl, '', $url);
-                // $header->headerlogo = new moodle_url($url);
-            }
-        }
+        // check if redundant - values defined in the layout theme settings?
+        // if ($showpageheaderlogo) {
+        //     if (!empty($this->page->theme->settings->logoheader)) {
+        //         $header->headerlogo = $this->page->theme->setting_file_url('logoheader', 'logoheader');
+        //         $header->logosite = $this->page->theme->setting_file_url('logosite', 'logosite');
+        //     }
+        // }
         return $this->render_from_template('theme_intuitable/core/full_header', $header);
     }
 

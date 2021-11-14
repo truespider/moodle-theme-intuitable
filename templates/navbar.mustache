@@ -25,8 +25,8 @@
         {{#mobilenavbar}}
         <div data-region="drawer-toggle" class="row align-items-center d-sm h-md">
             <div class="container logo-toggle">
-                <a class="homelink" href="{{{sitehome}}}" title="Intuitable homepage">
-                    <img class="img-responsive" src="{{{sitelogo}}}" alt="Intuitable bricks ident" width="38" height="47">
+                <a class="homelink" href="{{{sitehome}}}" title="{{{sitehometext}}}">
+                    <img class="img-responsive" src="{{{sitelogo}}}" alt="{{{logoalt}}}" width="38" height="47">
                 </a>
             </div>
             <div class="container ctl">
@@ -81,7 +81,7 @@
                 {{#showpageheaderlogo}}
                 <!-- Intuitable logo  -->
                 <div class = "container logo">
-                    {{! logo uploaded via theme settings logoheader is used as background for this div }}
+                <img class = "img-responsive" src="{{{ headerlogo }}}" alt="{{{ logoalt }}}" />
                 </div>
                 {{/showpageheaderlogo}}
                 {{^editing}}
@@ -103,3 +103,4 @@
         </div>
 </nav>
 
+ 

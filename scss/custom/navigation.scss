@@ -45,10 +45,6 @@ body.drawer-open-top div#page:after {
             margin: 0;
             padding: 0;
             align-items: center;
-                .img-responsive {
-                    max-height: none;
-                    max-width: none;
-                }
         }
         &.main {
             flex: 1 0 auto;
@@ -476,14 +472,10 @@ body.drawer-open-top div#page:after {
             padding: 0;
             margin: 0 0 0 $gutterpage;
             max-width: none;
-            background-image: url([[pix:theme_intuitable|logoheader]]);
-            background-size: contain;
-            background-position: left top;
-            background-repeat: no-repeat;
             height: 65px;
             width: auto;
             .img-responsive {
-                max-height: none;
+                max-height: 65px;
                 max-width: 80%;
                 margin: 0;
                 padding: 0;

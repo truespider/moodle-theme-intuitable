@@ -47,6 +47,20 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_intuitable_update_settings_images');
     $page->add($setting);
     
+    $name = 'theme_intuitable/logoalt';
+    $title = get_string('logoalt', 'theme_intuitable');
+    $description = get_string('logoalt_desc', 'theme_intuitable');
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 40, 40);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_intuitable/logositehomelinktext';
+    $title = get_string('logositehomelinktext', 'theme_intuitable');
+    $description = get_string('logositehomelinktext_desc', 'theme_intuitable');
+    $setting = new admin_setting_configtext_with_maxlength($name, $title, $description, null, PARAM_TEXT, 40, 40);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     // Header logo setting.
     $name = 'theme_intuitable/logoheader';
     $title = get_string('logoheader', 'theme_intuitable');
