@@ -402,7 +402,7 @@ section.pagebackground {
         left: 0;
         width: 100vw;;
         height: 100vh;
-        #block-region-intuitable-background {
+        #block-region-rgn-background {
             .background {
                 position: absolute;
                 top: 0;
@@ -433,7 +433,7 @@ section.pagebackground {
         position: relative;
         width: auto;
         height: auto;
-        #block-region-intuitable-background {
+        #block-region-rgn-background {
             .background {
                 position: relative;
                 .card-title {
@@ -447,7 +447,7 @@ section.pagebackground {
         }
     }
 }
-#block-region-intuitable-header {
+#block-region-rgn-header {
     .card {
         .card-title {
             color: $red;
@@ -464,7 +464,7 @@ section.pagebackground {
         }
     }
 }
-#block-region-intuitable-banner {
+#block-region-rgn-banner {
     .card {
         margin: 0 0 $gutterwide;
         &.banner {
@@ -497,14 +497,14 @@ section.pagebackground {
     }
 }
 #block-region-side-pre,
-#block-region-intuitable-intro,
-#block-region-intuitable-main {
+#block-region-rgn-intro,
+#block-region-rgn-main {
     .card-body {
         padding: 0 0 $gutterpage 0;
     }
 }
 
-#block-region-intuitable-intro {
+#block-region-rgn-intro {
     .card {
         &:not(.subtitle) {
             .card-title {
@@ -519,7 +519,7 @@ section.pagebackground {
     }
 }
 
-#block-region-intuitable-main {
+#block-region-rgn-main {
     .block_html {
         &.thumblinks {
             .card-title {
