@@ -42,12 +42,12 @@ require("{$CFG->dirroot}/theme/intuitable/layout/partials/themesettings.php");
 
 
 $blockshtml = $OUTPUT->blocks('side-pre');
-$blocksbackground = $OUTPUT->blocks('rgn-background');
-$blocksbanner = $OUTPUT->blocks('rgn-banner');
-$blocksheader = $OUTPUT->blocks('rgn-header');
-$blocksintro = $OUTPUT->blocks('rgn-intro');
-$blocksmain = $OUTPUT->blocks('rgn-main');
-$blocksfooter = $OUTPUT->blocks('rgn-footer');
+$blocksbackground = $OUTPUT->blocks('background');
+$blocksbanner = $OUTPUT->blocks('banner');
+$blocksheader = $OUTPUT->blocks('header');
+$blocksintro = $OUTPUT->blocks('intro');
+$blocksmain = $OUTPUT->blocks('main');
+$blocksfooter = $OUTPUT->blocks('footer');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $hasblocksbackground = strpos($blocksbackground, 'data-block=') !== false;
 $hasblocksbanner = strpos($blocksbanner, 'data-block=') !== false;

@@ -402,7 +402,7 @@ section.pagebackground {
         left: 0;
         width: 100vw;;
         height: 100vh;
-        #block-region-rgn-background {
+        #block-region-background {
             .background {
                 position: absolute;
                 top: 0;
@@ -430,24 +430,35 @@ section.pagebackground {
         }
     }
     body.editing & {
-        position: relative;
-        width: auto;
-        height: auto;
-        #block-region-rgn-background {
+        position: absolute;
+        #block-region-background {
             .background {
-                position: relative;
+                .block-controls {
+                    padding: 15px 0;
+                    background: #ffffff;
+                    position: absolute;
+                    top: 0;
+                    right: 55px;
+                    float: none!important;
+                    z-index: 200;
+                }
                 .card-title {
                     display: block;
                     float: left;
+                    margin: 0 0 0 175px;
+                    padding: 15px 0;
                 }
-                .card-text {
-                    display: none;
+                .card-body {
+                    img {
+                        max-width: 100%;
+                        width: 100%;                    
+                    }
                 }
             }
         }
     }
 }
-#block-region-rgn-header {
+#block-region-header {
     .card {
         .card-title {
             color: $red;
@@ -464,7 +475,7 @@ section.pagebackground {
         }
     }
 }
-#block-region-rgn-banner {
+#block-region-banner {
     .card {
         margin: 0 0 $gutterwide;
         &.banner {
@@ -497,14 +508,14 @@ section.pagebackground {
     }
 }
 #block-region-side-pre,
-#block-region-rgn-intro,
-#block-region-rgn-main {
+#block-region-intro,
+#block-region-main {
     .card-body {
         padding: 0 0 $gutterpage 0;
     }
 }
 
-#block-region-rgn-intro {
+#block-region-intro {
     .card {
         &:not(.subtitle) {
             .card-title {
@@ -519,7 +530,7 @@ section.pagebackground {
     }
 }
 
-#block-region-rgn-main {
+#block-region-main {
     .block_html {
         &.thumblinks {
             .card-title {

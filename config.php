@@ -85,31 +85,31 @@ $THEME->layouts = [
     // Standard layout with blocks, this is recommended for most pages with general information.
     'standard' => array(
         'file' => 'columns2.php',
-        'regions' => array('rgn-banner','rgn-header','rgn-intro','rgn-main','side-pre','rgn-footer'),
+        'regions' => array('banner','header','intro','main','side-pre','footer'),
         'defaultregion' => 'side-pre',
     ),
     // Main course page.
     'course' => array(
         'file' => 'columns2.php',
-        'regions' => array('rgn-background','rgn-banner','rgn-header','rgn-intro','rgn-main','side-pre','rgn-footer'),
+        'regions' => array('background','banner','header','intro','main','side-pre','footer'),
         'defaultregion' => 'side-pre',
         'options' => array('langmenu' => true),
     ),
     'coursecategory' => array(
         'file' => 'columns2.php',
-        'regions' => array('rgn-background','rgn-banner','rgn-header','rgn-intro','rgn-main','side-pre','rgn-footer'),
+        'regions' => array('background','banner','header','intro','main','side-pre','footer'),
         'defaultregion' => 'side-pre',
     ),
     // Part of course, typical for modules - default page layout if $cm specified in require_login().
     'incourse' => array(
         'file' => 'incourse.php',
-        'regions' => array('rgn-banner','rgn-header','rgn-intro','rgn-main','side-pre','rgn-footer'),
-        'defaultregion' => 'rgn-intro',
+        'regions' => array('banner','header','intro','main','side-pre','footer'),
+        'defaultregion' => 'intro',
     ),
     // The site home page.
     'frontpage' => array(
         'file' => 'columns2.php',
-        'regions' => array('rgn-background','rgn-banner','rgn-header','rgn-intro','rgn-main','side-pre','rgn-footer'),
+        'regions' => array('background','banner','header','intro','main','side-pre','footer'),
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true),
     ),
@@ -122,7 +122,7 @@ $THEME->layouts = [
     // My dashboard page.
     'mydashboard' => array(
         'file' => 'columns2.php',
-        'regions' => array('rgn-background','rgn-banner','rgn-header','rgn-intro','rgn-main','side-pre','rgn-footer'),
+        'regions' => array('background','banner','header','intro','main','side-pre','footer'),
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true, 'langmenu' => true, 'nocontextheader' => true),
     ),

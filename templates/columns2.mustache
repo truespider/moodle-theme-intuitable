@@ -89,12 +89,13 @@
 
 
 {{^editing}}
+{{/editing}}
 {{#hasintuitablebackgroundblocks}}
 <section data-region="blocksbackground" class="d-print-none pagebackground" aria-label="{{#str}}blocks{{/str}}">
     {{{ intuitablebackgroundblocks }}}
 </section>
 {{/hasintuitablebackgroundblocks}}
-{{/editing}}
+
 
 <div id="page-wrapper" class="d-print-block">
 
@@ -105,12 +106,6 @@
 
     <div id="page" class="container-fluid d-print-block">
         {{#editing}}
-        {{#hasintuitablebackgroundblocks}}
-        <section data-region="blocksbackground" class="d-print-none pagebackground" aria-label="{{#str}}blocks{{/str}}">
-            {{{ intuitablebackgroundblocks }}}
-        </section>
-        {{/hasintuitablebackgroundblocks}}
-
         {{#hasintuitableheaderblocks}}
         <section data-region="blocks-header" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
             {{{ intuitableheaderblocks }}}

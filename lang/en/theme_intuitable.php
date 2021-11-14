@@ -30,13 +30,13 @@ $string['choosereadme'] = 'Theme Intuitable is a child theme of Boost. It implem
 // The name of our plugin.                                                                                                          
 $string['pluginname'] = 'Intuitable';                                                                                                    
 // Intuitable block regions 
-$string['region-rgn-background'] = 'Page background';                                                         
-$string['region-rgn-header'] = 'Header';
-$string['region-rgn-banner'] = 'Banner';
-$string['region-rgn-intro'] = 'Intro';
-$string['region-rgn-main'] = 'Main';
+$string['region-background'] = 'Page background';                                                         
+$string['region-header'] = 'Header';
+$string['region-banner'] = 'Banner';
+$string['region-intro'] = 'Intro';
+$string['region-main'] = 'Main';
 $string['region-side-pre'] = 'Side';
-$string['region-rgn-footer'] = 'Footer';
+$string['region-footer'] = 'Footer';
 
 $string['adminsearch'] = 'Admin';
 $string['adminsearchurl'] = '/admin/search.php/';

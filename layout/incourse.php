@@ -89,18 +89,18 @@ switch ($PAGE->pagetype) {
         $showincoursenav = false;
         $showquizheader  = true;
         $extraclasses[] = 'quiz-nav-only';
-        $blocksbanner = $OUTPUT->quizblocks('rgn-banner'); // used for the quiz nav fake block
+        $blocksbanner = $OUTPUT->quizblocks('banner'); // used for the quiz nav fake block
         break;
     default: 
-        $blocksbackground = $OUTPUT->blocks('rgn-background');
-        $blocksbanner = $OUTPUT->blocks('rgn-banner');
-        $blocksheader = $OUTPUT->blocks('rgn-header');    
-        $blocksintro = $OUTPUT->blocks('rgn-intro');
+        $blocksbackground = $OUTPUT->blocks('background');
+        $blocksbanner = $OUTPUT->blocks('banner');
+        $blocksheader = $OUTPUT->blocks('header');    
+        $blocksintro = $OUTPUT->blocks('intro');
         break;
 }
 
-$blocksmain = $OUTPUT->blocks('rgn-main');
-$blocksfooter = $OUTPUT->blocks('rgn-footer');
+$blocksmain = $OUTPUT->blocks('main');
+$blocksfooter = $OUTPUT->blocks('footer');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $hasblocksbackground = strpos($blocksbackground, 'data-block=') !== false;
 $hasblocksbanner = strpos($blocksbanner, 'data-block=') !== false;

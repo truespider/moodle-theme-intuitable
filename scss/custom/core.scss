@@ -1,4 +1,7 @@
 #page-wrapper {
+    .editing.hasblockbackground & {
+        margin-top: 80px;
+    }
     #page {
         padding: 70px 55px 0;
         .pagelayout-mydashboard {
