@@ -52,9 +52,11 @@ $prefixtel = get_string('prefixtel', 'theme_intuitable');
 
 foreach ($coursemetadata as $key => $val) {
     switch ($key) {
-        case "intuitable_showpageheaderlogo" : $showpageheaderlogo = $val; break;
-        case "intuitable_category" : 
-        case "intuitable_subcategory" : $extraclasses[] = $val; break;
+        case "showpageheaderlogo" : $showpageheaderlogo = $val; break;
+        case "customcategory" : 
+        case "customsubcategory" : $extraclasses[] = $val; break;
+        case "showbreadcrumb": break;
+        case "showpagetitle": break;
         default: break;
     }
 }

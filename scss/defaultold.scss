@@ -1,0 +1,211 @@
+/* NB ! 
+* cli to compile the scss and see errors, not shown via mooodle's purgecaches rebuild 
+* adjust path of not run from moodle root folder
+*  php ./admin/cli/build_theme_css.php -t=intuitable  -d=ltr 
+*  php ./admin/cli/purge_caches.php
+* 
+* default grid breakpoints defined in bootstrap variables
+*  xs: 0,
+*  sm: 576px,
+*  md: 768px,
+*  lg: 992px,
+*  xl: 1200px
+*
+*/
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  smd: 680px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1450px
+);
+
+
+/* intuitable brand colours */
+$intuitablegreen:         #4EB235;
+$intuitablered:           #e2101a;
+$intuitableblue:          #1177D1;
+$intuitablemidblue:       #A9B8BE;
+$intuitablelightblue:     #F7F8F9;
+$intuitabledarkblue:      #294D5D;
+$intuitablecommonroom:    #AD907E;
+$intuitableorange:        #f0ad4e;
+$grey1:             #294D5D;
+$grey2:             #323537;
+$grey3:             #424648;
+$grey4:             #434242;
+$grey5:             #4B5052;
+$grey6:             #979797;
+$grey7:             #A9B8BE;
+$grey8:             #f2f2f2;
+$grey9:             #110F0F;
+
+$blue:              $intuitableblue;
+$red:               $intuitablered;
+$red2:              #A3586D;
+$white:             #ffffff;
+$whitetransparent:  rgba(255,255,255,0.85);
+$blacktransparent:  rgba(0,0,0,0.76);
+$primary:           $intuitablered;
+$secondary:         $intuitablered;
+$success:           $intuitablegreen;
+$info:              $intuitableblue;
+
+$statusuntracked:       $grey7;
+$statusnotstarted:      $intuitablered;
+$statusinprogress:      $intuitabledarkblue;
+$statuspending:         $intuitabledarkblue;
+$statuscomplete:        $intuitablegreen;
+
+$quecorrect:              #3F9D5D;
+$queincorrect:            $intuitablered;
+$quepartiallycorrect:     $intuitableorange;
+$quecorrecttext:          #ffffff;
+$queincorrecttext:        #ffffff;
+$quepartiallycorrecttext: #ffffff;
+$outcomecorrect:              rgba(17,119,209, 0.08);
+$outcomeincorrect:            rgba(226,16,26,0.1);
+$outcomepartiallycorrect:     rgba(226,16,26,0.1);
+$outcomecorrecttext:          $intuitabledarkblue;
+$outcomeincorrecttext:        $intuitabledarkblue;
+$outcomepartiallycorrecttext: $intuitabledarkblue;
+
+$categoryassessingservices:         #2AB29A;
+$categorybuildingpathology:         #5C4B72;
+$categoryconditionmasterclass:      #F4D552;
+$categoryconstruction:              #F18646;
+$categoryenergy:                    #D75F8E;
+$categoryinspectingproperty:        #005D96;
+$categoryintroductiontoassessment:  #945798;
+$categorylaw:                       #B05831;
+$categorypracticalday:              #EB5F60;
+$categoryprofessionalissues:        #A3586D;
+$categoryrdsapmasterclass:          #01363F;
+$categoryreportwriting:             #65829D;
+$categoryvaluation:                 #3F9D5D;
+$categoryunknown:                   $intuitablemidblue;
+$bodytext:      $grey1;
+$link:          $intuitableblue;
+$linkvisited:   $intuitableblue;
+$linkhover:     $intuitableblue;
+$linkactive:    $intuitableblue;
+$loginnavtext:                     #4a4a4a;
+$loginnavborder:                   #a4a4a4;
+
+/* menu */
+$menutabradius:         15px;
+$menutabwidth:          125px;
+$menubgwidth:           calc(#{$menutabwidth} - #{$menutabradius} * 2/3);
+$menucolour:            rgba(255,255,255,0.89);
+$menucolourhover:       $grey5;
+$menufont:              12px;
+$menuiconfont:          28px;
+$menufontweight:        300;
+$menulineheight:        13px;
+$menuiconlineheight:   29px;
+$menuletterspacing:     0;
+$menupadding:           20px;
+$menutextshadow:        0 2px 4px rgba(0,0,0,0.5);
+
+/* gradients */
+$gradientstart:             0%;
+$gradientend:               100%;
+$gradientendcontainer:      40px;
+$gradientwhitestart:        #ffffff;
+$gradientwhiteend:          #ffffff;
+$gradientbluestart:         #538496;
+$gradientblueend:           #294D5D;
+$gradientgreystart:         #434242;
+$gradientgreyend:           #352E37;
+$gradientredstart:          $red;
+$gradientredend:            #B20B13;
+
+$bluegradient:              linear-gradient(180deg, $gradientbluestart $gradientstart, $gradientblueend $gradientend);
+$bluegradientinverse:       linear-gradient(180deg, $gradientblueend $gradientstart, $gradientbluestart $gradientend);
+$greygradient:              linear-gradient(180deg, $grey4 $gradientstart, $grey2 $gradientend);
+$greygradientinverse:       linear-gradient(180deg, $grey9 $gradientstart, $grey2 $gradientend);
+$whitegradient:             linear-gradient(180deg, $white $gradientstart, $white $gradientend);
+$redgradient:               linear-gradient(180deg, $gradientredstart $gradientstart, $gradientredend $gradientend);
+$whitetransparentgradient:  linear-gradient(180deg, $whitetransparent $gradientstart, $white $gradientend);
+$containertransparentgradient:  linear-gradient(180deg, $whitetransparent $gradientstart, $white $gradientendcontainer);
+
+/* typography */
+$h1fontsize:        30px;
+$h1fontlineheight:  31px;
+$h1fontcolour:      $intuitablered;
+$h2fontsize:        19px;
+$h2fontlineheight:  19px;
+$h2fontcolour:      $intuitablered;
+$bodyfontsize:      14px;
+$bodyfontweight:    300;
+
+/* spacing */
+$gutterwide:        40px;
+$guttermedium:      20px;
+$gutternarrow:      10px; 
+$gutterpage:        $gutterwide;
+
+/* block styles vary - region and block type */
+$blocks-column-width:       255px;
+$grid-gutter-width:         40px;
+
+/* blocks - hero */
+$blocklargefontsize:            19px;
+$blocklargelineheight:          28px;
+$blocklargefontweight:          300;
+$blocklargecolour:              $bodytext;
+
+/* course section titles styles , blocks in main region title styles */
+$maincontentsectiontitlefontsize:       30px;
+$maincontentsectiontitlefontweight:     500;
+$maincontentsectiontitlelineheight:     31px;
+$maincontentsectiontitlecolour:         $red;
+$maincontentsectiontitleborder:         1px dashed #979797;
+$maincontenttitlepadding:               0 0 16px;
+
+/* blocks in side region custom css class titlethumb */
+$blockthumbtitlefontsize:                27px;
+$blockthumbtitlefontweight:              300;
+$blockthumbtitlelineheight:              27px;
+$blockthumbtitlelineheight:              32px;
+$blockthumbtitlecolour:                  $bodytext;
+$blockthumbtitleborder:                  1px dashed #979797;
+
+$blockthumbsubtitlefontsize:            20px;
+$blockthumbsubtitlefontweight:          500;
+$blockthumbsubtitlelineheight:          19px;
+$blockthumbsubtitlecolour:              $red;
+
+/* blockside region standard style */
+
+$cardborderradius:                      20px;
+
+// Buttons + Forms : override the bootstrap/boost defaults
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         12px;
+$input-btn-padding-x:         11px;
+$input-btn-font-family:       $font-family-base;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-font-size:               14px;
+$btn-line-height:             14px;
+
+
+$btn-font-weight:             500;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           6px;
+$btn-border-radius-lg:        6px;
+$btn-border-radius-sm:        6px;
+
+
+

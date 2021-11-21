@@ -218,8 +218,51 @@ $string['footersociallinkiconname4_desc'] = 'Font Awesome icon name displayed fo
 $string['footersociallinkurl4'] = 'Social link 4 url';
 $string['footersociallinkurl4_desc'] = 'The url for the fourth social link.';
 
+// Branding settings
+$string['configtitlebranding'] = 'Branding settings';
+
+/* general settings */
+$string['typographysettings'] = 'Typography settings';
+$string['fontsheading'] = 'Fonts';
+$string['fontsheading_desc'] = 'The following settings are used to define the fonts.';
+
+$string['bodyfont'] = 'Body text font family';
+$string['bodyfont_desc'] = 'The default font family for text content throughout the site.';
+
+$string['h1font'] = 'Heading 1 font family';
+$string['h1font_desc'] = 'The default font family for Heading 1 elements';
+
+$string['h2font'] = 'Heading 2 font family';
+$string['h2font_desc'] = 'The default font family for Heading 2 elements';
+
+$string['h3font'] = 'Heading 3 font family';
+$string['h3font_desc'] = 'The default font family for Heading 3 elements';
+
+$string['h4font'] = 'Heading 4 font family';
+$string['h4font_desc'] = 'The default font family for Heading 4 elements';
+
+$string['h5font'] = 'Heading 5 font family';
+$string['h5font_desc'] = 'The default font family for Heading 5 elements';
+
+$string['h6font'] = 'Heading 6 font family';
+$string['h6font_desc'] = 'The default font family for Heading 6 elements';
+
+
+
 $string['openmenu'] = 'Open menu';
-$string['closemenu'] = 'Close menu';
+$string['closemenu'] =$string['h1font'] = 'Heading 1 font family';
+$string['h1font_desc'] = 'The default font family for Heading 1 elements';
+
+$string['h1font'] = 'Heading 1 font family';
+$string['h1font_desc'] = 'The default font family for Heading 1 elements';
+
+$string['h1font'] = 'Heading 1 font family';
+$string['h1font_desc'] = 'The default font family for Heading 1 elements';
+
+$string['h1font'] = 'Heading 1 font family';
+$string['h1font_desc'] = 'The default font family for Heading 1 elements';
+
+ 'Close menu';
 
 $string['welcomeuser'] = 'Welcome back, {$a}';
 

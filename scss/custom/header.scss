@@ -32,7 +32,7 @@
             min-height: 0;
         }
         .card {
-            color: $white;
+            color: $headerhasbackgroundcardcolourtext;
             margin: 0;
         }
     }
@@ -47,7 +47,7 @@
     }
     .exit-activity {
         display: flex;
-        color: $intuitablered;
+        color: $headerexitactivitycolourtext;
         font-size: 16px;
         font-weight: 500;
         line-height: 27px;

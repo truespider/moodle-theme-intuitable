@@ -66,7 +66,7 @@
 }
 
 .editing.has-region-intuitable-background {
-    background: $greygradient;
+    background: $editinghasbackgroundcolourbg;
 }
 body.hasblockbackground, 
 .pagelayout-mydashboard {
@@ -75,8 +75,8 @@ body.hasblockbackground,
         background: transparent;
     }
     #region-main-box {
-        background: $containertransparentgradient;
-        border-radius: $cardborderradius;
+        background: $regionmaincontainercolourbg;
+        border-radius: $regionmaincontainerborderradius;
         padding-left: $gutterpage;
         padding-right: $gutterpage;
         padding-top: 55px;
@@ -118,7 +118,7 @@ body.hasblockbackground,
         position: absolute;
         top: 14px;
         left: 18px;
-        color: #7a7a7a;
+        color: $searchboxiconcolour;
         font-size: 18px;
         line-height: 18px;
         pointer-events: none;
@@ -136,7 +136,7 @@ body.hasblockbackground,
             width: auto;
             flex: 1 0 auto;
             height: 46px;
-            border: 1px solid $grey7;
+            border: 1px solid $searchboxinputcolourborder;
             &:focus + i {
                 display: none;
             }
@@ -145,19 +145,19 @@ body.hasblockbackground,
     .btn {
         width: auto;
         padding: 0 34px;
-        color: $white;
+        color: $searchboxbtncolourtext;
         border-radius: 0 8px 8px 0;
-        border: 1px solid $intuitablered;
-        background: $redgradient;
+        border: 1px solid $searchboxbtncolourborder;
+        background: $searchboxbtncolourbg;
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 500;
         line-height: 17px;
         &:hover,
         &:active {
-            background: $whitegradient;
-            color: $intuitablered;
-            border-color: $intuitablered;
+            background: $searchboxbtncolourbghover;
+            color: $searchboxbtncolourtexthover;
+            border-color: $searchboxbtncolourborderhover;
         }
         &:focus {
             outline: none;
@@ -188,13 +188,13 @@ body {
         float: none;
     }
     h1 {
-        color: $intuitablered;
+        color: $pageheaderh1colourtext;
         font-size: 41px;
         line-height: 41px;
         font-weight: 500;
         padding: 0 0 14px;
         margin: 0 0 13px;
-        border-bottom: $maincontentsectiontitleborder; 
+        border-bottom: $pageheaderh1border; 
     }
     .breadcrumb {
         padding: 0;
@@ -208,8 +208,8 @@ body {
     line-height: 24px;
     th,
     td {
-        border-top: 1px solid #ffffff;
-        border-left: 1px solid #ffffff;
+        border-top: $tablebordercellhoriztonal;
+        border-left: $tablebordercellvertical;
         font-size: 14px;
     }
 
@@ -230,4 +230,25 @@ body {
             }
         }
     }
+}
+
+
+a.return-link {
+display:inline-block;
+margin-top:10px;
+    background: $returnlinkcolourbg;
+    padding: 10px 18px;
+    border-radius: 4px;
+    border: 0;
+    color: $returnlinkcolourtext;
+    box-shadow: $returnlinkboxshadow;
+}
+a.return-link:hover {
+    text-decoration: none;
+    background-color: $returnlinkcolourbghover;
+    box-shadow: $returnlinkboxshadowhover;
+}
+
+p.intro {
+    font-size: 1.1rem;
 }

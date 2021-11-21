@@ -118,10 +118,10 @@ class core_renderer extends \core_renderer {
         }
         foreach ($coursemetadata as $key => $val) {
             switch ($key) {
-                case "intuitable_showpageheaderlogo" : $showpageheaderlogo = $val; break;
-                case "intuitable_showpagetitle" : $showpagetitle = $val; break;
-                case "intuitable_category" : break;
-                case "intuitable_subcategory" : break;
+                case "showpageheaderlogo" : $showpageheaderlogo = $val; break;
+                case "showpagetitle" : $showpagetitle = $val; break;
+                case "customcategory" : break;
+                case "customsubcategory" : break;
                 case "showbreadcrumb" : $showbreadcrumb = $val; break;
                 default: break;
             }

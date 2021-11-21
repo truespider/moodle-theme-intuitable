@@ -1,18 +1,24 @@
-/* NB ! 
-* cli to compile the scss and see errors, not shown via mooodle's purgecaches rebuild 
-* adjust path of not run from moodle root folder
-*  php ./admin/cli/build_theme_css.php -t=intuitable  -d=ltr 
-*  php ./admin/cli/purge_caches.php
-* 
-* default grid breakpoints defined in bootstrap variables
-*  xs: 0,
-*  sm: 576px,
-*  md: 768px,
-*  lg: 992px,
-*  xl: 1200px
-*
+/* 
+ *
+ * @package    theme_intuitable
+ * @copyright  2021 Mireile Pedder
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *  cli to compile the scss and see errors, not shown via mooodle's purgecaches rebuild 
+ *  adjust path of not run from moodle root folder
+ *  php ./admin/cli/build_theme_css.php -t=intuitable  -d=ltr 
+ *  php ./admin/cli/purge_caches.php
+ * 
+ *  default grid breakpoints defined in bootstrap variables
+ * 
+ *  xs: 0,
+ *  sm: 576px,
+ *  md: 768px,
+ *  lg: 992px,
+ *  xl: 1200px
+ *
 */
 
+// redfine bp
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -23,129 +29,189 @@ $grid-breakpoints: (
   xxl: 1450px
 );
 
+$font-default:              "filson-soft" !default;
+$font-family-default:       $font-default + "," + $font-family-base-default !default;
 
-/* intuitable brand colours */
-$intuitablegreen:         #4EB235;
-$intuitablered:           #e2101a;
-$intuitableblue:          #1177D1;
-$intuitablemidblue:       #A9B8BE;
-$savlightblue:      #F7F8F9;
-$intuitabledarkblue:      #294D5D;
-$intuitablecommonroom:    #AD907E;
-$intuitableorange:        #f0ad4e;
-$grey1:             #294D5D;
-$grey2:             #323537;
-$grey3:             #424648;
-$grey4:             #434242;
-$grey5:             #4B5052;
-$grey6:             #979797;
-$grey7:             #A9B8BE;
-$grey8:             #f2f2f2;
-$grey9:             #110F0F;
 
-$blue:              $intuitableblue;
-$red:               $intuitablered;
-$red2:              #A3586D;
-$white:             #ffffff;
-$whitetransparent:  rgba(255,255,255,0.85);
-$blacktransparent:  rgba(0,0,0,0.76);
-$primary:           $intuitablered;
-$secondary:         $intuitablered;
-$success:           $intuitablegreen;
-$info:              $intuitableblue;
+$white:               #fff     !default;
+$grey100:             #f4f4f4  !default;
+$grey200:             #dcdcdc  !default;
+$grey300:             #bebebe  !default;
+$grey400:             #c0c0c0  !default;
+$grey500:             #a9a9a9  !default;
+$grey600:             #969696  !default;
+$grey700:             #7a7a7a  !default;
+$grey800:             #5c5c5c  !default;
+$grey900:             #3a3a3a  !default;
+$black:               #000     !default;
+$whitetransparent:    rgba(255,255,255,0.85) !default;
+$blacktransparent:    rgba(0,0,0,0.76)       !default;
 
-$statusuntracked:       $grey7;
-$statusnotstarted:      $intuitablered;
-$statusinprogress:      $intuitabledarkblue;
-$statuspending:         $intuitabledarkblue;
-$statuscomplete:        $intuitablegreen;
+$blue:                #1177D1 !default;
+$lightblue:           #F7F8F9 !default;
+$midblue:             #A9B8BE !default;
+$darkblue:            #294D5D !default;
+$indigo:              #6610f2 !default;
+$purple:              #613d7c !default;
+$pink:                #e83e8c !default;
+$red:                 #e2101a !default;
+$orange:              #f0ad4e !default;
+$yellow:              #ff7518 !default;
+$green:               #4EB235 !default;
+$teal:                #20c997 !default;
+$cyan:                #008196 !default;
 
-$quecorrect:              #3F9D5D;
-$queincorrect:            $intuitablered;
-$quepartiallycorrect:     $intuitableorange;
-$quecorrecttext:          #ffffff;
-$queincorrecttext:        #ffffff;
-$quepartiallycorrecttext: #ffffff;
-$outcomecorrect:              rgba(17,119,209, 0.08);
-$outcomeincorrect:            rgba(226,16,26,0.1);
-$outcomepartiallycorrect:     rgba(226,16,26,0.1);
-$outcomecorrecttext:          $intuitabledarkblue;
-$outcomeincorrecttext:        $intuitabledarkblue;
-$outcomepartiallycorrecttext: $intuitabledarkblue;
-
-$categoryassessingservices:         #2AB29A;
-$categorybuildingpathology:         #5C4B72;
-$categoryconditionmasterclass:      #F4D552;
-$categoryconstruction:              #F18646;
-$categoryenergy:                    #D75F8E;
-$categoryinspectingproperty:        #005D96;
-$categoryintroductiontoassessment:  #945798;
-$categorylaw:                       #B05831;
-$categorypracticalday:              #EB5F60;
-$categoryprofessionalissues:        #A3586D;
-$categoryrdsapmasterclass:          #01363F;
-$categoryreportwriting:             #65829D;
-$categoryvaluation:                 #3F9D5D;
-$categoryunknown:                   $intuitablemidblue;
-$bodytext:      $grey1;
-$link:          $intuitableblue;
-$linkvisited:   $intuitableblue;
-$linkhover:     $intuitableblue;
-$linkactive:    $intuitableblue;
-$loginnavtext:                     #4a4a4a;
-$loginnavborder:                   #a4a4a4;
-
-/* menu */
-$menutabradius:         15px;
-$menutabwidth:          125px;
-$menubgwidth:           calc(#{$menutabwidth} - #{$menutabradius} * 2/3);
-$menucolour:            rgba(255,255,255,0.89);
-$menucolourhover:       $grey5;
-$menufont:              12px;
-$menuiconfont:          28px;
-$menufontweight:        300;
-$menulineheight:        13px;
-$menuiconlineheight:   29px;
-$menuletterspacing:     0;
-$menupadding:           20px;
-$menutextshadow:        0 2px 4px rgba(0,0,0,0.5);
+$primary:       $blue     !default;
+$success:       $green    !default;
+$info:          $cyan     !default;
+$warning:       $orange   !default;
+$danger:        $red      !default;
+$secondary:     $gray-400 !default;
 
 /* gradients */
 $gradientstart:             0%;
 $gradientend:               100%;
 $gradientendcontainer:      40px;
-$gradientwhitestart:        #ffffff;
-$gradientwhiteend:          #ffffff;
-$gradientbluestart:         #538496;
-$gradientblueend:           #294D5D;
-$gradientgreystart:         #434242;
-$gradientgreyend:           #352E37;
-$gradientredstart:          $red;
-$gradientredend:            #B20B13;
+$gradientwhitestart:        #ffffff !default;
+$gradientwhiteend:          #ffffff !default;
+$gradientbluestart:         #538496 !default;
+$gradientblueend:           #294D5D !default;
+$gradientgreystart:         #434242 !default;
+$gradientgreyend:           #352E37 !default;
+$gradientredstart:          #e2101a !default;
+$gradientredend:            #B20B13 !default;
 
 $bluegradient:              linear-gradient(180deg, $gradientbluestart $gradientstart, $gradientblueend $gradientend);
 $bluegradientinverse:       linear-gradient(180deg, $gradientblueend $gradientstart, $gradientbluestart $gradientend);
-$greygradient:              linear-gradient(180deg, $grey4 $gradientstart, $grey2 $gradientend);
-$greygradientinverse:       linear-gradient(180deg, $grey9 $gradientstart, $grey2 $gradientend);
+$greygradient:              linear-gradient(180deg, $gradientgreystart $gradientstart, $gradientgreyend $gradientend);
+$greygradientinverse:       linear-gradient(180deg, $gradientgreyend $gradientstart, $gradientgreystart $gradientend);
 $whitegradient:             linear-gradient(180deg, $white $gradientstart, $white $gradientend);
 $redgradient:               linear-gradient(180deg, $gradientredstart $gradientstart, $gradientredend $gradientend);
 $whitetransparentgradient:  linear-gradient(180deg, $whitetransparent $gradientstart, $white $gradientend);
 $containertransparentgradient:  linear-gradient(180deg, $whitetransparent $gradientstart, $white $gradientendcontainer);
 
+// Intuitable defaults
+// these can be overridden in child theme via theme settings
+
+/* tracking status */
+$statusuntracked:       $grey700  !default;
+$statusnotstarted:      $red      !default;
+$statusinprogress:      $blue     !default;
+$statuspending:         $darkblue !default;
+$statuscomplete:        $green    !default;
+
+
+
+/* quiz  */
+$quecorrect:                    $green    !default;
+$queincorrect:                  $red      !default;
+$quepartiallycorrect:           $orange   !default;
+$quecorrecttext:                $white    !default;
+$queincorrecttext:              $white    !default;
+$quepartiallycorrecttext:       $white    !default;
+$outcomecorrect:                rgba($blue, 0.08) !default;
+$outcomeincorrect:              rgba($red,0.1)    !default;
+$outcomepartiallycorrect:       rgba($orange,0.1) !default;
+$outcomecorrecttext:            $darkblue !default;
+$outcomeincorrecttext:          $darkblue !default;
+$outcomepartiallycorrecttext:   $darkblue !default;
+$quizcorrectcolourbackground:                 #e4f1e8 !default;     
+$quizincorrectcolourbackground:               #fce7e9 !default;     
+$quizipartiallycorrectcolourbackground:       #fceedd !default;
+$quizbuttoncolourtext:                        #ffffff !default;    
+$quiznavbuttonborder:                         1px solid $red !default;    
+$quiznavbuttoncolourbg:                       $redgradient !default;
+$quiznavbuttonsecondaryborder:                1px solid $gradientgreyend !default;
+$quizbuttonsecondarycolourtext:               #ffffff !default;    
+$quiznavbuttonsecondarycolourbg:              $greygradient !default;
+$quiznavblockbuttoncolourbg:                  transparent !default;
+$quiznavblockbuttoncolourtext:                $blue !default;
+$quizcontrolscolourborder:                    $darkblue !default;
+$quizbuttonsinglecolourtext:                  $blue !default;
+$quiztrafficlightcolourbg:                    $midblue !default;
+$quizformulationcolourbg:                     transparent !default;
+$quizdndcolourborder:                         1px solid $grey600 !default;
+$quizdndhomecolourbg:                         rgba(17,119,209,0.08) !default;
+$quizdndhomecolourtext:                       $darkblue !default;
+
+/* course category branding  - used in courselinks and blocks*/
+$category1:                     #2AB29A !default;
+$category2:                     #5C4B72 !default;
+$category3:                     #F4D552 !default;
+$category4:                     #F18646 !default;
+$category5:                     #D75F8E !default;
+$category6:                     #005D96 !default;
+$category7:                     #945798 !default;
+$category8:                     #B05831 !default;
+$category9:                     #EB5F60 !default;
+$category10:                    #A3586D !default;
+$category11:                    #01363F !default;
+$category12:                    #65829D !default;
+$category13:                    #3F9D5D !default;
+$category14:                    #9486e1 !default;
+$category15:                    #bf5c63 !default;
+$category16:                    #d98c23 !default;
+$category17:                    #6cc167 !default;
+$category18:                    #7278aa !default;
+$category19:                    #d2af25 !default;
+$category20:                    #4189b2 !default;
+$categoryunknown:               $midblue !default;
+$courselinkiconcolour:          #ffffff !default;
+$courselinkdatecolour:          $red !default;
+
+
+
+
+// 1 $categoryassessingservices;
+// 2 $categorybuildingpathology;
+// 3 $categoryconditionmasterclass;
+// 4 $categoryconstruction;
+// 5 $categoryenergy;
+// 6 $categoryinspectingproperty;
+// 7 $categoryintroductiontoassessment;
+// 8 $categorylaw;979797
+// 13 $categoryreportwriting;
+
+
+$bodytext:                      #294D5D !default;
+$link:                          $blue   !default;
+$linkvisited:                   $blue   !default;
+$linkhover:                     $blue   !default;
+$linkactive:                    $blue   !default;
+
+/* menu */
+$menutabradius:         15px    !default;
+$menutabwidth:          125px   !default;
+$menubgwidth:           calc(#{$menutabwidth} - #{$menutabradius} * 2/3);
+$menucolour:            rgba(#ffffff,0.89)  !default;
+$menucolourhover:       #4B5052 !default;
+$menufont:              12px    !default;
+$menuiconfont:          28px    !default;
+$menufontweight:        300     !default;
+$menulineheight:        13px    !default;
+$menuiconlineheight:    29px    !default;
+$menuletterspacing:     0       !default;
+$menupadding:           20px    !default;
+$menutextshadow:        0 2px 4px rgba(0,0,0,0.5) !default;
+
 /* typography */
 $h1fontsize:        30px;
 $h1fontlineheight:  31px;
-$h1fontcolour:      $intuitablered;
+$h1fontcolour:      $red !default;
 $h2fontsize:        19px;
 $h2fontlineheight:  19px;
-$h2fontcolour:      $intuitablered;
+$h2fontcolour:      $red !default;
+$h4fontsize:        16px;
+$h4fontlineheight:  16px;
+$h4fontweight:      500;
+$h4fontcolour:      #294d5d !default;
 $bodyfontsize:      14px;
 $bodyfontweight:    300;
 
 /* spacing */
-$gutterwide:        40px;
-$guttermedium:      20px;
-$gutternarrow:      10px; 
+$gutterwide:        40px !default;
+$guttermedium:      20px !default;
+$gutternarrow:      10px !default; 
 $gutterpage:        $gutterwide;
 
 /* block styles vary - region and block type */
@@ -153,35 +219,58 @@ $blocks-column-width:       255px;
 $grid-gutter-width:         40px;
 
 /* blocks - hero */
-$blocklargefontsize:            19px;
-$blocklargelineheight:          28px;
-$blocklargefontweight:          300;
-$blocklargecolour:              $bodytext;
+$blocklargefontsize:            19px !default;
+$blocklargelineheight:          28px !default;
+$blocklargefontweight:          300  !default;
+$blocklargecolour:              $bodytext !default;
 
 /* course section titles styles , blocks in main region title styles */
 $maincontentsectiontitlefontsize:       30px;
 $maincontentsectiontitlefontweight:     500;
 $maincontentsectiontitlelineheight:     31px;
-$maincontentsectiontitlecolour:         $red;
-$maincontentsectiontitleborder:         1px dashed #979797;
-$maincontenttitlepadding:               0 0 16px;
+$maincontentsectiontitlecolour:         $red !default;
+$maincontentsectiontitleborder:         1px dashed $grey600 !default;
+$maincontenttitlepadding:               0 0 16px !default;
 
 /* blocks in side region custom css class titlethumb */
-$blockthumbtitlefontsize:                27px;
+$blockthumbtitlefontsize:                27px ;
 $blockthumbtitlefontweight:              300;
 $blockthumbtitlelineheight:              27px;
 $blockthumbtitlelineheight:              32px;
 $blockthumbtitlecolour:                  $bodytext;
-$blockthumbtitleborder:                  1px dashed #979797;
+$blockthumbtitleborder:                  1px dashed $grey600 !default;
 
 $blockthumbsubtitlefontsize:            20px;
 $blockthumbsubtitlefontweight:          500;
 $blockthumbsubtitlelineheight:          19px;
-$blockthumbsubtitlecolour:              $red;
+$blockthumbsubtitlecolour:              $red !default;
 
-/* blockside region standard style */
+/* blocks standard style */
+$cardborderradius:                      20px !default;
+$cardtextcolor:                         $bodytext !default;
+$cardtabscolourbg:                      $bluegradient !default;
+$cardtabscolourbghover:                 $bluegradientinverse !default;
+$cardtabscolourbgactive:                #ffffff !default;
+$cardtabscolourborder:                  $midblue !default;
+$cardtabscolourborderhover:             $midblue !default;
+$cardtabscolourborderactive:            $midblue !default;
+$cardtabscolourtext:                    #ffffff !default;
+$cardtabscolourtexthover:               #ffffff !default;
+$cardtabscolourtextactive:              $darkblue !default;
+$cardmetacolourbackground:              $whitetransparent !default;
 
-$cardborderradius:                      20px;
+$blockduedatestatuscolourtext:          $darkblue !default;
+$blocksubtitletitlecolourtext:          $midblue !default;
+$blocksubtitlebodycolourtext:           $darkblue !default;
+$blocksubtitlebodycolourborder:         $grey600! default;    
+$blocknewsnamecolourtext:               $darkblue! default;
+$blockrecentlyaccessedtitlecolourtext:  $darkblue !default;
+
+$regionheadercardtitlecolourtext:       $red !default;
+$regionintrocardtitleborder:            1px dashed $grey800;
+
+$regionmaincontainercolourbg:           $containertransparentgradient !default;
+$regionmaincontainerborderradius:       $cardborderradius !default;
 
 // Buttons + Forms : override the bootstrap/boost defaults
 //
@@ -189,8 +278,7 @@ $cardborderradius:                      20px;
 
 $input-btn-padding-y:         12px;
 $input-btn-padding-x:         11px;
-$input-btn-font-family:       $font-family-base;
-
+$input-btn-font-family:       $font-default + "," + $font-family-base-default !default;
 
 // Buttons
 //
@@ -207,5 +295,120 @@ $btn-border-radius:           6px;
 $btn-border-radius-lg:        6px;
 $btn-border-radius-sm:        6px;
 
+/* admin settings tabs */
+$admintabscolourtext:             #ffffff !default;
+$admintabscolourtextactive:       $darkblue !default;
+$admintabscolourborder:           #ffffff !default;
+$admintabscolourborderactive:     $darkblue !default;
+$admintabscolourbg:               $gradientbluestart !default;
+$admintabscolourbghover:          $gradientblueend !default;
+$admintabscolourbgactive:         #ffffff !default;
+
+/* UX / widget settings */
+$userwelcomecolourtext:       #ffffff !default;
+$coursemetaiconcolour:        #748086;
+$boxedcolourborder:           #b3b3b3 !default;
+$boxedcolourbg:               #ededed !default;
+
+/* searchbox */
+$searchboxiconcolour:             $grey700 !default;
+$searchboxinputcolourborder:      $midblue !default;
+$searchboxbtncolourbg:            $redgradient !default;
+$searchboxbtncolourbghover:       $whitegradient !default;
+$searchboxbtncolourborder:        $red !default;
+$searchboxbtncolourborderhover:   $red !default;
+$searchboxbtncolourtext:          $white !default;
+$searchboxbtncolourtexthover:     $red !default;
+
+/* editing */
+$editinghasbackgroundcolourbg:    $greygradient !default;
+
+/* page title */
+$pageheaderh1colourtext:            $red !default;
+$pageheaderh1border:                $maincontentsectiontitleborder !default;
+
+/* tables */
+$tablebordercellhoriztonal:         1px solid #ffffff !default;
+$tablebordercellvertical:           1px solid #ffffff !default;
+
+/* return link */
+$returnlinkcolourbg:                linear-gradient(0deg, rgba(175,0,11,1) 0%, rgba(226,8,22,1) 40%) !default;
+$returnlinkcolourbghover:           linear-gradient(0deg, rgba(7,82,149,1) 0%, rgba(17,119,209,1) 40%) !default;
+$returnlinkcolourtext:              $white !default;
+$returnlinkboxshadow:               0px 2px 8px 0px rgba(0,0,0,0.54) !default;
+$returnlinkboxshadowhover:          0px 2px 8px 0px rgba(0,0,0,0.54) !default;
+
+/* collapsible topics */
+$collapsibleiconcolour:             $white !default;
+$collapsibleiconcolourbg:           $redgradient !default;
+$collapsibleiconboxshadow:          0 2px 4px 0 rgba(0,0,0,0.34) !default;
+$collapsiblesummaryborder:          1px dashed $grey600 !default;
+$collapsibleintrocolourtext:        $darkblue !default;;
+$collapsiblesectionnamecolourtext:  $red !default;
+
+/* page header */
+$headerhasbackgroundcardcolourtext: #ffffff !default;
+$headerexitactivitycolourtext:      $red !default;
+
+/* page footer */
+$footercontainercolourbg:           #ffffff !default;
+$footercolourbg:                    #333333 !default;
+$footercolourtext:                  #ffffff !default;
+$footerinfocolourbg:                #f5f5f5 !default;
+$footeritemscolourtext:             #333333 !default;
+$footeritemscolourlink:             #333333 !default;
+$footeritemscolourlinkdecoration:   underline !default;
+$footerlinkscolourbg:               $footercolourbg !default;
+$footerlinkscolourtext:             $footercolourtext !default;
+$footerlinksiconcolour:             $footercolourtext !default;
+$footerstandardcolourbg:            $footercolourbg !default;
+
+/* login page */
+$loginfootercolourbg:               #ffffff !default;
+$loginboxcolourbg:                  $whitetransparent !default;
+$loginboxborderradius:              $cardborderradius !default;
+$loginboxshadow:                    0px 0px 25px 9px rgb(0 0 0 / 16%);
+$logincardcolourbg:                 transparent !default;
+$logincardcolourtitle:              $red !default;
+$loginnavtext:                      #4a4a4a !default;
+$loginnavborder:                    #a4a4a4 !default;
+$loginforminputcolourborder:        $midblue !default;
+$loginformbtncolourbg:              $redgradient !default;
+$loginformbtncolourtext:            #ffffff !default;
+$loginformbtnshadow:                0 2px 4px 0 rgba(0,0,0,0.34) !default;
+$loginformbtnborder:                1px solid $red !default;
+
+/* navigation */
+$navtopopencolourbg:                $blacktransparent !default;
+$navdrawericoncolourbg:             $red !default;
+$navdrawercolourbg:                 transparent !default;
+$navdraweritemcolourbg:             $greygradient !default;
+$navdraweritemcolourbgactive:       $whitegradient !default;
+$navdraweritemcolourbgfocus:        $whitegradient !default;
+$navdraweritemcolourbghover:        $greygradientinverse !default;
+$navdraweritemcolourbgvisited:      $greygradient !default;
+$navdraweritemcolourlink:           $menucolour !default;
+$navdraweritemcolourlinkactive:     $menucolourhover !default;
+$navdraweritemcolourlinkfocus:      $menucolourhover !default;
+$navdraweritemcolourlinkhover:      $menucolourhover !default;
+$navdraweritemcolourlinkvisited:    $menucolour !default;
+$navdraweritemborderradius:         0 $menutabradius $menutabradius 0 !default;
+$navdrawermobilecolourbg:           #ffffff !default;
+$navdrawermobilecontainerborder:    1px solid $midblue !default;
+$navdrawermobilelinkcolourbg:       $bodytext !default;
+$navdrawermobilelinkcolourtext:     #ffffff !default;
+$navdrawerlinktexttransform:        capitalize !default;
+
+$headerlinkcolourtext:                    $grey600 !default;
+$headerlinkborder:                        1px solid $bodytext !default;
+$bodyhasbackgroundheaderlinkcolourtext:   #ffffff !default;
+$bodyhasbackgroundheaderlinkborder:       1px solid #ffffff !default;
+
+$headerlinktogglemenucolourbg:            $red !default;
+$headermobilecolourbg:                    $grey100 !default;
+$headerblockcolourbg:                     #ffffff !default;
+$headermobileborder:                      1px solid $midblue !default;
+
+$bodyhasbackgroundheaderblockcolourbg:    transparent !default;
 
 

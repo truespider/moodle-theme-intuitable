@@ -3,18 +3,18 @@ $sectionthumbindent: 60px;
 .course-content {
     .collapsible-actions {
         display: block;
-        margin: 10px 0 72px;
+        margin: 40px 0 72px 10px;
         padding: 0;
         text-align: left;
         a {
-            color: $white;
+            color: $collapsibleiconcolour;
             padding: 11px 18px 8px 37px;
             font-size: 14px;
             font-weight: 500;
             line-height: 14px;
             text-align: center;
             border-radius: 6px;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.34);
+            box-shadow: $collapsibleiconboxshadow;
             position: relative;
             &:before {
                 content: "\f0fe";
@@ -24,17 +24,17 @@ $sectionthumbindent: 60px;
                 font-size: 16px;
                 line-height: 16px;
                 text-align: center;
-                color: #fff;
+                color: $collapsibleiconcolour;
                 font-family: 'FontAwesome';
                 height: 16px;
                 width: 16px;
             }
             &.expandall {
                 content: "\f0fe";
-                background: $redgradient;
+                background: $collapsibleiconcolourbg;
             }
             &.collapseall {
-                background: $redgradient;
+                background: $collapsibleiconcolourbg;
                 content: "\f146";
             }
         }
@@ -91,10 +91,15 @@ $sectionthumbindent: 60px;
                         content: "\f147";
                     }
                 }
+                &.collapsed {
+                    ~ .section-summary-activities {
+                        display: none;
+                    }
+                }
             }
             .content {
                 padding: 0;
-                margin: 0 0 $gutterpage;
+                margin: 0 0 100px;
                 position: relative;
                 .editing & {
                     margin: 0 $gutterpage;
@@ -113,7 +118,7 @@ $sectionthumbindent: 60px;
         .content {
             .summarytext {
                 margin: 0 0 0 $sectiontoggleindent;
-                border-top: 1px dashed $grey6;
+                border-top: $collapsiblesummaryborder;
                 .img-responsive {
                     position: absolute;
                     top: 0;
@@ -137,13 +142,14 @@ $sectionthumbindent: 60px;
                     flex: 0 0 50%;
                     min-width: 200px;
                     margin: $gutternarrow 0;
-                    color: $grey1;
-                    font-size: 18px;
+                    color: $coursemetaiconcolour;
+                    font-size: 14px;
                     font-weight: 300;
                     letter-spacing: 0;
                     line-height: 18px;
+                    text-transform: uppercase;
                     .icon.fa {
-                        color: $red;
+                        color: $coursemetaiconcolour;
                         font-size: 18;
                         line-height: 18px   ;
                     }
@@ -154,7 +160,7 @@ $sectionthumbindent: 60px;
                     font-size: 18px;
                     line-height: 26px;
                     font-weight: 300;
-                    color: $grey1;
+                    color: $collapsibleintrocolourtext;
                 }
             }
         }
@@ -181,35 +187,37 @@ $sectionthumbindent: 60px;
             }
         }
         .sectionname {
-            color: $intuitablered;
+            color: $collapsiblesectionnamecolourtext;
             font-size: 30px;
             line-height: 31px;
             font-weight: 500;
+            margin-bottom: 20px;
             a {
-                color: $intuitablered;
+                color: $collapsiblesectionnamecolourtext;
             }
         }
     }
+    /* NB : selectors based on custom course fields?? */
     .intuitable-course &,
     .intuitable-news & {
         h3.sectionname {
-            color: $intuitablered;
+            color: $red;
             font-size: 30px;
             line-height: 31px;
             font-weight: 500;
             a {
-                color: $intuitablered;
+                color: $red;
             }
         }
         .summary {
             .datestamp {
                 font-size: 14px;
                 line-height: 14px;
-                color: $intuitablemidblue;
+                color: $midblue;
             }
             font-size: 14px;
             line-height: 22px;
-            color: $intuitabledarkblue;
+            color: $darkblue;
             margin: 0;
             padding: 0;
         }
@@ -220,7 +228,7 @@ $sectionthumbindent: 60px;
             h3.sectionname {
                 font-size: 41px;
                 line-height: 41px;
-                border-bottom: 1px dashed $grey6;
+                border-bottom: 1px dashed $grey600;
                 padding-bottom: 14px;
                 margin-bottom: 23px;
                 display: none;
@@ -228,7 +236,7 @@ $sectionthumbindent: 60px;
             .summary {
                 font-size: 18px;
                 line-height: 26px;
-                color: $intuitabledarkblue;
+                color: $darkblue;
             }
         }
         .section {
@@ -244,35 +252,35 @@ $sectionthumbindent: 60px;
     }
     .intuitable-learningskills & {
         h3.sectionname {
-            color: $intuitablered;
+            color: $red;
             font-size: 30px;
             line-height: 31px;
             font-weight: 500;
-            border-bottom: 1px dashed $grey6;
+            border-bottom: 1px dashed $grey600;
             padding: 0 0 16px;
             margin: 0 0 23px;
             a {
-                color: $intuitablered;
+                color: $red;
             }
         }
     }
     .intuitable-bookings & {
         h3.sectionname {
-            color: $intuitablered;
+            color: $red;
             font-size: 30px;
             line-height: 31px;
             font-weight: 500;
-            border-bottom: 1px dashed $grey6;
+            border-bottom: 1px dashed $grey600;
             padding: 0 0 16px;
             margin: 0 0 16px;
             a {
-                color: $intuitablered;
+                color: $red;
             }
         }
         .summary {
             font-size: 14px;
             line-height: 22px;
-            color: $intuitabledarkblue;
+            color: $darkblue;
             margin: 0;
             padding: 0;
         }
@@ -281,11 +289,11 @@ $sectionthumbindent: 60px;
                 .activityinstance {
                     font-size: 14px;
                     line-height: 22px;
-                    color: $intuitableblue;
+                    color: $blue;
                     > a {
                         font-size: 14px;
                         line-height: 22px;
-                        color: $intuitableblue;
+                        color: $blue;
                     }
                 }
                 img.iconlarge.activityicon {
@@ -360,7 +368,7 @@ $sectionthumbindent: 60px;
     .activity {
         &.courselink {
             display: block;
-            margin: 0;
+            margin: 20px 0;
             padding: 0;
 
         }
@@ -377,67 +385,67 @@ $sectionthumbindent: 60px;
             margin: 0 0 $guttermedium;
             &.cl-cat-name-assessing-services {
                 .cl-id {
-                    background: $categoryassessingservices;
+                    background: $category1;
                 }
             }
             &.cl-cat-name-building-pathology {
                 .cl-id {
-                    background: $categorybuildingpathology;
+                    background: $category2;
                 }
             }
             &.cl-cat-name-condition-master-class {
                 .cl-id {
-                    background: $categoryconditionmasterclass;
+                    background: $category3;
                 }
             }
             &.cl-cat-name-construction {
                 .cl-id {
-                    background: $categoryconstruction;
+                    background: $category4;
                 }
             }
             &.cl-cat-name-energy {
                 .cl-id {
-                    background: $categoryenergy;
+                    background: $category5;
                 }
             }
             &.cl-cat-name-inspecting-property {
                 .cl-id {
-                    background: $categoryinspectingproperty;
+                    background: $category6;
                 }
             }
             &.cl-cat-name-introduction-to-assessment {
                 .cl-id {
-                    background: $categoryintroductiontoassessment;
+                    background: $category7;
                 }
             }
             &.cl-cat-name-law {
                 .cl-id {
-                    background: $categorylaw;
+                    background: $category8;
                 }
             }
             &.cl-cat-name-practical-day {
                 .cl-id {
-                    background: $categorypracticalday;
+                    background: $category9;
                 }
             }
             &.cl-cat-name-professional-issues {
                 .cl-id {
-                    background: $categoryprofessionalissues;
+                    background: $category10;
                 }
             }
             &.cl-cat-name-rdsap-masterclass {
                 .cl-id {
-                    background: $categoryrdsapmasterclass;
+                    background: $category11;
                 }
             }
             &.cl-cat-name-valuation {
                 .cl-id {
-                    background: $categoryvaluation;
+                    background: $category12;
                 }
             }
             &.cl-cat-name-report-writing {
                 .cl-id {
-                    background: $categoryreportwriting;
+                    background: $category13;
                 }
             }
            &.untracked {
@@ -471,6 +479,7 @@ $sectionthumbindent: 60px;
             text-align: center;
             align-self: stretch;
             background: $categoryunknown;
+            height: 80px;
             .icon {
                 display: block;
                 width: 100%;
@@ -479,7 +488,7 @@ $sectionthumbindent: 60px;
                 font-size: 27px;
                 top: 14px;
                 position: relative;
-                color: $white;
+                color: $courselinkiconcolour;
             }
         }
         .cl-details {
@@ -499,6 +508,8 @@ $sectionthumbindent: 60px;
                 line-height: 14px;
                 font-weight: 300;
                 margin: 0;
+                padding-top: 5px;
+                color: $courselinkdatecolour;
             }
             .completiondate {
                 display: inline-block;
@@ -506,4 +517,19 @@ $sectionthumbindent: 60px;
             }
         }
     }
+}
+
+
+/* Style used within a course page to highlight content */
+.boxed {
+    padding:50px;
+    border: 1px solid $boxedcolourborder;
+    background-color: $boxedcolourbg;
+}
+
+
+img.elearning-button {
+    width:100%;
+    max-width:550px;
+    height:auto;
 }

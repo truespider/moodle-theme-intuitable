@@ -2,14 +2,20 @@
 $footerpaddingleft: 80px;
 
 #page-footer {
-    background: transparent;
+    background: $footercolourbg;
     margin: $gutterpage 0 0 -$gutterpage;
     padding: 0;
     z-index: 100;
     .container {
         max-width: 100%;
         padding: $guttermedium 0 0;
-        background: $white;
+        background: $footercontainercolourbg;
+    }
+    .footer-info {
+        background-color: $footerinfocolourbg;
+    }
+    .footer-standard {
+        display: none;
     }
     .footer-info,
     .footer-links,
@@ -25,10 +31,10 @@ $footerpaddingleft: 80px;
         padding: 0;
         font-size: 16px;
         line-height: 17px;
-        color: #333333;
+        color: $footeritemscolourtext;
         a {
-            color: #333333;
-            text-decoration: underline;
+            color: $footeritemscolourtext;
+            text-decoration: $footeritemscolourlinkdecoration;
         }
         .footercontentitem  {
             margin: 0 0 14px;
@@ -46,23 +52,20 @@ $footerpaddingleft: 80px;
         padding: $guttermedium $gutterpage $guttermedium $footerpaddingleft;
         font-size: 16px;
         line-height: 17px;
-        background-color: #333333;
-        color: #fff;
+        background-color: $footerlinkscolourbg;
+        color: $footerlinkscolourtext;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
-        .footersociallink {
-
-        }
         .icon {
             font-size: 16px;
-            color: #fff;
+            color:  $footerlinksiconcolour;
             padding: 0 $guttermedium 0 0;
         }
     }
     .footer-standard {
-        background-color: #333333;
+        background-color: $footerstandardcolourbg;
         margin: 0;
         padding: 0 $gutterpage $gutternarrow $footerpaddingleft;
     }

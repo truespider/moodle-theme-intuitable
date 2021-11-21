@@ -8,53 +8,56 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 
 /* Highlight correct or incorrect answers */
 #page-mod-quiz-review .answer .correct {
-    background-color: #e4f1e8;
+    background-color: $quizcorrectcolourbackground;
     padding: 10px;
     margin:5px 0px;
 }
 #page-mod-quiz-review .answer .correct .specificfeedback {
-	background-color: #e4f1e8;
+	background-color: $quizcorrectcolourbackground;
 	margin:0px;
 }
 #page-mod-quiz-review .answer .incorrect {
-    background-color: #fce7e9;
+    background-color: $quizincorrectcolourbackground;
     padding: 10px;
     margin:5px 0px;
 }
 #page-mod-quiz-review .answer .incorrect .specificfeedback {
-	background-color: #fce7e9;
+	background-color: $quizincorrectcolourbackground;
 	margin:0px;
 }
 #page-mod-quiz-review .que.correct .outcome {
-	background-color: #e4f1e8;
+	background-color: $quizcorrectcolourbackground;
 }
 #page-mod-quiz-review .que.partiallycorrect .outcome {
-	background-color: #fceedd;
+	background-color: $quizipartiallycorrectcolourbackground;
 }
 
 /* Buttons */
-#page-mod-quiz-attempt .submitbtns .mod_quiz-next-nav, #page-mod-quiz-review .submitbtns .mod_quiz-next-nav {
+#page-mod-quiz-attempt .submitbtns .mod_quiz-next-nav, 
+#page-mod-quiz-review .submitbtns .mod_quiz-next-nav {
     padding:10px 20px;
     border-radius: 6px;
-    color: #fff;
+    color: $quizbuttoncolourtext;
     font-size: 20px;
     font-weight: 500;
     line-height: 19px;
-    background: linear-gradient(180deg,#e2101a 0%,#b20b13 100%);
-    border: 1px solid #e2101a;
+    background: $quiznavbuttoncolourbg;
+    border: $quiznavbuttonborder;
     display: block;
     margin: 0 auto;
     text-decoration:none;
 }
-#page-mod-quiz-attempt .submitbtns .mod_quiz-prev-nav, #page-mod-quiz-review .submitbtns .mod_quiz-prev-nav {
+
+#page-mod-quiz-attempt .submitbtns .mod_quiz-prev-nav
+, #page-mod-quiz-review .submitbtns .mod_quiz-prev-nav {
     padding:10px 20px;
     border-radius: 6px;
-    color: #fff;
+    color: $quizbuttonsecondarycolourtext;
     font-size: 20px;
     font-weight: 500;
     line-height: 19px;
-    background: linear-gradient(180deg,#B6B6B6 0%,#737373 100%);
-    border: 1px solid #B6B6B6;
+    background: $quiznavbuttonsecondarycolourbg;
+    border: $quiznavbuttonsecondaryborder;
     margin: 0 auto;
     text-decoration:none;
 }
@@ -176,11 +179,11 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 	    font-size: 16px;
 	    font-weight: bold;
 	    line-height: 26px;
-	    background: transparent;
+	    background: $quiznavblockbuttoncolourbg;
 	    border: 0;
 	    padding: 0;
 	    display: block;
-	    color: $intuitableblue;
+	    color: $quiznavblockbuttoncolourtext;
 	}
 	#quiz-timer,
 	.submitbtns {
@@ -188,7 +191,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 		padding: 0 22px 0 0;
 	    font-size: 16px;
 	    line-height: 26px;
-	    border-right: 1px solid $intuitabledarkblue;
+	    border-right: 1px solid $quizcontrolscolourborder;
 	    flex: 0 0 auto;
 	}
 	#page-mod-quiz-summary & {
@@ -207,7 +210,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 				.controls {
 					padding-left: 22px;
 					margin-left: 22px;
-					border-left: 1px solid $intuitabledarkblue;
+					border-left: 1px solid $quizcontrolscolourborder;
 				}
 			}
 			&.returnattempt {
@@ -244,7 +247,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 	#user-picture {
 		font-size: 16px;
 		line-height: 26px;
-		color: $intuitabledarkblue;
+		color: $quizcontrolscolourborder;
 		margin: 0 0 0 20px;
 		padding: 0;
 		a {
@@ -268,7 +271,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 		    margin: 0 22px 0 0;
 		    font-size: 16px;
 		    line-height: 26px;
-		    border-right: 1px solid $intuitabledarkblue;
+		    border-right: 1px solid $quizcontrolscolourborder;
 		}
 		#quiz-time-left {
 			display: inline-block;
@@ -282,7 +285,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 		    font-size: 16px;
 		    font-weight: bold;
 		    line-height: 26px;
-		    border-right: 1px solid $intuitabledarkblue;
+		    border-right: 1px solid $quizcontrolscolourborder;
 		}
 		a.mod_quiz-next-nav {
 			flex: 0 0 auto;
@@ -292,7 +295,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 		    font-size: 16px;
 		    font-weight: bold;
 		    line-height: 26px;
-		    border-right: 1px solid $intuitabledarkblue;
+		    border-right: 1px solid $quizcontrolscolourborder;
 		}
 		.singlebutton {
 		    flex: 0 0 auto;
@@ -307,7 +310,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 			    border: 0;
 			    padding: 0;
 			    display: block;
-			    color: $intuitableblue;
+			    color: $quizbuttonsinglecolourtext;
 		    }
 		}
 		body#page-mod-quiz-review & {
@@ -324,7 +327,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 				order: 2;
 			    padding: 0 22px 0 0;
 			    margin: 0 22px 0 0;
-			    border-right: 1px solid $intuitabledarkblue;
+			    border-right: 1px solid $quizcontrolscolourborder;
 			}
 		}
 	}
@@ -353,7 +356,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 			}
 			&.answersaved {
 				.trafficlight {
-					background-color: $intuitablemidblue;
+					background-color: $quiztrafficlightcolourbg;
 				}
 			}
 			.trafficlight {
@@ -407,7 +410,7 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 		margin: 0 0 0 175px;
 	}
 	.formulation {
-		background: transparent;
+		background: $quizformulationcolourbg;
 		border: 0;
 		padding: 0;
 	}
@@ -447,22 +450,22 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 		.drop {
 			&.active {
 				margin-left: 0.5em;
-				border: 1px solid $grey6;
+				border: $quizdndcolourborder;
 			}
 			.placed {
 
 			}
 		}
 		.draghome {
-			background-color: rgba(17,119,209,0.08);
-			border: 1px solid $grey6;
+			background-color: $quizdndhomecolourbg;
+			border: $quizdndcolourborder;
 			font-size: 18px;
 			padding: 10px 30px;
 			line-height: 18px!important;
 			width: auto!important;
 			height: auto!important;
 			margin: 0 20px 0 0;
-			color: $intuitabledarkblue;
+			color: $quizdndhomecolourtext;
 		}
 	}
 	&.correct {

@@ -1,0 +1,64 @@
+.path-admin-setting {	
+	#adminsettings .settingsform {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		> h2 {
+			flex: 0 0 100%;
+		}
+		ul.nav.nav-tabs {
+			flex: 0 0 25%;
+		    display: flex;
+		    flex-direction: column;		
+		}
+		.tab-content {
+		    flex: 0 0 73%;
+		    margin: 0!important;
+		}
+		> .row {
+			flex: 0 0 100%;
+		}
+		.form-item.row {
+			margin: 0 0 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.form-label {
+				flex: 0 0 20%;
+				max-width: 20%;
+				padding: 0;
+			}
+			.form-setting {
+				flex: 0 0 77%;
+				max-width: 77%;
+				padding: 0;
+				.form-control[size] {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#adminsettings {
+	ul.nav-tabs {
+		.nav-item {
+			margin: 0;
+			.nav-link {
+				border:1px solid $admintabscolourborder;
+				background: $admintabscolourbg;
+				color: $admintabscolourtext;
+				padding: 10px;
+				&:hover {
+					background: $admintabscolourbghover;
+				}
+				&.active {
+					border:1px solid $admintabscolourborderactive;
+                    background: $admintabscolourbgactive;
+                    color: $admintabscolourtextactive;
+				}
+			}
+		}
+	}
+}

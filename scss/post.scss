@@ -5,15 +5,56 @@
   -------------------------------------*/
 @import "default";
 @import "custom/mixin";
+@import "custom/admin";
 @import "custom/blocks";
-@import "custom/bookings";
-@import "custom/commonroom";
+// @import "custom/bookings";
+// @import "custom/commonroom";
 @import "custom/core";
 @import "custom/course";
 @import "custom/dashboard";
 @import "custom/footer";
 @import "custom/header";
-@import "custom/navigation";
 @import "custom/login";
+@import "custom/navigation";
+@import "custom/typography";
 @import "custom/mod_quiz";
 @import "custom/additionalhtml";
+
+// first pass - replace all hex values
+//  done @import "default_new";
+//  done  @import "custom/mixin";
+//  done  @import "custom/admin";
+//  done @import "custom/blocks";
+//  na done @import "custom/bookings";
+//  na @import "custom/commonroom";
+//  done @import "custom/core";
+//  done @import "custom/course";
+//  done @import "custom/dashboard";
+//  done @import "custom/footer";
+//  done @import "custom/header";
+//  done @import "custom/navigation";
+//  done @import "custom/login";
+//  done @import "custom/mod_quiz";
+// @import "custom/additionalhtml";
+
+// second pass - replace the generic variables with context specific
+// to be added to the default.scss
+// to be extracted to spreadsheet
+// add  param type, name, default value to spreadsheet
+// php to read the spreadsheet and generate the theme settings for each row
+//   @import "default_new";
+//   done @import "custom/mixin";
+//   done @import "custom/admin";
+//   done @import "custom/blocks";
+//   na @import "custom/bookings";
+//   na @import "custom/commonroom";
+//   done @import "custom/core";
+//   WIP : check issue re custom course fields and derived class names, eg intuitable-course, intuitable-news etc 
+//   @import "custom/course";
+//   done @import "custom/dashboard";
+//   done @import "custom/footer";
+//   done @import "custom/header";
+//   done @import "custom/navigation";
+//   done @import "custom/login";
+//   done @import "custom/mod_quiz";
+//   done @import "custom/additionalhtml";

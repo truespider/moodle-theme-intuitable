@@ -4,7 +4,7 @@ body.drawer-open-top div#page:after {
     display: block;
     width: 100%;
     height: 100%;
-    background: $blacktransparent;
+    background: $navtopopencolourbg;
     top: 0;
     left: 0;
     position: absolute;
@@ -39,7 +39,7 @@ body.drawer-open-top div#page:after {
             height: 100%;
         }
         &.logo {
-            background: $red;
+            background: $navdrawericoncolourbg;
             width: $menubgwidth;
             flex: 1 1 auto;
             margin: 0;
@@ -55,7 +55,7 @@ body.drawer-open-top div#page:after {
     ul.mainnavigation {
         padding: 0;
         margin: 0;
-        background: transparent;
+        background: $navdrawercolourbg;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -69,34 +69,34 @@ body.drawer-open-top div#page:after {
         flex-direction: column;
         flex: 1 0 auto;
         align-items: stretch;
-        background: $greygradient;
-        border-radius: 0 $menutabradius $menutabradius 0;
+        background: $navdraweritemcolourbg;
+        border-radius: $navdraweritemborderradius;
         &:last-child {
             border-bottom-right-radius: 0px;
         }
         &:visited {
-            background: $greygradient;
+            background: $navdraweritemcolourbgvisited;
             outline: none;
         }
         &:hover {
-            background: $greygradientinverse;
+            background: $navdraweritemcolourbghover;
             outline: none;
             .nav-link {
-                color: $menucolour;
+                color: $navdraweritemcolourlinkhover;
                 text-shadow: none;
             }
         }
         &:active,
         &.active {
-            background: $whitegradient;
+            background: $navdraweritemcolourbgactive;
             outline: none;
             .nav-link {
-                color: $menucolourhover;
+                color: $navdraweritemcolourlinkactive;
                 text-shadow: none;
             }
         }
         &:focus {
-            background: $whitegradient;
+            background: $navdraweritemcolourbgfocus;
             outline: none;
         }
     }
@@ -106,7 +106,7 @@ body.drawer-open-top div#page:after {
         outline: none;
         border: 0;
         text-decoration: none;
-        color: $menucolour;
+        color: $navdraweritemcolourlink;
         font-size: $menufont;
         font-weight: $menufontweight;
         letter-spacing: $menuletterspacing;
@@ -118,7 +118,7 @@ body.drawer-open-top div#page:after {
         flex-wrap: wrap;
         flex: 1 0 auto;
         &:hover {
-            color: $menucolourhover;
+            color: $navdraweritemcolourlinkhover;
             text-shadow: none;
         }
         .icon {
@@ -169,7 +169,7 @@ body.drawer-open-top div#page:after {
         top: 60px;
         width: 100%;
         height: auto;
-        background: $white;
+        background: $navdrawermobilecolourbg;
         overflow-x: hidden;
         position: fixed;
         .d-sm-fl {
@@ -188,14 +188,14 @@ body.drawer-open-top div#page:after {
                 justify-content: space-between;
                 align-items: center;
                 margin: 0;
-                border-bottom: 1px solid $intuitablemidblue;
+                border-bottom: $navdrawermobilecontainerborder;
                 padding: 25px 22px;
                 max-width: none;
             }
             &.main {
                 flex: 1 0 auto;
                 max-width: none;
-                border-bottom: 1px solid $intuitablemidblue;
+                border-bottom: $navdrawermobilecontainerborder;
 
             }
             &.ctl {
@@ -228,7 +228,7 @@ body.drawer-open-top div#page:after {
             font-weight: 500;
             line-height: 18px;
             text-shadow: none;
-            text-transform: capitalize;
+            text-transform: $navdrawerlinktexttransform;
             padding: 16px 23px;
             span {
                 align-self: center;
@@ -245,8 +245,8 @@ body.drawer-open-top div#page:after {
             &:hover,
             &:active,
             &:focus {
-                background: $bodytext;
-                color: $white;
+                background: $navdrawermobilelinkcolourbg;
+                color: $navdrawermobilelinkcolourtext;
             }
         }
         ul.headerlinks {
@@ -256,7 +256,7 @@ body.drawer-open-top div#page:after {
         }
         li.headerlink a {
             font-size: 18px;
-            color: #979797;
+            color: $headerlinkcolourtext;
             font-weight: 500;
             padding: 15px;
             line-height: 18px;
@@ -319,11 +319,11 @@ body.drawer-open-top div#page:after {
             flex-wrap: nowrap;
        }
         li.nav-item {
-            background: $greygradient;
-            border-radius: 0 $menutabradius $menutabradius 0;
+            background: $navdraweritemcolourbg;
+            border-radius: $navdraweritemborderradius;
         }
         .nav-link {
-            color: $menucolour;
+            color: $navdraweritemcolourlink;
             font-size: $menufont;
             font-weight: $menufontweight;
             line-height: $menulineheight;
@@ -388,12 +388,12 @@ body.drawer-open-top div#page:after {
             padding: 0;
             list-style: none;
             li {
-                color: $bodytext;
+                color: $headerlinkcolourtext;
                 font-weight: 300;
                 line-height: 13px;
-                border-right: 1px solid $bodytext;
+                border-right: $headerlinkborder;
                 a {
-                    color: $bodytext;
+                    color: $headerlinkcolourtext;
                     padding: 0 10px;
                 }
                 #page-my-index.pagelayout-mydashboard &,
@@ -405,16 +405,16 @@ body.drawer-open-top div#page:after {
                     }
                 }
                 body.hasblockbackground & {
-                    color: $white;
-                    border-right: 1px solid $white;
+                    color: $bodyhasbackgroundheaderlinkcolourtext;
+                    border-right: $bodyhasbackgroundheaderlinkborder;
                     a {
-                        color: $white;
+                        color: $bodyhasbackgroundheaderlinkcolourtext;
                     }
                     #page-my-index.pagelayout-mydashboard & {
-                        color: $white;
-                        border-color: $white;
+                        color: $bodyhasbackgroundheaderlinkcolourtext;
+                        border-color: $bodyhasbackgroundheaderlinkcolourtext;
                         a {
-                            color: $white;
+                            color: $bodyhasbackgroundheaderlinkcolourtext;
                         }
                     }
                 }
@@ -430,7 +430,7 @@ body.drawer-open-top div#page:after {
             .card-title {
                 padding: 0;
                 margin: 0 $gutternarrow 0 0;
-                color: $intuitabledarkblue;
+                color: $regionheadercardtitlecolourtext;
             }
             .card-text {
                 display: none;
@@ -440,18 +440,18 @@ body.drawer-open-top div#page:after {
     #page-my-index.pagelayout-mydashboard &,
     body.hasblockbackground & {
         a.dropdown-toggle {
-            color: $white;
+            color: $bodyhasbackgroundheaderlinkcolourtext;
         }
     }
     .userwelcome {
         font-size: 30px;
         line-height: 31px;
-        color: #fff;
+        color: $userwelcomecolourtext;
         font-weight: 300;
     }
     .container {
         &.logo-toggle {
-            background: $intuitablered;
+            background: $headerlinktogglemenucolourbg;
             flex: 0 0 auto;
             max-width: none;
             width: auto;
@@ -537,8 +537,8 @@ body.drawer-open-top div#page:after {
             position: fixed;
             top: 0px;
             height: 60px;
-            background: $grey8;
-            border-bottom: 1px solid $intuitablemidblue;
+            background: $headermobilecolourbg;
+            border-bottom: $headermobileborder;
             padding: 0;
         }
         .userwelcome {
@@ -552,10 +552,10 @@ body.drawer-open-top div#page:after {
                 opacity: 1;
                 transition: opacity .4s ease;
                 display: flex;
-                background-color: $white;
+                background-color: $headerblockcolourbg;
                 padding: 0 0 10px;
                 body.hasblockbackground & {
-                    background-color: transparent;
+                    background-color: $bodyhasbackgroundheaderblockcolourbg;
                 }
                 body.drawer-open-top & {
                     opacity: 0;
@@ -584,10 +584,7 @@ body.drawer-open-top div#page:after {
             background: transparent;
             padding: 0 $gutterpage;
             border-bottom: 0;
-            body.intuitable-bookings &,
-            body.intuitable-commonroom &,
-            body.intuitable-course &,
-            body.intuitable-learningskills & {
+            body.hasblockbackground & {
                 padding: 0 55px;
             }
         }
