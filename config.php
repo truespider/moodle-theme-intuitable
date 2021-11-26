@@ -45,6 +45,8 @@ $THEME->parents = ['boost'];
 $THEME->scss = function($theme) {
     return theme_intuitable_get_main_scss_content($theme);
 };
+
+// use custom preprocessing to use theme settings
 $THEME->prescsscallback = 'theme_intuitable_get_pre_scss';
 // $THEME->extrascsscallback = 'theme_intuitable_get_extra_scss';
 $THEME->enable_dock = false;                                                                                                        

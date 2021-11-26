@@ -73,11 +73,22 @@ $string['logologin_desc'] = 'The logo displayed on the login page above the logi
 $string['logintitle'] = 'Log in to your account';
 $string['forgotten'] = 'Forgotten your password?';
 
-/* header links */
+/* header */
 $string['logosite'] = 'Sitewide logo';
 $string['logosite_desc'] = 'The logo displayed in the main navigation sitewide after login.';
 
+$string['headersettings'] = 'Header settings';
+$string['headerheading'] = 'Header';
+$string['headerheading_desc'] = 'The following settings are used to adjust the page header im conjunction with course custom settings.';
 
+$string['headerheightsmall'] = 'Small header height';
+$string['headerheightsmall_desc'] = 'The height in px for small headers on course pages.';
+$string['headerheightmedium'] = 'Small header height';
+$string['headerheightmedium_desc'] = 'The height in px for small headers on course pages.';
+$string['headerheightlarge'] = 'Small header height';
+$string['headerheightlarge_desc'] = 'The height in px for small headers on course pages.';
+
+/* header links */
 $string['headerlinksettings'] = 'Header links settings';
 $string['headerlinksheading'] = 'Header links';
 $string['headerlinksheading_desc'] = 'The following settings define the links which are rendered at the top of each page sitewide.';
@@ -104,50 +115,50 @@ $string['headerlinkselect3'] = 'Header link 3 type';
 $string['headerlinkselect3_desc'] = 'Select email, tel or url';
 
 /* custom navigation */
-$string['navigationsettings'] = 'Main navigation settings';
+$string['navigationsettings'] = 'Vertical navigation settings';
 $string['navigationheading'] = 'Navigation setings';
-$string['navigationheading_desc'] = 'The following settings define the main menu navigation which is displayed site wide, at the top for mobile or on the left for tablet and desktop. Up to 6 settings can be defined.';
+$string['navigationheading_desc'] = 'The following settings define the vertical navigation which is displayed site wide, at the top for mobile or on the left for tablet and desktop. Up to 6 settings can be defined.';
 
-$string['navigationlink1'] = 'Main navigation 1';
+$string['navigationlink1'] = 'Vertical navigation 1';
 $string['navigationlink1_desc'] = 'Name of the first link in the main navigation.';
-$string['navigationlinkiconname1'] = 'Navigation link 1 icon';
+$string['navigationlinkiconname1'] = 'Vertical link 1 icon';
 $string['navigationlinkiconname1_desc'] = 'Font Awesome icon name displayed for the first navigation link.';
-$string['navigationlinkurl1'] = 'Navigation link 1 url';
+$string['navigationlinkurl1'] = 'Vertical link 1 url';
 $string['navigationlinkurl1_desc'] = 'The url for the first navigation link.';
 
-$string['navigationlink2'] = 'Main navigation 2';
+$string['navigationlink2'] = 'Vertical navigation 2';
 $string['navigationlink2_desc'] = 'Name of the second link in the main navigation.';
-$string['navigationlinkiconname2'] = 'Navigation link 2 icon';
+$string['navigationlinkiconname2'] = 'Vertical link 2 icon';
 $string['navigationlinkiconname2_desc'] = 'Font Awesome icon name displayed for the second navigation link.';
-$string['navigationlinkurl2'] = 'Navigation link 2 url';
+$string['navigationlinkurl2'] = 'Vertical link 2 url';
 $string['navigationlinkurl2_desc'] = 'The url for the second navigation link.';
 
-$string['navigationlink3'] = 'Main navigation 3';
+$string['navigationlink3'] = 'Vertical navigation 3';
 $string['navigationlink3_desc'] = 'Name of the third link in the main navigation.';
-$string['navigationlinkiconname3'] = 'Navigation link 3 icon';
+$string['navigationlinkiconname3'] = 'Vertical link 3 icon';
 $string['navigationlinkiconname3_desc'] = 'Font Awesome icon name displayed for the third navigation link.';
-$string['navigationlinkurl3'] = 'Navigation link 3 url';
+$string['navigationlinkurl3'] = 'Vertical link 3 url';
 $string['navigationlinkurl3_desc'] = 'The url for the third navigation link.';
 
-$string['navigationlink4'] = 'Main navigation 4';
+$string['navigationlink4'] = 'Vertical navigation 4';
 $string['navigationlink4_desc'] = 'Name of the fourth link in the main navigation.';
-$string['navigationlinkiconname4'] = 'Navigation link 4 icon';
+$string['navigationlinkiconname4'] = 'Vertical link 4 icon';
 $string['navigationlinkiconname4_desc'] = 'Font Awesome icon name displayed for the fourth navigation link.';
-$string['navigationlinkurl4'] = 'Navigation link 4 url';
+$string['navigationlinkurl4'] = 'Vertical link 4 url';
 $string['navigationlinkurl4_desc'] = 'The url for the fourth navigation link.';
 
-$string['navigationlink5'] = 'Main navigation 5';
+$string['navigationlink5'] = 'Vertical navigation 5';
 $string['navigationlink5_desc'] = 'Name of the fifth link in the main navigation.';
-$string['navigationlinkiconname5'] = 'Navigation link 5 icon';
+$string['navigationlinkiconname5'] = 'Vertical link 5 icon';
 $string['navigationlinkiconname5_desc'] = 'Font Awesome icon name displayed for the fifth navigation link.';
-$string['navigationlinkurl5'] = 'Navigation link 5 url';
+$string['navigationlinkurl5'] = 'Vertical link 5 url';
 $string['navigationlinkurl5_desc'] = 'The url for the fifth navigation link.';
 
-$string['navigationlink6'] = 'Main navigation 6';
+$string['navigationlink6'] = 'Vertical navigation 6';
 $string['navigationlink6_desc'] = 'Name of the sixth link in the main navigation.';
-$string['navigationlinkiconname6'] = 'Navigation link 6 icon';
+$string['navigationlinkiconname6'] = 'Vertical link 6 icon';
 $string['navigationlinkiconname6_desc'] = 'Font Awesome icon name displayed for the sixth navigation link.';
-$string['navigationlinkurl6'] = 'Navigation link 6 url';
+$string['navigationlinkurl6'] = 'Vertical link 6 url';
 $string['navigationlinkurl6_desc'] = 'The url for the sixth navigation link.';
 
 /* breadcrumb settings */

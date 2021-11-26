@@ -4,6 +4,14 @@
     color: $cardtextcolor;
     border: 0;
     padding: 0;
+    .card-body {
+    	color: $cardtextcolor;
+    	background-color: $cardcolourbg;
+    	border: $cardborder;
+    	border-radius: $cardborderradius;
+    	padding: $cardpadding;
+    	margin: $cardmargin;
+    }
     .block-controls + .card-text {
         clear: both;
     }

@@ -246,8 +246,63 @@ $blockthumbsubtitlelineheight:          19px;
 $blockthumbsubtitlecolour:              $red !default;
 
 /* blocks standard style */
-$cardborderradius:                      20px !default;
 $cardtextcolor:                         $bodytext !default;
+$cardcolourbg:                          transparent !default;
+$cardborder:                            0 !default;
+$cardborderradius:                      0 !default;
+$cardpadding:                           1.25rem !default;
+$cardmargin:                            0 !default;
+$cardcolourbg:                          transparent !default;
+/* header custom region block styles */
+$headercardtextcolor:                         $bodytext !default;
+$headercardcolourbg:                          transparent !default;
+$headercardborder:                            0 !default;
+$headercardborderradius:                      0 !default;
+$headercardpadding:                           1.25rem !default;
+$headercardmargin:                            0 !default;
+$headercardcolourbg:                          transparent !default;
+/* banner custom region block styles */
+$bannercardtextcolor:                         $bodytext !default;
+$bannercardcolourbg:                          transparent !default;
+$bannercardborder:                            0 !default;
+$bannercardborderradius:                      0 !default;
+$bannercardpadding:                           1.25rem !default;
+$bannercardmargin:                            0 !default;
+$bannercardcolourbg:                          transparent !default;
+/* intro custom region block styles */
+$introcardtextcolor:                         $bodytext !default;
+$introcardcolourbg:                          transparent !default;
+$introcardborder:                            0 !default;
+$introcardborderradius:                      0 !default;
+$introcardpadding:                           1.25rem !default;
+$introcardmargin:                            0 !default;
+$introcardcolourbg:                          transparent !default;
+/* main custom region block styles */
+$maincardtextcolor:                         $bodytext !default;
+$maincardcolourbg:                          transparent !default;
+$maincardborder:                            0 !default;
+$maincardborderradius:                      0 !default;
+$maincardpadding:                           1.25rem !default;
+$maincardmargin:                            0 !default;
+$maincardcolourbg:                          transparent !default;
+/* side pre region block styles */
+$sideprecardtextcolor:                         $bodytext !default;
+$sideprecardcolourbg:                          transparent !default;
+$sideprecardborder:                            0 !default;
+$sideprecardborderradius:                      0 !default;
+$sideprecardpadding:                           1.25rem !default;
+$sideprecardmargin:                            0 !default;
+$sideprecardcolourbg:                          transparent !default;
+/* footer region block styles */
+$footercardtextcolor:                         $bodytext !default;
+$footercardcolourbg:                          transparent !default;
+$footercardborder:                            0 !default;
+$footercardborderradius:                      0 !default;
+$footercardpadding:                           1.25rem !default;
+$footercardmargin:                            0 !default;
+$footercardcolourbg:                          transparent !default;
+
+/* card tabs */
 $cardtabscolourbg:                      $bluegradient !default;
 $cardtabscolourbghover:                 $bluegradientinverse !default;
 $cardtabscolourbgactive:                #ffffff !default;
@@ -379,30 +434,34 @@ $loginformbtnshadow:                0 2px 4px 0 rgba(0,0,0,0.34) !default;
 $loginformbtnborder:                1px solid $red !default;
 
 /* navigation */
-$navtopopencolourbg:                $blacktransparent !default;
-$navdrawericoncolourbg:             $red !default;
-$navdrawercolourbg:                 transparent !default;
-$navdraweritemcolourbg:             $greygradient !default;
-$navdraweritemcolourbgactive:       $whitegradient !default;
-$navdraweritemcolourbgfocus:        $whitegradient !default;
-$navdraweritemcolourbghover:        $greygradientinverse !default;
-$navdraweritemcolourbgvisited:      $greygradient !default;
-$navdraweritemcolourlink:           $menucolour !default;
-$navdraweritemcolourlinkactive:     $menucolourhover !default;
-$navdraweritemcolourlinkfocus:      $menucolourhover !default;
-$navdraweritemcolourlinkhover:      $menucolourhover !default;
-$navdraweritemcolourlinkvisited:    $menucolour !default;
-$navdraweritemborderradius:         0 $menutabradius $menutabradius 0 !default;
-$navdrawermobilecolourbg:           #ffffff !default;
-$navdrawermobilecontainerborder:    1px solid $midblue !default;
-$navdrawermobilelinkcolourbg:       $bodytext !default;
-$navdrawermobilelinkcolourtext:     #ffffff !default;
-$navdrawerlinktexttransform:        capitalize !default;
+$vnavmobilecolourbg:                $blacktransparent !default;
+$vnaviconcolourbg:             $red !default;
+$vnavcolourbg:                 transparent !default;
+$vnavitemcolourbg:             $greygradient !default;
+$vnavitemcolourbgactive:       $whitegradient !default;
+$vnavitemcolourbgfocus:        $whitegradient !default;
+$vnavitemcolourbghover:        $greygradientinverse !default;
+$vnavitemcolourbgvisited:      $greygradient !default;
+$vnavitemcolourlink:           $menucolour !default;
+$vnavitemcolourlinkactive:     $menucolourhover !default;
+$vnavitemcolourlinkfocus:      $menucolourhover !default;
+$vnavitemcolourlinkhover:      $menucolourhover !default;
+$vnavitemcolourlinkvisited:    $menucolour !default;
+$vnavitemborderradius:         0 $menutabradius $menutabradius 0 !default;
+$vnavmobilecolourbg:           #ffffff !default;
+$vnavmobilecontainerborder:    1px solid $midblue !default;
+$vnavmobilelinkcolourbg:       $bodytext !default;
+$vnavmobilelinkcolourtext:     #ffffff !default;
+$vnavlinktexttransform:        capitalize !default;
 
 $headerlinkcolourtext:                    $grey600 !default;
 $headerlinkborder:                        1px solid $bodytext !default;
 $bodyhasbackgroundheaderlinkcolourtext:   #ffffff !default;
 $bodyhasbackgroundheaderlinkborder:       1px solid #ffffff !default;
+
+$headerheightsm:                          100px !default;
+$headerheightmd:                          200px !default;
+$headerheightlg:                          300px !default;
 
 $headerlinktogglemenucolourbg:            $red !default;
 $headermobilecolourbg:                    $grey100 !default;

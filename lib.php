@@ -118,6 +118,43 @@ function theme_intuitable_get_main_scss_content($theme) {
 }
 
 /**
+ * Get SCSS to prepend.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return array
+ */
+function theme_intuitable_get_pre_scss($theme) {
+    global $CFG;
+
+    $scss = '';
+    $configurable = [
+        // Config key => [variableName, ...].
+        'headerheightsmall' => ['headerheightsm'],
+        'headerheightmedium' => ['headerheightmd'],
+        'headerheightlarge' => ['headerheightlg']
+    ];
+
+    // Prepend variables first.
+    foreach ($configurable as $configkey => $targets) {
+        $value = isset($theme->settings->{$configkey}) ? $theme->settings->{$configkey} : null;
+        if (empty($value)) {
+            continue;
+        }
+        array_map(function($target) use (&$scss, $value) {
+            $scss .= '$' . $target . ': ' . $value . ";\n";
+        }, (array) $targets);
+    }
+
+    // Prepend pre-scss.
+    if (!empty($theme->settings->scsspre)) {
+        $scss .= $theme->settings->scsspre;
+    }
+
+    return $scss;
+}
+
+
+/**
  * Returns the course custom fields
  * 
  * code as per https://docs.moodle.org/dev/Custom_fields_API

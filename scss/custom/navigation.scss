@@ -4,7 +4,7 @@ body.drawer-open-top div#page:after {
     display: block;
     width: 100%;
     height: 100%;
-    background: $navtopopencolourbg;
+    background: $vnavmobilecolourbg;
     top: 0;
     left: 0;
     position: absolute;
@@ -39,7 +39,7 @@ body.drawer-open-top div#page:after {
             height: 100%;
         }
         &.logo {
-            background: $navdrawericoncolourbg;
+            background: $vnaviconcolourbg;
             width: $menubgwidth;
             flex: 1 1 auto;
             margin: 0;
@@ -55,7 +55,7 @@ body.drawer-open-top div#page:after {
     ul.mainnavigation {
         padding: 0;
         margin: 0;
-        background: $navdrawercolourbg;
+        background: $vnavcolourbg;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -69,34 +69,34 @@ body.drawer-open-top div#page:after {
         flex-direction: column;
         flex: 1 0 auto;
         align-items: stretch;
-        background: $navdraweritemcolourbg;
-        border-radius: $navdraweritemborderradius;
+        background: $vnavitemcolourbg;
+        border-radius: $vnavitemborderradius;
         &:last-child {
             border-bottom-right-radius: 0px;
         }
         &:visited {
-            background: $navdraweritemcolourbgvisited;
+            background: $vnavitemcolourbgvisited;
             outline: none;
         }
         &:hover {
-            background: $navdraweritemcolourbghover;
+            background: $vnavitemcolourbghover;
             outline: none;
             .nav-link {
-                color: $navdraweritemcolourlinkhover;
+                color: $vnavitemcolourlinkhover;
                 text-shadow: none;
             }
         }
         &:active,
         &.active {
-            background: $navdraweritemcolourbgactive;
+            background: $vnavitemcolourbgactive;
             outline: none;
             .nav-link {
-                color: $navdraweritemcolourlinkactive;
+                color: $vnavitemcolourlinkactive;
                 text-shadow: none;
             }
         }
         &:focus {
-            background: $navdraweritemcolourbgfocus;
+            background: $vnavitemcolourbgfocus;
             outline: none;
         }
     }
@@ -106,7 +106,7 @@ body.drawer-open-top div#page:after {
         outline: none;
         border: 0;
         text-decoration: none;
-        color: $navdraweritemcolourlink;
+        color: $vnavitemcolourlink;
         font-size: $menufont;
         font-weight: $menufontweight;
         letter-spacing: $menuletterspacing;
@@ -118,7 +118,7 @@ body.drawer-open-top div#page:after {
         flex-wrap: wrap;
         flex: 1 0 auto;
         &:hover {
-            color: $navdraweritemcolourlinkhover;
+            color: $vnavitemcolourlinkhover;
             text-shadow: none;
         }
         .icon {
@@ -169,7 +169,7 @@ body.drawer-open-top div#page:after {
         top: 60px;
         width: 100%;
         height: auto;
-        background: $navdrawermobilecolourbg;
+        background: $vnavmobilecolourbg;
         overflow-x: hidden;
         position: fixed;
         .d-sm-fl {
@@ -188,14 +188,14 @@ body.drawer-open-top div#page:after {
                 justify-content: space-between;
                 align-items: center;
                 margin: 0;
-                border-bottom: $navdrawermobilecontainerborder;
+                border-bottom: $vnavmobilecontainerborder;
                 padding: 25px 22px;
                 max-width: none;
             }
             &.main {
                 flex: 1 0 auto;
                 max-width: none;
-                border-bottom: $navdrawermobilecontainerborder;
+                border-bottom: $vnavmobilecontainerborder;
 
             }
             &.ctl {
@@ -228,7 +228,7 @@ body.drawer-open-top div#page:after {
             font-weight: 500;
             line-height: 18px;
             text-shadow: none;
-            text-transform: $navdrawerlinktexttransform;
+            text-transform: $vnavlinktexttransform;
             padding: 16px 23px;
             span {
                 align-self: center;
@@ -245,8 +245,8 @@ body.drawer-open-top div#page:after {
             &:hover,
             &:active,
             &:focus {
-                background: $navdrawermobilelinkcolourbg;
-                color: $navdrawermobilelinkcolourtext;
+                background: $vnavmobilelinkcolourbg;
+                color: $vnavmobilelinkcolourtext;
             }
         }
         ul.headerlinks {
@@ -319,11 +319,11 @@ body.drawer-open-top div#page:after {
             flex-wrap: nowrap;
        }
         li.nav-item {
-            background: $navdraweritemcolourbg;
-            border-radius: $navdraweritemborderradius;
+            background: $vnavitemcolourbg;
+            border-radius: $vnavitemborderradius;
         }
         .nav-link {
-            color: $navdraweritemcolourlink;
+            color: $vnavitemcolourlink;
             font-size: $menufont;
             font-weight: $menufontweight;
             line-height: $menulineheight;
@@ -540,6 +540,15 @@ body.drawer-open-top div#page:after {
             background: $headermobilecolourbg;
             border-bottom: $headermobileborder;
             padding: 0;
+            .coursepageheaderheightsm & {
+                min-height: $headerheightsm;
+            }
+            .coursepageheaderheightmd & {
+                min-height: $headerheightmd;
+            }
+            .coursepageheaderheightlg & {
+                min-height: $headerheightlg;
+            }
         }
         .userwelcome {
             margin: 0 40px;

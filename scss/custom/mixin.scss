@@ -15,3 +15,13 @@
     line-height: $blocklargelineheight;
     color: $blocklargecolour;
 }
+
+@mixin courselink-style($category, $colourbg, $colourtext) {
+    .section .courselink .contentwithoutlink .cl-cat-name-#{$category} .cl-id .icon, 
+    .card.block_cohortcourselink .bcl-wrapper .bcl-cat-name-#{$category} .icon {
+        .icon {
+            background-color: $colourbg;
+            color: $colourtext;
+        }
+    }
+}

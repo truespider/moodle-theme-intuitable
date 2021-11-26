@@ -167,6 +167,11 @@ $sectionthumbindent: 60px;
     }
     ul.topics {
         li.section {
+            &#section-0 {
+                body.hidetopiczero:not(.editing) & {
+                    display: none;
+                }
+            }
             .summary {
                 .intuitable-news & 
                 .intuitable-learningskills & {
