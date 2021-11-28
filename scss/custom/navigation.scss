@@ -435,6 +435,11 @@ body.drawer-open-top div#page:after {
             .card-text {
                 display: none;
             }
+            &.showcontent {
+                .card-text {
+                    display: block;
+                }
+            }
         }
     }
     #page-my-index.pagelayout-mydashboard &,

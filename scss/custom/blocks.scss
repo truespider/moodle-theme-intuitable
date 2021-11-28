@@ -467,31 +467,48 @@ section.pagebackground {
         }
     }
 }
+
 #block-region-header {
     .card {
-        .card-title {
-            color: $regionheadercardtitlecolourtext;
-            font-size: 30px;
-            font-weight: 300;
-            letter-spacing: 0;
-            line-height: 31px;  
-        }
         .card-body {
-            padding: 0;
+            background-color: $headercardcolourbg;
+            padding: $headercardpadding;
+            margin: $headercardmargin;
+            border: $headercardborder;
+            border-radius: $headercardborderradius;
             p {
                 margin: 0;
             }
         }
+        .card-title {
+            color: $headercardtitletextcolor;
+            font-size: $headercardtitlefontsize;
+            font-weight: $headercardtitlefontweight;
+            letter-spacing: $headercardtitleletterspacing;
+            line-height: $headercardtitlelineheight;  
+        }
+        .card-text {
+            color: $headercardtextcolor;
+            font-size: $headercardfontsize;
+            font-weight: $headercardfontweight;
+            letter-spacing: $headercardletterspacing;
+            line-height: $headercardlineheight;  
+        }
     }
 }
+
 #block-region-banner {
     .card {
-        margin: 0 0 $gutterwide;
+        margin: $bannercardmargin;
         &.banner {
             border: 0;
             padding: 0;
             .card-body {
-                padding: 0;
+                background-color: $bannercardcolourbg;
+                border: $bannercardborder;
+                border-radius: $bannercardborderradius;
+                padding: $bannercardpadding;
+                color: $bannercardtextcolor;
                 p {
                     margin: 0;
                 }
@@ -516,16 +533,23 @@ section.pagebackground {
         padding-top: 14px;
     }
 }
-#block-region-side-pre,
-#block-region-intro,
-#block-region-main {
+#block-region-side-pre {
     .card-body {
-        padding: 0 0 $gutterpage 0;
+        padding: $cardpadding;
     }
 }
 
 #block-region-intro {
     .card {
+        border: 0;
+        padding: 0;
+        .card-body {
+            background-color: $introcardcolourbg;
+            border: $introcardborder;
+            border-radius: $introcardborderradius;
+            padding: $introcardpadding;
+            color: $introcardtextcolor;
+        }
         &:not(.subtitle) {
             .card-title {
                 font-size: 20px;
@@ -550,7 +574,16 @@ section.pagebackground {
 }
 
 #block-region-content {
-    .block {
+    .card {
+        border: 0;
+        padding: 0;
+        .card-body {
+            background-color: $contentcardcolourbg;
+            border: $contentcardborder;
+            border-radius: $contentcardborderradius;
+            padding: $contentcardpadding;
+            color: $contentcardtextcolor;
+        }
         .card-title {
             @include card-title;
         }

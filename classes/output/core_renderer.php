@@ -87,6 +87,7 @@ class core_renderer extends \core_renderer {
         // add loginlogo, logoalt 
         $context->logoalt = get_config('theme_intuitable', 'logoalt');   
         $context->loginlogo = $PAGE->theme->setting_file_url('logologin', 'logologin');
+        $context->loginbg = $PAGE->theme->setting_file_url('backgroundimagelogin', 'backgroundimagelogin');
         return $this->render_from_template('theme_intuitable/core/loginform', $context);
         // MODIFICATION END.
     }

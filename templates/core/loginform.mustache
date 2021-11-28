@@ -94,7 +94,12 @@
         "maintenance": "For full access to this site, you need to login in as an admin."
     }
 }}
-
+{{! workaround while login.scss child theme bg url not working }}
+<style>
+body.pagelayout-login {
+    background-image: url("{{{loginbg}}}");
+}
+</style>
 <div class="row justify-content-center">
     <div class="col-sm-12">
         <div class = "container logo">

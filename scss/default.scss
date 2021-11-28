@@ -250,57 +250,67 @@ $cardtextcolor:                         $bodytext !default;
 $cardcolourbg:                          transparent !default;
 $cardborder:                            0 !default;
 $cardborderradius:                      0 !default;
-$cardpadding:                           1.25rem !default;
+$cardpadding:                           0 0 $gutterwide !default;
 $cardmargin:                            0 !default;
 $cardcolourbg:                          transparent !default;
 /* header custom region block styles */
-$headercardtextcolor:                         $bodytext !default;
+$headercardtextcolor:                         $red !default;
 $headercardcolourbg:                          transparent !default;
 $headercardborder:                            0 !default;
 $headercardborderradius:                      0 !default;
-$headercardpadding:                           1.25rem !default;
+$headercardpadding:                           0 !default;
 $headercardmargin:                            0 !default;
-$headercardcolourbg:                          transparent !default;
+$headercardtitlefontsize:                     30px !default;
+$headercardtitlefontweight:                   300 !default;
+$headercardtitlelineheight:                   31px !default;
+$headercardtitleletterspacing:                0 !default;
+$headercardtitletextcolor:                    $red !default;
+$headercardfontsize:                          19px !default;
+$headercardfontweight:                        300 !default;
+$headercardlineheight:                        28px !default;
+$headercardletterspacing:                     0 !default;
 /* banner custom region block styles */
 $bannercardtextcolor:                         $bodytext !default;
 $bannercardcolourbg:                          transparent !default;
 $bannercardborder:                            0 !default;
 $bannercardborderradius:                      0 !default;
-$bannercardpadding:                           1.25rem !default;
-$bannercardmargin:                            0 !default;
-$bannercardcolourbg:                          transparent !default;
+$bannercardpadding:                           0 !default;
+$bannercardmargin:                            0 0 $gutterwide !default;
 /* intro custom region block styles */
 $introcardtextcolor:                         $bodytext !default;
 $introcardcolourbg:                          transparent !default;
 $introcardborder:                            0 !default;
 $introcardborderradius:                      0 !default;
-$introcardpadding:                           1.25rem !default;
+$introcardpadding:                           0 !default;
 $introcardmargin:                            0 !default;
-$introcardcolourbg:                          transparent !default;
+/* content region block styles */
+$contentcardtextcolor:                       $bodytext !default;
+$contentcardcolourbg:                        transparent !default;
+$contentcardborder:                          0 !default;
+$contentcardborderradius:                    0 !default;
+$contentcardpadding:                         0 !default;
+$contentcardmargin:                          0 !default;
 /* main custom region block styles */
-$maincardtextcolor:                         $bodytext !default;
-$maincardcolourbg:                          transparent !default;
-$maincardborder:                            0 !default;
-$maincardborderradius:                      0 !default;
-$maincardpadding:                           1.25rem !default;
-$maincardmargin:                            0 !default;
-$maincardcolourbg:                          transparent !default;
+$maincardtextcolor:                           $bodytext !default;
+$maincardcolourbg:                            transparent !default;
+$maincardborder:                              0 !default;
+$maincardborderradius:                        0 !default;
+$maincardpadding:                             0 !default;
+$maincardmargin:                              0 !default;
 /* side pre region block styles */
-$sideprecardtextcolor:                         $bodytext !default;
-$sideprecardcolourbg:                          transparent !default;
-$sideprecardborder:                            0 !default;
-$sideprecardborderradius:                      0 !default;
-$sideprecardpadding:                           1.25rem !default;
-$sideprecardmargin:                            0 !default;
-$sideprecardcolourbg:                          transparent !default;
+$sideprecardtextcolor:                        $bodytext !default;
+$sideprecardcolourbg:                         transparent !default;
+$sideprecardborder:                           0 !default;
+$sideprecardborderradius:                     0 !default;
+$sideprecardpadding:                          0 !default;
+$sideprecardmargin:                           0 !default;
 /* footer region block styles */
 $footercardtextcolor:                         $bodytext !default;
 $footercardcolourbg:                          transparent !default;
 $footercardborder:                            0 !default;
 $footercardborderradius:                      0 !default;
-$footercardpadding:                           1.25rem !default;
+$footercardpadding:                           0 !default;
 $footercardmargin:                            0 !default;
-$footercardcolourbg:                          transparent !default;
 
 /* card tabs */
 $cardtabscolourbg:                      $bluegradient !default;
