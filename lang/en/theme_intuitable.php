@@ -83,10 +83,10 @@ $string['headerheading_desc'] = 'The following settings are used to adjust the p
 
 $string['headerheightsmall'] = 'Small header height';
 $string['headerheightsmall_desc'] = 'The height in px for small headers on course pages.';
-$string['headerheightmedium'] = 'Small header height';
-$string['headerheightmedium_desc'] = 'The height in px for small headers on course pages.';
-$string['headerheightlarge'] = 'Small header height';
-$string['headerheightlarge_desc'] = 'The height in px for small headers on course pages.';
+$string['headerheightmedium'] = 'Medium header height';
+$string['headerheightmedium_desc'] = 'The height in px for medium headers on course pages.';
+$string['headerheightlarge'] = 'Large header height';
+$string['headerheightlarge_desc'] = 'The height in px for large headers on course pages.';
 
 /* header links */
 $string['headerlinksettings'] = 'Header links settings';

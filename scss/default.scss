@@ -29,10 +29,6 @@ $grid-breakpoints: (
   xxl: 1450px
 );
 
-$font-default:              "filson-soft" !default;
-$font-family-default:       $font-default + "," + $font-family-base-default !default;
-
-
 $white:               #fff     !default;
 $grey100:             #f4f4f4  !default;
 $grey200:             #dcdcdc  !default;
@@ -205,6 +201,7 @@ $h4fontsize:        16px;
 $h4fontlineheight:  16px;
 $h4fontweight:      500;
 $h4fontcolour:      #294d5d !default;
+$h4fontfamily:      $title-font-family-base !default;
 $bodyfontsize:      14px;
 $bodyfontweight:    300;
 
@@ -343,7 +340,7 @@ $regionmaincontainerborderradius:       $cardborderradius !default;
 
 $input-btn-padding-y:         12px;
 $input-btn-padding-x:         11px;
-$input-btn-font-family:       $font-default + "," + $font-family-base-default !default;
+$input-btn-font-family:       $font-family-base !default;
 
 // Buttons
 //

@@ -50,7 +50,7 @@ $mobilenavbar = empty($PAGE->layout_options['nomobilenavbar']);
 $prefixmailto = get_string('prefixmailto', 'theme_intuitable');
 $prefixtel = get_string('prefixtel', 'theme_intuitable');
 
-$pageheights = array('sm','md','lg');
+$pageheights = array('1'=>'sm','2'=>'md','3'=>'lg');
 foreach ($coursemetadata as $key => $val) {
     switch ($key) {
         case "coursepageheaderheight": array_key_exists($val,$pageheights) && $extraclasses[] = $key.$pageheights[$val]; break;
