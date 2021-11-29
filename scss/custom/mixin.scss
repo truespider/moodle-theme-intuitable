@@ -17,11 +17,9 @@
 }
 
 @mixin courselink-style($category, $colourbg, $colourtext) {
-    .section .courselink .contentwithoutlink .cl-cat-name-#{$category} .cl-id .icon, 
+    .section .courselink .contentwithoutlink .cl-cat-name-#{$category} .cl-id, 
     .card.block_cohortcourselink .bcl-wrapper .bcl-cat-name-#{$category} .icon {
-        .icon {
-            background-color: $colourbg;
-            color: $colourtext;
-        }
+        background-color: $colourbg;
+        color: $colourtext;
     }
 }
