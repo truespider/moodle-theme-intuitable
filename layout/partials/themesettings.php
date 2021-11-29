@@ -111,6 +111,7 @@ for ( $headerlinks_i = 1 ; $headerlinks_i < 4 ; $headerlinks_i++) {
 // use course category to determine if active link
 $linkactiveclass = '';
 $categoryclass =  '';
+$topcategoryclass =  '';
 // get current page path : used to determine active link in main navigation
 $currentpath = $PAGE->url->out_as_local_url();
 // home page is my dashboard - set the actve class on home nav link 
@@ -120,7 +121,9 @@ if ($PAGE->pagelayout === 'mydashboard') {
 else if ($PAGE->category) {
     $arrcategory = explode("/",$PAGE->category->path);
     $topcategory = core_course_category::get($arrcategory[1]);
-    $categoryclass = strtolower(preg_replace('/[^a-zA-Z0-9]/','',$topcategory->name));
+    $topcategoryclass = strtolower(preg_replace('/[^a-zA-Z0-9]/','',$topcategory->name));
+    $categoryclass = strtolower(preg_replace('/[^a-zA-Z0-9]/','', $PAGE->category->name));
+    $extraclasses[] = $categoryclass;
 }
 
 for ( $navlink_i = 1 ; $navlink_i < 7 ; $navlink_i++) {
@@ -140,7 +143,7 @@ for ( $navlink_i = 1 ; $navlink_i < 7 ; $navlink_i++) {
         $settingicon = get_config('theme_intuitable', 'navigationlinkiconname'.$navlink_i);
         $iconclass .= $settingicon;
         if (strlen($settingcontenturl) !== 0) {
-            if ($currentpath === $settingcontenturl || $categoryclass === $settingcontentclass) {
+            if ($currentpath === $settingcontenturl || $topcategoryclass === $settingcontentclass) {
                 $linkactiveclass = ' active';
             }
             $contentclass .= $linkactiveclass;
