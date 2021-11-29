@@ -266,6 +266,7 @@ $headercardfontsize:                          19px !default;
 $headercardfontweight:                        300 !default;
 $headercardlineheight:                        28px !default;
 $headercardletterspacing:                     0 !default;
+$pagebgheadercardtitletextcolor:              $white !default;
 /* banner custom region block styles */
 $bannercardtextcolor:                         $bodytext !default;
 $bannercardcolourbg:                          transparent !default;
@@ -332,7 +333,7 @@ $regionheadercardtitlecolourtext:       $red !default;
 $regionintrocardtitleborder:            1px dashed $grey800;
 
 $regionmaincontainercolourbg:           $containertransparentgradient !default;
-$regionmaincontainerborderradius:       $cardborderradius !default;
+$regionmaincontainerborderradius:       20px !default;
 
 // Buttons + Forms : override the bootstrap/boost defaults
 //

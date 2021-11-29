@@ -28,4 +28,9 @@
     <script src="https://kit.fontawesome.com/99a458b0d6.js" crossorigin="anonymous"></script>
     {{{ output.standard_head_html }}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{#fontimporturl}}
+    <style>
+    @import url({{{fontimporturl}}}); 
+    </style>
+    {{/fontimporturl}}
 </head>

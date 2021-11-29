@@ -376,7 +376,14 @@ body.drawer-open-top div#page:after {
         }
         .card {
             background: transparent;
-        }
+            &.haslogo {
+                .card-text {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+         }
         .card-body {
         }
         ul.headerlinks {
@@ -545,15 +552,6 @@ body.drawer-open-top div#page:after {
             background: $headermobilecolourbg;
             border-bottom: $headermobileborder;
             padding: 0;
-            .coursepageheaderheightsm & {
-                min-height: $headerheightsm;
-            }
-            .coursepageheaderheightmd & {
-                min-height: $headerheightmd;
-            }
-            .coursepageheaderheightlg & {
-                min-height: $headerheightlg;
-            }
         }
         .userwelcome {
             margin: 0 40px;
@@ -586,6 +584,12 @@ body.drawer-open-top div#page:after {
                     line-height: 18px;
                     font-weight: 300;
                     padding: 20px 40px 0;
+                    h1 {
+                        margin: 0 40px;
+                        padding: 0;
+                        position: absolute;
+                        top: 40px;
+                    }
                 }
             }
         }
@@ -600,6 +604,15 @@ body.drawer-open-top div#page:after {
             border-bottom: 0;
             body.hasblockbackground & {
                 padding: 0 55px;
+            }
+           .card {
+                &.haslogo {
+                    .card-text {
+                        img {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
         &.closed {
@@ -636,7 +649,16 @@ body.drawer-open-top div#page:after {
                 body.drawer-open-top & {
                     opacity: 1;
                 }
-                .container.logo {
+                body.coursepageheaderheightsm & {
+                    min-height: $headerheightsm;
+                }
+                body.coursepageheaderheightmd & {
+                    min-height: $headerheightmd;
+                }
+                body.coursepageheaderheightlg & {
+                    min-height: $headerheightlg;
+                }
+                 .container.logo {
                     display: flex;
                     margin-bottom: 20px;
                 }
@@ -649,6 +671,14 @@ body.drawer-open-top div#page:after {
                     font-size: 30px;
                     line-height: 31px;
                     padding: 0;
+                }
+                .card {
+                    .card-text {
+                        h1 {
+                            position: relative;
+                            top: 0;
+                        }
+                    }
                 }
             }
         }

@@ -494,6 +494,29 @@ section.pagebackground {
             letter-spacing: $headercardletterspacing;
             line-height: $headercardlineheight;  
         }
+        body.hasblockbackground & {
+            margin: 0 $gutterwide;
+            .card-text {
+                color: $pagebgheadercardtitletextcolor;
+                h1 {
+                    color: $pagebgheadercardtitletextcolor;
+                    font-size: $headercardtitlefontsize;
+                    font-weight: $headercardtitlefontweight;
+                    line-height: $headercardtitlelineheight;
+                    letter-spacing: $headercardtitleletterspacing;
+                }
+            }
+        }
+        &.haslogo {
+            .card-text {
+                img {
+                    max-height: 65px;
+                    width: auto;
+                    margin: 0 0 20px;
+                    padding: 0;
+                }
+            }
+        }
     }
 }
 
