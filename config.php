@@ -105,7 +105,7 @@ $THEME->layouts = [
     // Part of course, typical for modules - default page layout if $cm specified in require_login().
     'incourse' => array(
         'file' => 'incourse.php',
-        'regions' => array('banner','header','intro','main','side-pre','footer'),
+        'regions' => array('background','banner','header','intro','main','side-pre','footer'),
         'defaultregion' => 'intro',
     ),
     // The site home page.

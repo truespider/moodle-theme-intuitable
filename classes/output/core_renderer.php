@@ -132,7 +132,7 @@ class core_renderer extends \core_renderer {
             $showbreadcrumb = true;
         } 
         // show course page title on activity / resource pages
-        if ($PAGE->pagelayout === "incourse"){
+        if ($PAGE->pagelayout === "incourse") {
             $showpagetitle = true;
         }
         if ($this->page->include_region_main_settings_in_header_actions() &&

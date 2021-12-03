@@ -410,8 +410,11 @@ $collapsibleintrocolourtext:        $darkblue !default;;
 $collapsiblesectionnamecolourtext:  $red !default;
 
 /* page header */
-$headerhasbackgroundcardcolourtext: #ffffff !default;
-$headerexitactivitycolourtext:      $red !default;
+$headerhasbackgroundcardcolourbg:           transparent !default;
+$headerhasbackgroundcardcolourtext:         #ffffff !default;
+$editingheaderhasbackgroundcardcolourbg:    #ffffff !default;
+$editingheaderhasbackgroundcardcolourtext:  $bodytext !default;
+$headerexitactivitycolourtext:              $red !default;
 
 /* page footer */
 $footercontainercolourbg:           #ffffff !default;
@@ -430,16 +433,27 @@ $footerstandardcolourbg:            $footercolourbg !default;
 $loginfootercolourbg:               #ffffff !default;
 $loginboxcolourbg:                  $whitetransparent !default;
 $loginboxborderradius:              $cardborderradius !default;
-$loginboxshadow:                    0px 0px 25px 9px rgb(0 0 0 / 16%);
+$loginboxshadow:                    0px 0px 25px 9px rgb(0 0 0 / 16%) !default;
 $logincardcolourbg:                 transparent !default;
 $logincardcolourtitle:              $red !default;
 $loginnavtext:                      #4a4a4a !default;
 $loginnavborder:                    #a4a4a4 !default;
 $loginforminputcolourborder:        $midblue !default;
+$loginformbtnborderradius:          6px !default;
 $loginformbtncolourbg:              $redgradient !default;
+$loginformbtncolourbghover:         $white !default;
 $loginformbtncolourtext:            #ffffff !default;
+$loginformbtncolourtexthover:       $red !default;
 $loginformbtnshadow:                0 2px 4px 0 rgba(0,0,0,0.34) !default;
 $loginformbtnborder:                1px solid $red !default;
+$loginformbtnborderhover:           1px solid $red !default;
+$loginformbtnfontsize:              20px !default;
+$loginformbtnfontweight:            500 !default;
+$loginformbtnlineheight:            19px !default;
+$loginformbtnletterspacing:         0 !default;
+$loginformbtntexttransform:         none !default;
+$loginformbtnminheight:             50px !default;
+$loginformbtnminwidth:              50% !default;
 
 /* navigation */
 $vnavmobilecolourbg:                $blacktransparent !default;

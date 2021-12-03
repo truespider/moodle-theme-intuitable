@@ -18,7 +18,7 @@
 
 @mixin courselink-style($category, $colourbg, $colourtext) {
     .section .courselink .contentwithoutlink .cl-cat-name-#{$category} .cl-id, 
-    .card.block_cohortcourselink .bcl-wrapper .bcl-cat-name-#{$category} .icon {
+    .card.block_cohortcourselink .bcl-wrapper.bcl-cat-name-#{$category} .icon {
         background-color: $colourbg;
         color: $colourtext;
     }

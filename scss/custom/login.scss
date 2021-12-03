@@ -8,18 +8,21 @@ body.pagelayout-login {
 
     .container.logo {
         text-align: center;
-        min-height: 13vh;
-        max-height: 16vh;
+        height: 14vh;
         padding: 0;
+        margin: 4vh auto;
         .img-responsive {
-            min-height: 13vh;
-            max-height: 16vh;
+            height: 14vh;
+            width: auto;
             padding: 0;
+            max-width: unset;
+            max-height: unset;
         }
     }
     #page {
         margin: 0;
         padding: 0;
+        top: 0;
     }
     #page-footer {
         background: $loginfootercolourbg;
@@ -112,19 +115,27 @@ form#login {
         height: 52px;
         border-color: $loginforminputcolourborder;
     }
+
     button.btn-primary {
-        width: 168px;
-        height: 51px;
-        border-radius: 6px;
+        min-height: $loginformbtnminheight;
+        min-width: $loginformbtnminwidth;
+        border-radius: $loginformbtnborderradius;
         color: $loginformbtncolourtext;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 19px;
+        font-size: $loginformbtnfontsize;
+        font-weight: $loginformbtnfontweight;
+        line-height: $loginformbtnlineheight;
         background: $loginformbtncolourbg;
         box-shadow: $loginformbtnshadow;
         border: $loginformbtnborder;
+        text-transform: $loginformbtntexttransform;
         display: block;
         margin: 0 auto;
+        &:hover,
+        &:focus {
+            color: $loginformbtncolourtexthover;
+            background: $loginformbtncolourbghover;
+            border: $loginformbtnborderhover;
+        }
     }
 }
 
@@ -153,12 +164,11 @@ form#login {
             }
         }
         .container.logo {
-            margin: 0 auto 4vh;
-            max-height: 20vh;
-            min-height: 15vh;
+            max-height: 16vh;
+            min-height: 14vh;
             .img-responsive {
                 max-height: 16vh;
-                min-height: 13vh;
+                min-height: 14vh;
                 height: auto;
             }
         }

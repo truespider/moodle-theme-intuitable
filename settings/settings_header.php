@@ -40,5 +40,14 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    $choices = array('1' => 'sm', '2' => 'md', '3' => 'lg', '4' => 'auto');
+    $name = 'theme_intuitable/dashboardheaderheightclass';
+    $title = get_string('dashboardheaderheightclass', 'theme_intuitable', null, true);
+    $description = get_string('dashboardheaderheightclass_desc', 'theme_intuitable', null, true);
+    $setting = new admin_setting_configselect($name, $title, $description, '4', $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+
     // Add tab to settings page.
     $settings->add($page);

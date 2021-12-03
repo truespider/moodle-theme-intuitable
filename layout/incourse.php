@@ -99,6 +99,11 @@ switch ($PAGE->pagetype) {
         break;
 }
 
+$blockshtml = $OUTPUT->blocks('side-pre');
+$blocksbackground = $OUTPUT->blocks('background');
+$blocksbanner = $OUTPUT->blocks('banner');
+$blocksheader = $OUTPUT->blocks('header');
+$blocksintro = $OUTPUT->blocks('intro');
 $blocksmain = $OUTPUT->blocks('main');
 $blocksfooter = $OUTPUT->blocks('footer');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
@@ -122,6 +127,8 @@ $templatecontext = [
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
     'hasblocks' => $hasblocks,
+    'intuitablebackgroundblocks' => $blocksbackground,
+    'hasintuitablebackgroundblocks' => $hasblocksbackground,
     'intuitablebannerblocks' => $blocksbanner,
     'hasintuitablebannerblocks' => $hasblocksbanner,
     'intuitableheaderblocks' => $blocksheader,

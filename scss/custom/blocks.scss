@@ -496,14 +496,26 @@ section.pagebackground {
         }
         body.hasblockbackground & {
             margin: 0 $gutterwide;
+            background-color: $headerhasbackgroundcardcolourbg;
+            color: $headerhasbackgroundcardcolourtext;
             .card-text {
-                color: $pagebgheadercardtitletextcolor;
+                color: $headerhasbackgroundcardcolourtext;
                 h1 {
-                    color: $pagebgheadercardtitletextcolor;
+                    color: $headerhasbackgroundcardcolourtext;
                     font-size: $headercardtitlefontsize;
                     font-weight: $headercardtitlefontweight;
                     line-height: $headercardtitlelineheight;
                     letter-spacing: $headercardtitleletterspacing;
+                }
+            }
+        }
+        body.hasblockbackground.editing & {
+            background-color: $editingheaderhasbackgroundcardcolourbg;
+            color: $editingheaderhasbackgroundcardcolourtext;
+            .card-text {
+                color: $editingheaderhasbackgroundcardcolourtext;
+                h1 {
+                    color: $editingheaderhasbackgroundcardcolourtext;
                 }
             }
         }

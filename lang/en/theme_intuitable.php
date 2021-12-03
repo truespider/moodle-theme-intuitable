@@ -87,6 +87,8 @@ $string['headerheightmedium'] = 'Medium header height';
 $string['headerheightmedium_desc'] = 'The height in px for medium headers on course pages.';
 $string['headerheightlarge'] = 'Large header height';
 $string['headerheightlarge_desc'] = 'The height in px for large headers on course pages.';
+$string['dashboardheaderheightclass'] = 'Dashboard header height class';
+$string['dashboardheaderheightclass_desc'] = 'The class set on dashboard to apply the required height.';
 
 /* header links */
 $string['headerlinksettings'] = 'Header links settings';

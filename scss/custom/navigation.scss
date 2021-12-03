@@ -649,13 +649,16 @@ body.drawer-open-top div#page:after {
                 body.drawer-open-top & {
                     opacity: 1;
                 }
-                body.coursepageheaderheightsm & {
+                body.coursepageheaderheightsm &,
+                body.headerheightsm & {
                     min-height: $headerheightsm;
                 }
-                body.coursepageheaderheightmd & {
+                body.coursepageheaderheightmd &,
+                body.headerheightmd & {
                     min-height: $headerheightmd;
                 }
-                body.coursepageheaderheightlg & {
+                body.coursepageheaderheightlg &,
+                body.headerheightlg & {
                     min-height: $headerheightlg;
                 }
                  .container.logo {

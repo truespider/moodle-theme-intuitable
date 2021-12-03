@@ -42,10 +42,6 @@ $logoalt = get_config('theme_intuitable', 'logoalt');
 $sitehomelinktext = get_config('theme_intuitable', 'logositehomelinktext');
 $minilogo = '';
 $welcomemessagename = false;
-if (isloggedin() && $PAGE->pagelayout === 'mydashboard') {
-    $showpageheaderlogo = true;
-    $welcomemessagename = $USER->firstname;
-}
 $mobilenavbar = empty($PAGE->layout_options['nomobilenavbar']);
 $prefixmailto = get_string('prefixmailto', 'theme_intuitable');
 $prefixtel = get_string('prefixtel', 'theme_intuitable');
@@ -62,6 +58,13 @@ foreach ($coursemetadata as $key => $val) {
         case "showpagetitle": break;
         default: break;
     }
+}
+
+if (isloggedin() && $PAGE->pagelayout === 'mydashboard') {
+    $dashboardheight = get_config('theme_intuitablechild', 'dashboardheaderheightclass');
+    array_key_exists($dashboardheight,$pageheights) && $extraclasses[] = 'headerheight'.$pageheights[$dashboardheight];
+    // $showpageheaderlogo = true;
+    // $welcomemessagename = $USER->firstname;
 }
 
 if (is_siteadmin($USER)) {

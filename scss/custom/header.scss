@@ -32,11 +32,27 @@
             min-height: 0;
         }
         .card {
+            background-color: $headerhasbackgroundcardcolourbg;
             color: $headerhasbackgroundcardcolourtext;
             margin: 0;
         }
     }
+    body.hasblockbackground.editing & {
+        .card {
+            background-color: $editingheaderhasbackgroundcardcolourbg;
+            color: $editingheaderhasbackgroundcardcolourtext;
+        }
+    }
 }
+
+
+/* page header */
+$headerhasbackgroundcardcolourbg:           transparent !default;
+$headerhasbackgroundcardcolourtext:         #ffffff !default;
+$headerhasbackgroundcardborderradius:       0 !default;
+$editingheaderhasbackgroundcardcolourbg:    #ffffff !default;
+$editingheaderhasbackgroundcardcolourtext:  $bodytext !default;
+$headerexitactivitycolourtext:              $red !default;
 
 #mini-header {
     .container-logo {

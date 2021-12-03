@@ -95,6 +95,12 @@
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
 
+{{#hasintuitablebackgroundblocks}}
+<section data-region="blocksbackground" class="d-print-none pagebackground" aria-label="{{#str}}blocks{{/str}}">
+    {{{ intuitablebackgroundblocks }}}
+</section>
+{{/hasintuitablebackgroundblocks}}
+
 <div id="page-wrapper" class="d-print-block">
 
     {{{ output.standard_top_of_body_html }}}
