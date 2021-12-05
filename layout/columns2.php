@@ -59,6 +59,13 @@ $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_action
 // If the settings menu will be included in the header then don't add it here.
 $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
 
+if ($showpageheaderlogo  || 
+    $hasintuitableheaderblocks ||
+    $showsearchbox ||
+    $welcomemessagename ) {
+    $showrowcohort = true;
+}
+ 
 if ($hasblocksbackground) {
     $extraclasses[] = 'hasblockbackground';
 }
@@ -100,7 +107,9 @@ $templatecontext = [
     'adminsearch' => $adminsearch,
     'adminsearchurl' => $adminsearchurl,
     'mobilenavbar' => $mobilenavbar,
-    'welcomemessagename' => $welcomemessagename
+    'welcomemessagename' => $welcomemessagename,
+    'showrowcohort' => $showrowcohort,
+    'showsearchbox' => $showsearchbox
 ];
 
 echo $OUTPUT->render_from_template('theme_intuitable/columns2', $templatecontext);

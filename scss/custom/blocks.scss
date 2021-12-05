@@ -12,6 +12,9 @@
     	padding: $cardpadding;
     	margin: $cardmargin;
     }
+    .no-overflow {
+        overflow: visible;
+    }
     .block-controls + .card-text {
         clear: both;
     }

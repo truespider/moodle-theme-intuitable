@@ -55,7 +55,7 @@
         </div>
         {{/mobilenavbar}}
 
-        <div class="row align-items-center {{#mobilenavbar}}h-sm d-md-fl{{/mobilenavbar}}">
+        <div class="row align-items-center {{#mobilenavbar}}h-sm d-md-fl{{/mobilenavbar}} {{^showrowcohort}}pb-2{{/showrowcohort}}">
             {{#headerlinkscontent}}
             <div class="nav-group {{#mobilenavbar}}h-sm d-md{{/mobilenavbar}}">
                 <ul class="headerlinks">
@@ -76,8 +76,10 @@
             </div>
             {{/isadmin }}
         </div>
+
+        {{#showrowcohort}}
         <div class="row block-cohort h-sm d-md-fl {{#showpageheaderlogo}}has-logo{{/showpageheaderlogo}}">
-            <div class="col-sm-12 col-md-7 px-0 py-0">
+            <div class="px-0 py-0 col-sm-12 {{#showsearchbox}}col-md-7{{/showsearchbox}}">
                 {{#showpageheaderlogo}}
                 <!-- header logo  -->
                 <div class = "container logo">
@@ -92,15 +94,18 @@
                 {{/hasintuitableheaderblocks}}
                 {{/editing}}
             </div>
+            {{#showsearchbox}}
             <div class="h-sm d-md-fl col-sm-12 col-md-5 px-0 py-0 ">
             {{{ output.search_box }}}
             </div>
+            {{/showsearchbox}}
             {{#welcomemessagename}}
             <div class="col-sm-12 px-0 py-0">
                 <h2 class='userwelcome'>{{#str}}welcomeuser, theme_intuitable, {{welcomemessagename}}{{/str}}</H2>
             </div>
             {{/welcomemessagename}}
         </div>
+        {{/showrowcohort}}
 </nav>
 
  

@@ -139,8 +139,7 @@ $sectionthumbindent: 60px;
                     align-items: start;
                 }
                 .meta-item {
-                    flex: 0 0 50%;
-                    min-width: 200px;
+                    flex: 0 0 100%;
                     margin: $gutternarrow 0;
                     color: $coursemetaiconcolour;
                     font-size: 14px;
@@ -162,6 +161,19 @@ $sectionthumbindent: 60px;
                     font-weight: 300;
                     color: $collapsibleintrocolourtext;
                 }
+                @include media-breakpoint-up(md) {
+                    ul.meta {
+                        flex-wrap: nowrap;
+                        .meta-item {
+                            flex: 1 1 50%;
+                            margin-right: $gutternarrow;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }

@@ -117,6 +117,14 @@ $buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_action
 // If the settings menu will be included in the header then don't add it here.
 $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
 
+//  if any one of these true / has content, then rowcohortempty = false
+if ($showpageheaderlogo  || 
+    $hasintuitableheaderblocks ||
+    $showsearchbox ||
+    $welcomemessagename ) {
+    $showrowcohort = true;
+}
+ 
 if ($hasblocksbackground) {
     $extraclasses[] = 'hasblockbackground';
 }
@@ -166,7 +174,9 @@ $templatecontext = [
     'minilogo' => $minilogo,
     'exitactivity' => $exitactivity,
     'exitactivityurl' => $exitactivityurl,
-    'showquizexit' => $showquizexit
+    'showquizexit' => $showquizexit,
+    'showrowcohort' => $showrowcohort,
+    'showsearchbox' => $showsearchbox
 ];
 
 if ($showquizheader) {

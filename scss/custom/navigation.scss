@@ -640,6 +640,7 @@ body.drawer-open-top div#page:after {
                 top: 0;
                 background-color: transparent;
                 padding-bottom: 40px;
+                justify-content: space-between;
                 /* to align with the intuitable ident in left drawer */ 
                 /* set min height on all pages where logo rendered in header */ 
                 &.has-logo, 

@@ -12,9 +12,6 @@
         }
     }
 }
-#region-main {
-    overflow-x: hidden;
-}
 
 #region-main-settings-menu.has-blocks, 
 #region-main.has-blocks {
@@ -63,6 +60,11 @@
     .row {
         margin: 0;
     }
+}
+
+#region-main {
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 .editing.has-region-intuitable-background {
