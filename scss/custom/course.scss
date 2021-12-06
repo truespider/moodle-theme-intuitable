@@ -7,34 +7,58 @@ $sectionthumbindent: 60px;
         padding: 0;
         text-align: left;
         a {
-            color: $collapsibleiconcolour;
-            padding: 11px 18px 8px 37px;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 14px;
+            color: $btnprimarycolour;
+            background: $btnprimarycolourbg;
+            padding: $btnprimarypadding;
+            padding-left: 2.25em;
+            font-size: $btnprimaryfontsize;
+            font-weight: $btnprimaryfontweight;
+            line-height: $btnprimarylineheight;
             text-align: center;
-            border-radius: 6px;
-            box-shadow: $collapsibleiconboxshadow;
+            border-radius: $btnprimaryborderradius;
+            box-shadow: $btnboxshadow;
             position: relative;
+            text-transform: $btnprimarytexttransform;
+            letter-spacing: $btnprimaryletterspacing;
+            text-decoration: none;
             &:before {
                 content: "\f0fe";
                 display: block;
                 position: absolute;
                 left: 10px;
-                font-size: 16px;
-                line-height: 16px;
+                font-size:$btnprimaryfontsize;
+                line-height: $btnprimarylineheight;
                 text-align: center;
-                color: $collapsibleiconcolour;
+                color: $btnprimarycolour;
                 font-family: 'FontAwesome';
-                height: 16px;
-                width: 16px;
+                height: $btnprimaryfontsize;
+                width: $btnprimaryfontsize;
+            }
+            &:hover {
+                box-shadow: $btnboxshadow;
+                color: $btnprimarycolourhover;
+                background: $btnprimarycolourbghover;
+                border: $btnprimaryborderhover;
+                &:before {
+                    color: $btnprimarycolourhover;
+                }
+            }
+            &.expandall, &.collapseall {
+                background: $btnprimarycolourbg;
+                color: $btnprimarycolour;
+                &:hover {
+                    color: $btnprimarycolourhover;
+                    background: $btnprimarycolourbghover;
+                    border: $btnprimaryborderhover;
+                    &:before {
+                        color: $btnprimarycolourhover;
+                    }
+                }
             }
             &.expandall {
                 content: "\f0fe";
-                background: $collapsibleiconcolourbg;
             }
             &.collapseall {
-                background: $collapsibleiconcolourbg;
                 content: "\f146";
             }
         }

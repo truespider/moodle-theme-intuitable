@@ -348,6 +348,77 @@ $input-btn-font-family:       $font-family-base !default;
 // Buttons
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
+/* default button */
+$btncolour:           #ffffff !default;
+$btncolourbg:         #575757 !default;
+$btnborder:           1px solid #575757 !default;
+$btnpadding:          6px 8px !default;
+$btnfontsize:         15px !default;
+$btnfontweight:       600 !default;
+$btnletterspacing:    0 !default;
+$btntexttransform:    uppercase !default;
+$btnlineheight:       18px !default;
+$btnborderradius:     6px !default;
+$btnborderradiuslg:   6px !default;
+$btnborderradiussm:   6px !default;
+$btncolouractive:     #575757 !default;
+$btncolourbgactive:   #ffffff !default;
+$btnborderactive:     1px solid #575757 !default;
+$btncolourhover:      #575757 !default;
+$btncolourbghover:    #ffffff !default;
+$btnborderhover:      1px solid #575757 !default;
+$btncolourfocus:      #575757 !default;
+$btncolourbgfocus:    #ffffff !default;
+$btnborderfocus:      1px solid #575757 !default;
+$btnboxshadow:        0 2px 4px rgba(0,0,0,0.34) !default; 
+
+/* primary button */
+$btnprimarypadding:          8px 10px !default;
+$btnprimaryfontsize:         18px !default;
+$btnprimaryfontweight:       600 !default;
+$btnprimaryletterspacing:    0 !default;
+$btnprimarytexttransform:    uppercase !default;
+$btnprimarylineheight:       20px !default;
+$btnprimarycolour:           #ffffff !default;
+$btnprimarycolourbg:         $redgradient !default;
+$btnprimaryborder:           1px solid $red !default;
+$btnprimaryborderradius:     6px !default;
+
+$btnprimarycolouractive:     $red !default;
+$btnprimarycolourbgactive:   #ffffff !default;
+$btnprimaryborderactive:     1px solid $red !default;
+
+$btnprimarycolourhover:      $red !default;
+$btnprimarycolourbghover:    #ffffff !default;
+$btnprimaryborderhover:      1px solid $red !default;
+
+$btnprimarycolourfocus:      $red !default;
+$btnprimarycolourbgfocus:    #ffffff !default;
+$btnprimaryborderfocus:      1px solid $red !default;
+
+/* secondary button */
+$btnsecondarypadding:          8px 10px !default;
+$btnsecondaryfontsize:         18px !default;
+$btnsecondaryfontweight:       600 !default;
+$btnsecondaryletterspacing:    0 !default;
+$btnsecondarytexttransform:    uppercase !default;
+$btnsecondarylineheight:       20px !default;
+$btnsecondarycolour:           #ffffff !default;
+$btnsecondarycolourbg:         $cyan !default;
+$btnsecondaryborder:           1px solid $cyan !default;
+$btnsecondaryborderradius:     6px !default;
+
+$btnsecondarycolouractive:     $cyan !default;
+$btnsecondarycolourbgactive:   #ffffff !default;
+$btnsecondaryborderactive:     1px solid $cyan !default;
+
+$btnsecondarycolourhover:      $cyan !default;
+$btnsecondarycolourbghover:    #ffffff !default;
+$btnsecondaryborderhover:      1px solid $cyan !default;
+
+$btnsecondarycolourfocus:      $cyan !default;
+$btnsecondarycolourbgfocus:    #ffffff !default;
+$btnsecondaryborderfocus:      1px solid $cyan !default;
 
 $btn-font-size:               14px;
 $btn-line-height:             14px;

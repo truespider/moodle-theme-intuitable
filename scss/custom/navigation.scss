@@ -697,6 +697,15 @@ body.drawer-open-top div#page:after {
 .activity-navigation.container-fluid {
     padding: 20px 0;
     clear: both;
+    #prev-activity-link, 
+    #next-activity-link {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: $guttermedium;
+        color: $bodytext;
+    }
     .col-md-4 {
         .btn-link {
             display: block;

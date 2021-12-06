@@ -85,7 +85,7 @@ class core_renderer extends \core_renderer {
                 ['context' => context_course::instance(SITEID), "escape" => false]);
         // MODIFICATION START.
         // add loginlogo, logoalt 
-        $context->logoalt = get_config('theme_intuitable', 'logoalt');   
+        $context->logoalt = get_config($PAGE->theme->name, 'logoalt');   
         $context->loginlogo = $PAGE->theme->setting_file_url('logologin', 'logologin');
         $context->loginbg = $PAGE->theme->setting_file_url('backgroundimagelogin', 'backgroundimagelogin');
         return $this->render_from_template('theme_intuitable/core/loginform', $context);
@@ -527,7 +527,7 @@ class core_renderer extends \core_renderer {
      * @return string
      */
     public function context_header_settings_menu() {
-        global $USER;
+        global $USER, $PAGE, $CFG;
         $isadmin = is_siteadmin($USER);
         $context = $this->page->context;
         $menu = new action_menu();
@@ -541,15 +541,25 @@ class core_renderer extends \core_renderer {
         // breadcrumbtext
         // breadcrumburlpath
         // breadcrumburlparam
-        $breadcrumbtext = get_config('theme_intuitable', 'breadcrumbtext');
-        $breadcrumburlpath = get_config('theme_intuitable', 'breadcrumburlpath');
-        $breadcrumburlparam = get_config('theme_intuitable', 'breadcrumburlparam');
+        // if patj and param are not defined, display text and no active link
+        $breadcrumbtext = get_config($PAGE->theme->name, 'breadcrumbtext');
+        $breadcrumburlpath = get_config($PAGE->theme->name, 'breadcrumburlpath');
+        $breadcrumburlparam = get_config($PAGE->theme->name, 'breadcrumburlparam');
         foreach ($tempitems as $item) {
             switch ($item->key) {
                 case 'courses' : 
                 case 'mycourses' : if (!$isadmin) {
-                                    $item->text = $breadcrumbtext;
-                                    $item->action = new moodle_url($breadcrumburlpath, array('id'=>$breadcrumburlparam));
+                                    if ($breadcrumbtext === false || $breadcrumburlpath === false || $breadcrumburlparam === false ) {
+                                        break;
+                                    }
+                                    else {
+                                        $item->text = $breadcrumbtext;
+                                        $item->action = new moodle_url($breadcrumburlpath, array('id'=>$breadcrumburlparam));                                       
+                                        $items[] = $item;
+                                    }
+                                 }
+                                 else {
+                                    $items[] = $item;
                                  }
                                  $items[] = $item;
                                  break;

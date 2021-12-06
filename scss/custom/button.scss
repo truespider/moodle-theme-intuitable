@@ -1,0 +1,119 @@
+.btn {
+	color: $btncolour;
+	background: $btncolourbg;
+	border: $btnborder;
+	padding: $btnpadding;
+	font-size: $btnfontsize;
+	font-weight: $btnfontweight;
+	line-height: $btnlineheight;
+	border-radius: $btnborderradius;
+	letter-spacing: $btnletterspacing;
+	text-transform: $btntexttransform;
+	box-shadow: $btnboxshadow;
+	&:hover {
+		box-shadow: $btnboxshadow; 
+		color: $btncolourhover;
+		background: $btncolourbghover;
+		border: $btnborderhover;
+	}
+	&:focus, &.focus {
+		box-shadow: $btnboxshadow; 
+		color: $btncolourfocus;
+		background: $btncolourbgfocus;
+		border: $btnborderfocus;
+	}
+	&:active, &.active {
+		box-shadow: $btnboxshadow; 
+		color: $btncolouractive;
+		background: $btncolourbgactive;
+		border: $btnborderactive;
+	}
+	&.disabled, &:disabled {
+		opacity: 0.65; 
+	}
+}
+
+.btn-primary {
+	color: $btnprimarycolour;
+	background: $btnprimarycolourbg;
+	border: $btnprimaryborder;
+	border-radius: $btnprimaryborderradius;
+	padding: $btnprimarypadding;
+	font-size: $btnprimaryfontsize;
+	font-weight: $btnprimaryfontweight;
+	line-height: $btnprimarylineheight;
+	letter-spacing: $btnprimaryletterspacing;
+	text-transform: $btnprimarytexttransform;
+	box-shadow: $btnboxshadow;
+  	&:hover {
+		box-shadow: $btnboxshadow;
+		color: $btnprimarycolourhover;
+		background: $btnprimarycolourbghover;
+		border: $btnprimaryborderhover;
+	}
+  	&:focus,
+  	&.focus {
+		box-shadow: $btnboxshadow;
+		color: $btnprimarycolourfocus;
+		background: $btnprimarycolourbgfocus;
+		border: $btnprimaryborderfocus;
+	}
+  	&:active,
+  	&.active {
+		box-shadow: $btnboxshadow;
+		color: $btnprimarycolouractive;
+		background: $btnprimarycolourbgactive;
+		border: $btnprimaryborderactive;
+	}
+   &:not(:disabled):not(.disabled):active,
+   &:not(:disabled):not(.disabled).active,
+   &.dropdown-toggle {
+		box-shadow: $btnboxshadow;
+		color: $btnprimarycolouractive;
+		background: $btnprimarycolourbgactive;
+		border: $btnprimaryborderactive;
+	}
+}
+
+.btn-secondary {
+	color: $btnsecondarycolour;
+	background: $btnsecondarycolourbg;
+	border: $btnsecondaryborder;
+	border-radius: $btnsecondaryborderradius;
+	padding: $btnsecondarypadding;
+	font-size: $btnsecondaryfontsize;
+	font-weight: $btnsecondaryfontweight;
+	line-height: $btnsecondarylineheight;
+	letter-spacing: $btnsecondaryletterspacing;
+	text-transform: $btnsecondarytexttransform;
+	box-shadow: $btnboxshadow;
+  	&:hover {
+		box-shadow: $btnboxshadow;
+		color: $btnsecondarycolourhover;
+		background: $btnsecondarycolourbghover;
+		border: $btnsecondaryborderhover;
+	}
+  	&:focus,
+  	&.focus {
+		box-shadow: $btnboxshadow;
+		color: $btnsecondarycolourfocus;
+		background: $btnsecondarycolourbgfocus;
+		border: $btnsecondaryborderfocus;
+	}
+  	&:active,
+  	&.active {
+		box-shadow: $btnboxshadow;
+		color: $btnsecondarycolouractive;
+		background: $btnsecondarycolourbgactive;
+		border: $btnsecondaryborderactive;
+	}
+   &:not(:disabled):not(.disabled):active,
+   &:not(:disabled):not(.disabled).active,
+   &.dropdown-toggle {
+		box-shadow: $btnboxshadow;
+		color: $btnsecondarycolouractive;
+		background: $btnsecondarycolourbgactive;
+		border: $btnsecondaryborderactive;
+	}
+}
+

@@ -181,6 +181,8 @@ body#page-mod-quiz-attempt, body#page-mod-quiz-review {
 	    line-height: 26px;
 	    background: $quiznavblockbuttoncolourbg;
 	    border: 0;
+	    border-radius: 0;
+	    box-shadow: none;
 	    padding: 0;
 	    display: block;
 	    color: $quiznavblockbuttoncolourtext;

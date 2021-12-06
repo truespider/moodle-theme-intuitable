@@ -259,6 +259,17 @@ body {
     }
 }
 
+.moodle-dialogue-confirm {
+    .confirmation-dialogue {
+        input.btn {
+            margin: 20px 0;
+            width: 100%;
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
 
 a.return-link {
 display:inline-block;
