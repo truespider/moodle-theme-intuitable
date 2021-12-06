@@ -198,8 +198,9 @@
             h5.card-title {
                 margin: 14px 0 0 90px;
                 font-size: $blockthumbtitlefontsize;
-                line-height: $blockthumbtitlefontsize;
-                color: $bodytext;
+                font-weight: $blockthumbtitlefontweight;
+                line-height: $blockthumbtitlelineheight;
+                color: $blockthumbtitlecolour;
                 border-bottom: $blockthumbtitleborder;
                 padding: 0 0 1px;
             }
@@ -574,15 +575,24 @@ section.pagebackground {
         }
     }
 }
+
 #block-region-side-pre {
-    padding-top: 5px;
-    .intuitable-course & {
-        padding-top: 14px;
+    .card {
+        margin: $sideprecardmargin;
+        &.hidecontent {
+            margin-bottom:0;
+            .card-text {
+                h5 {
+                    min-height: none;
+                }
+            }
+        }
     }
-}
-#block-region-side-pre {
     .card-body {
-        padding: $cardpadding;
+        padding: $sideprecardpadding;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: $sidepreoffsettop;
     }
 }
 

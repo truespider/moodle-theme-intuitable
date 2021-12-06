@@ -96,8 +96,6 @@ $statusinprogress:      $blue     !default;
 $statuspending:         $darkblue !default;
 $statuscomplete:        $green    !default;
 
-
-
 /* quiz  */
 $quecorrect:                    $green    !default;
 $queincorrect:                  $red      !default;
@@ -155,20 +153,6 @@ $categoryunknown:               $midblue !default;
 $courselinkiconcolour:          #ffffff !default;
 $courselinkdatecolour:          $red !default;
 
-
-
-
-// 1 $categoryassessingservices;
-// 2 $categorybuildingpathology;
-// 3 $categoryconditionmasterclass;
-// 4 $categoryconstruction;
-// 5 $categoryenergy;
-// 6 $categoryinspectingproperty;
-// 7 $categoryintroductiontoassessment;
-// 8 $categorylaw;979797
-// 13 $categoryreportwriting;
-
-
 $bodytext:                      #294D5D !default;
 $link:                          $blue   !default;
 $linkvisited:                   $blue   !default;
@@ -205,11 +189,24 @@ $h4fontfamily:      $title-font-family-base !default;
 $bodyfontsize:      14px;
 $bodyfontweight:    300;
 
+/* page context header */
+$pageheaderh1colourtext:          $darkblue !default;
+$pageheaderh1fontsize:            49px !default;
+$pageheaderh1fontweight:          600 !default;
+$pageheaderh1lineheight:          59px !default;
+$pageheaderh1letterspacing:       0 !default;
+$pageheaderh1texttransform:       none !default;
+$pageheaderh1padding:             0 0 17px !default;
+$pageheaderh1margin:              0 0 13px !default;
+$pageheaderh1border:              1px dashed #979797 !default;
+
 /* spacing */
 $gutterwide:        40px !default;
 $guttermedium:      20px !default;
 $gutternarrow:      10px !default; 
 $gutterpage:        $gutterwide;
+$pagepaddingx:      55px !default;
+$pagepaddingxlg:    85px !default;
 
 /* block styles vary - region and block type */
 $blocks-column-width:       255px;
@@ -230,17 +227,15 @@ $maincontentsectiontitleborder:         1px dashed $grey600 !default;
 $maincontenttitlepadding:               0 0 16px !default;
 
 /* blocks in side region custom css class titlethumb */
-$blockthumbtitlefontsize:                27px ;
-$blockthumbtitlefontweight:              300;
-$blockthumbtitlelineheight:              27px;
-$blockthumbtitlelineheight:              32px;
-$blockthumbtitlecolour:                  $bodytext;
-$blockthumbtitleborder:                  1px dashed $grey600 !default;
-
-$blockthumbsubtitlefontsize:            20px;
-$blockthumbsubtitlefontweight:          500;
-$blockthumbsubtitlelineheight:          19px;
-$blockthumbsubtitlecolour:              $red !default;
+$blockthumbtitlefontsize:                27px  !default;
+$blockthumbtitlefontweight:              300  !default;
+$blockthumbtitlelineheight:              32px  !default;
+$blockthumbtitlecolour:                  $darkblue !default;
+$blockthumbtitleborder:                  1px dashed #979797 !default;
+$blockthumbsubtitlefontsize:             20px !default;
+$blockthumbsubtitlefontweight:           600 !default;
+$blockthumbsubtitlelineheight:           24px !default;
+$blockthumbsubtitlecolour:               $midblue !default;
 
 /* blocks standard style */
 $cardtextcolor:                         $bodytext !default;
@@ -300,12 +295,13 @@ $maincardborderradius:                        0 !default;
 $maincardpadding:                             0 !default;
 $maincardmargin:                              0 !default;
 /* side pre region block styles */
+$sidepreoffsettop:                            29px !default;
 $sideprecardtextcolor:                        $bodytext !default;
 $sideprecardcolourbg:                         transparent !default;
 $sideprecardborder:                           0 !default;
 $sideprecardborderradius:                     0 !default;
 $sideprecardpadding:                          0 !default;
-$sideprecardmargin:                           0 !default;
+$sideprecardmargin:                           0 0 30px 0!default;
 /* footer region block styles */
 $footercardtextcolor:                         $bodytext !default;
 $footercardcolourbg:                          transparent !default;
@@ -338,6 +334,8 @@ $regionintrocardtitleborder:            1px dashed $grey800;
 
 $regionmaincontainercolourbg:           $containertransparentgradient !default;
 $regionmaincontainerborderradius:       20px !default;
+$regionmainboxpadding:                  40px 40px 0 !default;
+$hasbannerregionmainboxpadding:         40px 0 0 !default;
 
 // Buttons + Forms : override the bootstrap/boost defaults
 //
@@ -353,8 +351,6 @@ $input-btn-font-family:       $font-family-base !default;
 
 $btn-font-size:               14px;
 $btn-line-height:             14px;
-
-
 $btn-font-weight:             500;
 
 // Allows for customizing button radius independently from global border radius
@@ -389,10 +385,6 @@ $searchboxbtncolourtexthover:     $red !default;
 
 /* editing */
 $editinghasbackgroundcolourbg:    $greygradient !default;
-
-/* page title */
-$pageheaderh1colourtext:            $red !default;
-$pageheaderh1border:                $maincontentsectiontitleborder !default;
 
 /* tables */
 $tablebordercellhoriztonal:         1px solid #ffffff !default;

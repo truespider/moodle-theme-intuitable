@@ -72,6 +72,9 @@ if ($hasblocksbackground) {
 if ($hasblocksheader) {
     $extraclasses[] = 'hasheaderblock';
 }
+if ($hasblocksbanner) {
+    $extraclasses[] = 'hasbannerblock';
+}
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 
 $templatecontext = [

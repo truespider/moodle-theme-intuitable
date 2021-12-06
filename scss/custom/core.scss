@@ -3,12 +3,25 @@
         margin-top: 80px;
     }
     #page {
-        padding: 70px 55px 0;
+        padding-top: 70px;
+        padding-bottom: 0;
+        padding-left: $pagepaddingx;
+        padding-right: $pagepaddingx;
+        body.hasbannerblock & {
+            #page-content.row {
+                margin-left: 0;
+                margin-right: 0;
+            }            
+        }
         .pagelayout-mydashboard {
             padding-top: 0;
         }
         @include media-breakpoint-up(md) {
             padding-top: 0;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-left: $pagepaddingxlg;
+            padding-right: $pagepaddingxlg;
         }
     }
 }
@@ -76,6 +89,12 @@
 .editing.has-region-intuitable-background {
     background: $editinghasbackgroundcolourbg;
 }
+body.hasbannerblock {
+    #region-main-box {
+        padding: $hasbannerregionmainboxpadding;
+    }
+}
+
 body.hasblockbackground, 
 .pagelayout-mydashboard {
     #region-main {
@@ -85,10 +104,7 @@ body.hasblockbackground,
     #region-main-box {
         background: $regionmaincontainercolourbg;
         border-radius: $regionmaincontainerborderradius;
-        padding-left: $gutterpage;
-        padding-right: $gutterpage;
-        padding-top: 55px;
-        padding-top: 15px;
+        padding: $regionmainboxpadding;
         .block-region {
             .card {
                 background-color: transparent;
@@ -198,11 +214,13 @@ body {
     }
     h1 {
         color: $pageheaderh1colourtext;
-        font-size: 41px;
-        line-height: 41px;
-        font-weight: 500;
-        padding: 0 0 14px;
-        margin: 0 0 13px;
+        font-size: $pageheaderh1fontsize;
+        font-weight: $pageheaderh1fontweight;
+        line-height: $pageheaderh1lineheight;
+        letter-spacing: $pageheaderh1letterspacing;
+        text-transform: $pageheaderh1texttransform;
+        padding: $pageheaderh1padding;
+        margin: $pageheaderh1margin;
         border-bottom: $pageheaderh1border; 
     }
     .breadcrumb {
