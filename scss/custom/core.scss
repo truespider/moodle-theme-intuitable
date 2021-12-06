@@ -50,9 +50,15 @@
     @include media-breakpoint-up(xs) {
         position: relative;
         top: 60px;
+        body.hasheaderblock & {
+            top: 180px;
+        }
     }
     @include media-breakpoint-up(md) {
         top: 0;
+        body.hasheaderblock & {
+            top: 0;
+        }
     }
 }
 

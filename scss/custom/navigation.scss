@@ -547,6 +547,9 @@ body.drawer-open-top div#page:after {
         }
         &.notfixed-top {
             position: fixed;
+            body.hasblockbackground & {
+                position: relative;
+            }
             top: 0px;
             height: 60px;
             background: $headermobilecolourbg;
@@ -565,7 +568,7 @@ body.drawer-open-top div#page:after {
                 transition: opacity .4s ease;
                 display: flex;
                 background-color: $headerblockcolourbg;
-                padding: 0 0 10px;
+                padding: 20px 0;
                 body.hasblockbackground & {
                     background-color: $bodyhasbackgroundheaderblockcolourbg;
                 }
@@ -639,6 +642,7 @@ body.drawer-open-top div#page:after {
                 position: relative;
                 top: 0;
                 background-color: transparent;
+                padding-top: 0;
                 padding-bottom: 40px;
                 justify-content: space-between;
                 /* to align with the intuitable ident in left drawer */ 

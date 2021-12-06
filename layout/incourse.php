@@ -128,6 +128,9 @@ if ($showpageheaderlogo  ||
 if ($hasblocksbackground) {
     $extraclasses[] = 'hasblockbackground';
 }
+if ($hasblocksheader) {
+    $extraclasses[] = 'hasheaderblock';
+}
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 
 $templatecontext = [

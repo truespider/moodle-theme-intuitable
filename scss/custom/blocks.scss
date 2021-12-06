@@ -499,16 +499,25 @@ section.pagebackground {
         }
         body.hasblockbackground & {
             margin: 0 $gutterwide;
+            padding-bottom: $guttermedium;
             background-color: $headerhasbackgroundcardcolourbg;
             color: $headerhasbackgroundcardcolourtext;
             .card-text {
                 color: $headerhasbackgroundcardcolourtext;
+                font-size: $headercardfontsize;
+                font-weight: $headercardfontweight;
+                line-height: $headercardlineheight;
+                letter-spacing: $headercardletterspacing;
+                text-transform: $headercardtexttransform;
+                text-shadow: $headercardtextshadow;
                 h1 {
                     color: $headerhasbackgroundcardcolourtext;
                     font-size: $headercardtitlefontsize;
                     font-weight: $headercardtitlefontweight;
                     line-height: $headercardtitlelineheight;
                     letter-spacing: $headercardtitleletterspacing;
+                    text-transform: $headercardtitletexttransform;
+                    text-shadow: $headercardtitletextshadow;
                 }
             }
         }
