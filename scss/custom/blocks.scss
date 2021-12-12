@@ -436,6 +436,12 @@ section.pagebackground {
                         border: 0;
                         width: 100%;
                         height: auto;
+                        vertical-align: top;
+                        position: relative;
+                        top: 60px;
+                        @include media-breakpoint-up(md) { 
+                            top: 0;
+                        }
                     }
                 }
             }

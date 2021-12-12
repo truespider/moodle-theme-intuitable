@@ -118,7 +118,7 @@ $THEME->layouts = [
     // Server administration scripts.
     'admin' => array(
         'file' => 'columns2.php',
-        'regions' => array('side-pre'),
+        'regions' => array('background','banner','header','intro','main','side-pre','footer'),
         'defaultregion' => 'side-pre',
     ),
     // My dashboard page.

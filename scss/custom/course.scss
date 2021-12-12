@@ -207,6 +207,11 @@ $sectionthumbindent: 60px;
                 body.hidetopiczero:not(.editing) & {
                     display: none;
                 }
+                body.hidetopiczerotitle:not(.editing) & {
+                    h3.sectionname {
+                        display: none;
+                    }
+                }
             }
             .summary {
                 .intuitable-news & 

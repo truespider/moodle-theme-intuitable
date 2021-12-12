@@ -31,6 +31,18 @@
 	&.disabled, &:disabled {
 		opacity: 0.65; 
 	}
+	.fitem .col-form-label & {
+		background: none;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		padding: unset;
+		font-size: unset;
+		font-weight: unset;
+		line-height: unset;
+		letter-spacing: unset;
+		text-transform: unset;
+	}
 }
 
 .btn-primary {

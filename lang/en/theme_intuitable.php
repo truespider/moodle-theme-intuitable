@@ -231,6 +231,13 @@ $string['footersociallinkiconname4_desc'] = 'Font Awesome icon name displayed fo
 $string['footersociallinkurl4'] = 'Social link 4 url';
 $string['footersociallinkurl4_desc'] = 'The url for the fourth social link.';
 
+$string['footersociallink5'] = 'Social link 5';
+$string['footersociallink5_desc'] = 'Name of the fifth social link in the footer.';
+$string['footersociallinkiconname5'] = 'Social link 5 icon';
+$string['footersociallinkiconname5_desc'] = 'Font Awesome icon name displayed for the fifth social link.';
+$string['footersociallinkurl5'] = 'Social link 5 url';
+$string['footersociallinkurl5_desc'] = 'The url for the fifth social link.';
+
 // Branding settings
 $string['configtitlebranding'] = 'Branding settings';
 
@@ -260,22 +267,8 @@ $string['h5font_desc'] = 'The default font family for Heading 5 elements';
 $string['h6font'] = 'Heading 6 font family';
 $string['h6font_desc'] = 'The default font family for Heading 6 elements';
 
-
-
 $string['openmenu'] = 'Open menu';
-$string['closemenu'] =$string['h1font'] = 'Heading 1 font family';
-$string['h1font_desc'] = 'The default font family for Heading 1 elements';
-
-$string['h1font'] = 'Heading 1 font family';
-$string['h1font_desc'] = 'The default font family for Heading 1 elements';
-
-$string['h1font'] = 'Heading 1 font family';
-$string['h1font_desc'] = 'The default font family for Heading 1 elements';
-
-$string['h1font'] = 'Heading 1 font family';
-$string['h1font_desc'] = 'The default font family for Heading 1 elements';
-
- 'Close menu';
+$string['closemenu'] = 'Close menu';
 
 $string['welcomeuser'] = 'Welcome back, {$a}';
 

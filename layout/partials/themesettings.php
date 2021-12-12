@@ -56,6 +56,7 @@ foreach ($coursemetadata as $key => $val) {
         case "customsubcategory" : $extraclasses[] = $val; break;
         case "showpageheaderlogo" : $showpageheaderlogo = $val; break;
         case "hidetopiczero" : $extraclasses[] = 'hidetopiczero'; break;
+        case "hidetopiczerotitle" : $extraclasses[] = 'hidetopiczerotitle'; break;
         case "showbreadcrumb": break;
         case "showpagetitle": break;
         default: break;
@@ -191,7 +192,7 @@ for ( $footercontent_i = 1 ; $footercontent_i < 4 ; $footercontent_i++) {
 }
 
 // footer social links content
-for ( $footerlink_i = 1 ; $footerlink_i < 5 ; $footerlink_i++) {
+for ( $footerlink_i = 1 ; $footerlink_i <= 5 ; $footerlink_i++) {
     $settingcontenturl = '';
     $settingicon = '';
     $settingiconoutput = '';
