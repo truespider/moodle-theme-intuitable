@@ -31,6 +31,7 @@
 	&.disabled, &:disabled {
 		opacity: 0.65; 
 	}
+	&.btn-link.p-0, 
 	.fitem .col-form-label & {
 		background: none;
 		border: 0;

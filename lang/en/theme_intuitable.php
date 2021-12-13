@@ -182,25 +182,31 @@ $string['footercontentheading'] = 'Footer content';
 $string['footercontentheading_desc'] = 'The following settings define the text content which to be displayed at the foot of each page sitewide.';
 
 $string['footercontent1'] = 'Footer content 1';
-$string['footercontent1_desc'] = 'First line of text displayed at foot of each page.';
+$string['footercontent1_desc'] = 'First text item displayed at foot of each page.';
 $string['footercontenturl1'] = 'Footer content 1 url';
-$string['footercontenturl1_desc'] = 'URL if this item is a link: if this setting is used the text is displayed underlined.';
-$string['footercontentbold1'] = 'Bold?';
-$string['footercontentbold1_desc'] = 'Check if this text to be displayed with bold font.';
+$string['footercontenturl1_desc'] = 'URL if this item is a link.';
+$string['footercontentweight1'] = 'Font weight';
+$string['footercontentweight1_desc'] = 'The font weight for the first footer item.';
 
 $string['footercontent2'] = 'Footer content 2';
-$string['footercontent2_desc'] = 'Second line of text displayed at foot of each page.';
-$string['footercontentbold2'] = 'Bold?';
-$string['footercontentbold2_desc'] = 'Check if this text to be displayed with bold font.';
+$string['footercontent2_desc'] = 'Second text item displayed at foot of each page.';
+$string['footercontenturl2'] = 'Footer content 2 url';
+$string['footercontenturl2_desc'] = 'URL if this item is a link.';
+$string['footercontentweight2'] = 'Font weight';
+$string['footercontentweight2_desc'] = 'The font weight for the second footer item';
 
 $string['footercontent3'] = 'Footer content 3';
-$string['footercontent3_desc'] = 'Third line of text displayed at foot of each page.';
-$string['footercontentbold3'] = 'Bold?';
-$string['footercontentbold3_desc'] = 'Check if this text to be displayed with bold font.';
+$string['footercontent3_desc'] = 'Third text item displayed at foot of each page.';
+$string['footercontenturl3'] = 'Footer content 3 url';
+$string['footercontenturl3_desc'] = 'URL if this item is a link.';
+$string['footercontentweight3'] = 'Font weight';
+$string['footercontentweight3_desc'] = 'The font weight for the third footer item.';
 
 /* footer social links */
 $string['footersociallinksettings'] = 'Footer social links settings';
 $string['footersociallinksheading'] = 'Social links';
+$string['footercontenturl1'] = 'Footer content 1 url';
+$string['footercontenturl1_desc'] = 'URL if this item is a link: if this setting is used the text is displayed underlined.';
 $string['footersociallinksheading_desc'] = 'The following settings define the social links which are rendered at the foot of each page sitewide.';
 
 $string['footersociallink1'] = 'Social link 1';

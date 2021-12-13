@@ -290,6 +290,7 @@ body.drawer-open-top div#page:after {
             &.main {
                 flex: 1 0 auto;
                 display: flex;
+                background: $vnavcolourbg;
             }
             &.h-md {
                 display: none;

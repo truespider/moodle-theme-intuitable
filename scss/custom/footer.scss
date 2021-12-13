@@ -1,18 +1,21 @@
 
-$footerpaddingleft: 80px;
 
 #page-footer {
     background: $footercolourbg;
-    margin: $gutterpage 0 0 -$gutterpage;
+    margin: $footermargin;
     padding: 0;
     z-index: 100;
     .container {
         max-width: 100%;
-        padding: $guttermedium 0 0;
+        padding: $footercontainerpadding;
         background: $footercontainercolourbg;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .footer-info {
         background-color: $footerinfocolourbg;
+        flex: 0 0 100%
     }
     .footer-standard {
         display: none;
@@ -23,24 +26,29 @@ $footerpaddingleft: 80px;
         margin: 0;
     }
     .footer-info {
-        padding: $guttermedium 0 $gutternarrow $footerpaddingleft;
+        padding: $footerinfopadding;
     }
     .footer-items {
         list-style: none;
         margin: 0;
         padding: 0;
-        font-size: 16px;
-        line-height: 17px;
-        color: $footeritemscolourtext;
+        font-size: $footerinfofontsize;
+        font-weight: $footerinfofontweight;
+        line-height: $footerinfolineheight;
+        color: $footerinfocolourtext;
         a {
-            color: $footeritemscolourtext;
-            text-decoration: $footeritemscolourlinkdecoration;
+            color: $footerinfocolourlink;
+            text-decoration: none;
+            font-size: $footerinfofontsize;
+            font-weight: $footerinfofontweight;
+            line-height: $footerinfolineheight;
+            &:hover {
+                text-decoration: $footerinfolinkdecoration;
+            }
         }
         .footercontentitem  {
-            margin: 0 0 14px;
-            &:first-child {
-                margin-bottom: 35px;
-            }
+            padding: $footerinfoitempadding;
+            margin: 0;
         }
         .strong {
             font-weight: 600;
@@ -49,31 +57,46 @@ $footerpaddingleft: 80px;
     .footer-links {
         list-style: none;
         margin: 0;
-        padding: $guttermedium $gutterpage $guttermedium $footerpaddingleft;
-        font-size: 16px;
-        line-height: 17px;
-        background-color: $footerlinkscolourbg;
-        color: $footerlinkscolourtext;
+        padding: $footersociallinkspaddingy $footersociallinkspaddingx;
+        font-size: $footersociallinksfontsize;
+        font-weight: $footersociallinksfontweight;
+        line-height: $footersociallinkslineheight;
+        background-color: $footersociallinkscolourbg;
+        color: $footersociallinkscolourtext;
+        flex: 0 0 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
         .icon {
-            font-size: 16px;
-            color:  $footerlinksiconcolour;
-            padding: 0 $guttermedium 0 0;
+            background: $footersociallinksiconbg;
+            font-size: $footersociallinksfontsize;
+            font-weight: $footersociallinksfontweight;
+            line-height: $footersociallinkslineheight;
+            height: $footersociallinksiconheight;
+            width: $footersociallinksiconwidth;
+            color:  $footersociallinksiconcolour;
+            padding: $footersociallinksiconpadding;
+            border: $footersociallinksiconborder;
+            border-radius: $footersociallinksiconborderradius;
         }
     }
     .footer-standard {
         background-color: $footerstandardcolourbg;
         margin: 0;
-        padding: 0 $gutterpage $gutternarrow $footerpaddingleft;
+        padding: $footerstandardpadding;
     }
     @include media-breakpoint-up(md) {
-        .footer-links, 
+        .footer-info {
+            flex: 1 0 auto;
+        }
+        .footer-links {
+            flex: 0 0 auto;
+            justify-content: flex-end;
+        }
         .footer-standard {
             margin-left: -40px;
-            padding-left: 120px;
+            padding-left: $footerpaddingleft;
         }
         .quiz-nav-only & {
             .footer-info {

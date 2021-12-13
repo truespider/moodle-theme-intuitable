@@ -484,17 +484,45 @@ $editingheaderhasbackgroundcardcolourtext:  $bodytext !default;
 $headerexitactivitycolourtext:              $red !default;
 
 /* page footer */
-$footercontainercolourbg:           #ffffff !default;
-$footercolourbg:                    #333333 !default;
+$footercolourbg:                    transparent !default;
+$footermargin:                      40px 0 0 -15px !default;
+$footerpaddingleft:                 30px !default;
+$footercontainercolourbg:           #575757 !default;
+$footercontainerpadding:            0 0 0 15px !default;
 $footercolourtext:                  #ffffff !default;
-$footerinfocolourbg:                #f5f5f5 !default;
-$footeritemscolourtext:             #333333 !default;
-$footeritemscolourlink:             #333333 !default;
-$footeritemscolourlinkdecoration:   underline !default;
-$footerlinkscolourbg:               $footercolourbg !default;
-$footerlinkscolourtext:             $footercolourtext !default;
-$footerlinksiconcolour:             $footercolourtext !default;
-$footerstandardcolourbg:            $footercolourbg !default;
+
+$footerinfocolourbg:                transparent !default;
+$footerinfopadding:                 30px 0 30px $footerpaddingleft !default;
+$footerinfoitempadding:             0 0 23px 0 !default;
+$footerinfocolourtext:              #ffffff !default;
+$footerinfocolourlink:              #ffffff !default;
+$footerinfolinkdecoration:          underline !default;
+$footerinfofontsize:                16px !default;
+$footerinfofontweight:              200 !default;
+$footerinfolineheight:              20px !default;  
+$footerinfolargefontsize:           18px !default;
+$footerintolargefontweight:         500 !default;
+$footerinfolargelineheight:         22px !default;  
+$footerinfomargin:                  0 0 1em !default;
+
+$footersociallinkspaddingx:         30px !default;
+$footersociallinkspaddingy:         30px !default;
+$footersociallinksfontsize:         32px !default;
+$footersociallinksfontweight:       300 !default;
+$footersociallinkslineheight:       32px !default;
+$footersociallinkscolourbg:         transparent !default;
+$footersociallinkscolourtext:       #575757 !default;
+$footersociallinksiconcolour:       #575757 !default;
+$footersociallinksiconbg:           #ffffff !default;
+$footersociallinksiconpadding:      16px !default;
+$footersociallinksiconheight:       32px !default;
+$footersociallinksiconwidth:        32px !default;
+$footersociallinksiconborder:       0 !default;
+$footersociallinksiconborderradius: 50% !default;
+
+$footerstandardcolourbg:            transparent !default;
+$footerstandardpadding:             0 $gutterpage $gutternarrow $footerpaddingleft !default;
+
 
 /* login page */
 $loginfootercolourbg:               #ffffff !default;

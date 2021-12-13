@@ -168,22 +168,22 @@ for ( $navlink_i = 1 ; $navlink_i < 7 ; $navlink_i++) {
 // footer content 
 for ( $footercontent_i = 1 ; $footercontent_i < 4 ; $footercontent_i++) {
     $settingcontenturl = '';
-    $settingcontentbold = '';
+    $settingcontentweight = '';
     $settingoutput = '';
     $settingcontent = get_config('theme_intuitable', 'footercontent'.$footercontent_i);
     $contentclass = 'footercontentitem';
     if (! is_null($settingcontent)) {
         $settingcontenturl = get_config('theme_intuitable', 'footercontenturl'.$footercontent_i);
-        $settingcontentbold = get_config('theme_intuitable', 'footercontentbold'.$footercontent_i);
-        $contentclass .= ($settingcontentbold === 'yes' ? ' strong' : '');
+        // $settingcontentweight = get_config('theme_intuitable', 'footercontentweight'.$footercontent_i);
+        // $contentclass .= ' weight'.$settingcontentweight;
         if (strlen($settingcontenturl) === 0) {
-            $settingoutput = html_writer::tag('li'
+            $settingoutput = html_writer::tag('div'
                                             , $settingcontent
                                             , ['class' => $contentclass]);
         }
         else {
             $linkoutput = html_writer::tag('a', $settingcontent,['href' => $settingcontenturl]);
-            $settingoutput = html_writer::tag('li'
+            $settingoutput = html_writer::tag('div'
                                               , $linkoutput
                                               ,['class' => $contentclass]);
         }
