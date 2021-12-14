@@ -95,26 +95,14 @@ $string['headerlinksettings'] = 'Header links settings';
 $string['headerlinksheading'] = 'Header links';
 $string['headerlinksheading_desc'] = 'The following settings define the links which are rendered at the top of each page sitewide.';
 
-$string['headerlinktext1'] = 'Header link 1 text';
-$string['headerlinktext1_desc'] = 'The text displayed for the first link in the page header.';
 $string['headerlink1'] = 'Header link 1';
 $string['headerlink1_desc'] = 'The first link in the header: email address, phone number or url';
-$string['headerlinkselect1'] = 'Header link 1 type';
-$string['headerlinkselect1_desc'] = 'Select email, tel or url';
 
-$string['headerlinktext2'] = 'Header link 2 text';
-$string['headerlinktext2_desc'] = 'The text displayed for the http_send_content_disposition(filename) link in the page header.';
 $string['headerlink2'] = 'Header link 2';
 $string['headerlink2_desc'] = 'The second link in the header: email address, phone number or url';
-$string['headerlinkselect2'] = 'Header link 2 type';
-$string['headerlinkselect2_desc'] = 'Select email, tel or url';
 
-$string['headerlinktext3'] = 'Header link 3 text';
-$string['headerlinktext3_desc'] = 'The text displayed for the third link in the page header.';
 $string['headerlink3'] = 'Header link 3';
 $string['headerlink3_desc'] = 'The third link in the header: email address, phone number or url';
-$string['headerlinkselect3'] = 'Header link 3 type';
-$string['headerlinkselect3_desc'] = 'Select email, tel or url';
 
 /* custom navigation */
 $string['navigationsettings'] = 'Vertical navigation settings';
