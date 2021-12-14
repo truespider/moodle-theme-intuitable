@@ -175,6 +175,10 @@ $menupadding:           20px    !default;
 $menutextshadow:        0 2px 4px rgba(0,0,0,0.5) !default;
 
 /* typography */
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
 $h1fontsize:        30px;
 $h1fontlineheight:  31px;
 $h1fontcolour:      $red !default;
@@ -186,7 +190,7 @@ $h4fontlineheight:  16px;
 $h4fontweight:      500;
 $h4fontcolour:      #294d5d !default;
 $h4fontfamily:      $title-font-family-base !default;
-$bodyfontsize:      14px;
+$bodyfontsize:      $font-size-base !default;
 $bodyfontweight:    300;
 
 /* page context header */

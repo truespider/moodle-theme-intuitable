@@ -1,4 +1,12 @@
 /* Typography style fixes */
+
+body {
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+}
+
+
 h4, .h4 {
     font-size: $h4fontsize;
     font-family: $h4fontfamily;
