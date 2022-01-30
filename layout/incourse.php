@@ -72,7 +72,6 @@ $blocksbanner = '';
 $blocksheader = '';
 $blocksintro = '';
 
-
 // quiz attempt, review pages only:
 // do not render:
 // header nav
@@ -131,7 +130,7 @@ if ($hasblocksbackground) {
 if ($hasblocksheader) {
     $extraclasses[] = 'hasheaderblock';
 }
-if ($hasblocksbanner) {
+if ($hasblocksbanner || $showunenrolledbanner) {
     $extraclasses[] = 'hasbannerblock';
 }
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
@@ -182,7 +181,10 @@ $templatecontext = [
     'exitactivityurl' => $exitactivityurl,
     'showquizexit' => $showquizexit,
     'showrowcohort' => $showrowcohort,
-    'showsearchbox' => $showsearchbox
+    'showsearchbox' => $showsearchbox,
+    'courseenrolbanner' => $courseenrolbanner,
+    'courseenrolbanneralt' => $courseenrolbanneralt,
+    'showunenrolledbanner' => $showunenrolledbanner
 ];
 
 if ($showquizheader) {

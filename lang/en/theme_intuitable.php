@@ -261,6 +261,16 @@ $string['h5font_desc'] = 'The default font family for Heading 5 elements';
 $string['h6font'] = 'Heading 6 font family';
 $string['h6font_desc'] = 'The default font family for Heading 6 elements';
 
+/* course settings */
+$string['coursesettings'] = 'Course settings';
+$string['courseheading'] = 'Course and enrolment setttings';
+$string['courseheading_desc'] = 'These settings are used at course level';
+$string['courseenrolbanner'] = 'Course enrolment page banner';
+$string['courseenrolbanner_desc'] = 'The graphic displayed on the course enrol page to unerolled learners when auto enrol is disabled';
+$string['courseenrolbanneralt'] = 'Alt text';
+$string['courseenrolbanneralt_desc'] = 'The banner alt text';
+
+
 $string['openmenu'] = 'Open menu';
 $string['closemenu'] = 'Close menu';
 

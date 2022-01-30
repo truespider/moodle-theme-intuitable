@@ -47,6 +47,9 @@ $showsearchbox = ((empty($CFG->enableglobalsearch) || !has_capability('moodle/se
 $mobilenavbar = empty($PAGE->layout_options['nomobilenavbar']);
 $prefixmailto = get_string('prefixmailto', 'theme_intuitable');
 $prefixtel = get_string('prefixtel', 'theme_intuitable');
+$courseenrolbanner = false;
+$courseenrolbanneralt = false;
+$showunenrolledbanner = false;
 
 $pageheights = array('1'=>'sm','2'=>'md','3'=>'lg');
 foreach ($coursemetadata as $key => $val) {
@@ -90,6 +93,13 @@ for ( $headerlinks_i = 1 ; $headerlinks_i < 4 ; $headerlinks_i++) {
                                         , ['class' => $contentclass]);
         $headerlinkscontent .= $settingoutput;
     }
+}
+
+// leaner not enrolled , get banner content for the course banner from theme settings 
+if ($PAGE->pagelayout === "incourse" && !is_siteadmin() && !is_enrolled($PAGE->context, $USER, '', true)) {
+    $courseenrolbanner = $this->page->theme->setting_file_url('courseenrolbanner', 'courseenrolbanner');
+    $courseenrolbanneralt = get_config('theme_intuitablechild', 'courseenrolbanneralt');
+    $showunenrolledbanner = true;
 }
 
 // all main nav items

@@ -44,4 +44,6 @@ if ($ADMIN->fulltree) {
     require("$CFG->dirroot/theme/intuitable/settings/settings_footersocial.php");
 
     require("$CFG->dirroot/theme/intuitable/settings/settings_typography.php");
+
+    require("$CFG->dirroot/theme/intuitable/settings/settings_course.php");
 }

@@ -120,6 +120,20 @@
         {{/hasintuitableheaderblocks}}
         {{/editing}}
 
+        {{#showunenrolledbanner}}
+        <section data-region="blocks-banner" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
+            <aside id="block-region-banner" class="block-region" data-blockregion="banner">
+                <section class="block_html block banner card" data-block="html" aria-label="HTML">
+                    <div class="card-body">
+                        <div class="card-text content">
+                            <img class="img-responsive banner-enrol" src="{{{courseenrolbanner}}}" alt="{{{courseenrolbanneralt}}}">
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </section>
+        {{/showunenrolledbanner}}
+
         {{#hasintuitablebannerblocks}}
         <section data-region="blocks-banner" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
             {{{ intuitablebannerblocks }}}

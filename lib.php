@@ -280,6 +280,8 @@ function theme_intuitable_pluginfile($course, $cm, $context, $filearea, $args, $
             return $theme->setting_file_serve('imageareaitems', $args, $forcedownload, $options);
         } else if ($filearea === 'additionalresources') {
             return $theme->setting_file_serve('additionalresources', $args, $forcedownload, $options);
+        } else if ($filearea === 'courseenrolbanner') {
+            return $theme->setting_file_serve('courseenrolbanner', $args, $forcedownload, $options);
         } else {
             send_file_not_found();
         }
