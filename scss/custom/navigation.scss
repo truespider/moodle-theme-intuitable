@@ -51,6 +51,11 @@ body.drawer-open-top div#page:after {
             padding: 0;
             margin: 0;
         }
+        body.drawer-open-top & {
+            .usermenu .dropdown-toggle {
+                color: $vnavitemcolourlink;
+            }
+        }
     }
     ul.mainnavigation {
         padding: 0;
@@ -225,7 +230,6 @@ body.drawer-open-top div#page:after {
             border-radius: 0;
         }
         .nav-link {
-            color: $bodytext;
             font-size: 18px;
             font-weight: 500;
             line-height: 18px;
@@ -578,6 +582,7 @@ body.drawer-open-top div#page:after {
                 }
                 body.drawer-open-top & {
                     opacity: 0;
+                    pointer-events: none;
                 }
                 .container.logo {
                     display: none;
