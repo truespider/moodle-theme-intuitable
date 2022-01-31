@@ -196,7 +196,7 @@ for ( $footerlink_i = 1 ; $footerlink_i <= 5 ; $footerlink_i++) {
         if (strlen($settingcontenturl) !== 0) {
             $settingiconoutput = html_writer::tag('span', html_writer::tag('i', '', array('class' =>  $iconclass, 'aria-hidden' => 'true')), array('class' => 'media-left'));
             $linkoutput = html_writer::tag('a', $settingiconoutput
-                                            ,['href' => $settingcontenturl, 'title' => $settingcontent]);
+                                            ,['href' => $settingcontenturl, 'title' => $settingcontent, 'target' => '_blank']);
             $settingoutput = html_writer::tag('li'
                                             , $linkoutput
                                             , ['class' => $contentclass]);
