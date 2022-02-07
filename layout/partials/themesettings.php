@@ -50,6 +50,7 @@ $prefixtel = get_string('prefixtel', 'theme_intuitable');
 $courseenrolbanner = false;
 $courseenrolbanneralt = false;
 $showunenrolledbanner = false;
+$minibreadcrumb = false;
 
 $pageheights = array('1'=>'sm','2'=>'md','3'=>'lg');
 foreach ($coursemetadata as $key => $val) {
@@ -75,6 +76,9 @@ if (isloggedin() && $PAGE->pagelayout === 'mydashboard') {
 
 if (is_siteadmin($USER)) {
     $showbreadcrumb = true;
+} 
+else {
+    $minibreadcrumb = true;
 }
 
 if ($showpageheaderlogo) {

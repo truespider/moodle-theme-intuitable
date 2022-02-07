@@ -75,6 +75,9 @@ if ($hasblocksheader) {
 if ($hasblocksbanner) {
     $extraclasses[] = 'hasbannerblock';
 }
+if ($minibreadcrumb) {
+    $extraclasses[] = 'minibreadcrumb';
+}
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 
 $templatecontext = [

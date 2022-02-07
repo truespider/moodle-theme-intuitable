@@ -290,3 +290,30 @@ a.return-link:hover {
 p.intro {
     font-size: 1.1rem;
 }
+
+body.minibreadcrumb {
+    &.pagelayout-course {
+        ol.breadcrumb {
+            .breadcrumb-item {
+                display: none;
+                &:first-child, 
+                &:nth-last-child(1) {
+                    display: flex;
+                }
+            }
+        }
+    }
+    &.pagelayout-incourse {  
+        ol.breadcrumb {
+            .breadcrumb-item {
+                display: none;
+                &:first-child, 
+                &:nth-last-child(1), 
+                &:nth-last-child(2),
+                &:nth-last-child(3) {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
