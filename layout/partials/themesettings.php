@@ -77,9 +77,9 @@ if (isloggedin() && $PAGE->pagelayout === 'mydashboard') {
 if (is_siteadmin($USER)) {
     $showbreadcrumb = true;
 } 
-else {
-    $minibreadcrumb = true;
-}
+// else {
+//     $minibreadcrumb = true;
+// }
 
 if ($showpageheaderlogo) {
     $headerlogo = $this->page->theme->setting_file_url('logoheader', 'logoheader');
