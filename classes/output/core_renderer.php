@@ -151,7 +151,31 @@ class core_renderer extends \core_renderer {
         $header->settingsmenu = $this->context_header_settings_menu();
         $header->contextheader = $this->context_header();
         $header->hasnavbar = empty($this->page->layout_options['nonavbar']);
+
+        // intuitable customisation : if not admin user, do not display any breadcrumb items unless home page, cour
+        if (!$isadmin) {
+            foreach ($PAGE->navbar->get_items() as $node) {
+                /** @var navigation_node $node */
+                $node;
+                switch ($node->type) {
+                    case 60:
+                    case 40:
+                    case 20:
+                    case 30: 
+                        // var_dump('SHOW  '.$node->text.' : '.$node->type);
+                        break;
+                    default:
+                        // var_dump('DO NOT SHOW  '.$node->text.' : '.$node->type);
+                        $node->add_class('hide');
+                        $node->display = false;
+                        break;
+                }
+            }
+        }
+        // var_dump($PAGE->navbar->get_items());
+          
         $header->navbar = $this->navbar();
+
         $header->pageheadingbutton = $this->page_heading_button();
         $header->courseheader = $this->course_header();
         $header->headeractions = $this->page->get_header_actions();
